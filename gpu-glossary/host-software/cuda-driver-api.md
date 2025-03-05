@@ -31,3 +31,10 @@ from NVIDIA.
 
 The CUDA Driver API is closed source. You can find its documentation
 [here](https://docs.nvidia.com/cuda/cuda-driver-api/index.html).
+
+Though they are not commonly used, there are projects that attempt
+to provide or use open sourcealternatives to the CUDA Driver API, like
+[LibreCuda](https://github.com/mikex86/LibreCuda) and
+[tinygrad](https://github.com/tinygrad). See
+[their source code](https://github.com/tinygrad/tinygrad/blob/77f7ddf62a78218bee7b4f7b9ff925a0e581fcad/tinygrad/runtime/ops_nv.py)
+for details.
