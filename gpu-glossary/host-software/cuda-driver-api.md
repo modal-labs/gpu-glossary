@@ -30,10 +30,11 @@ For details on distributing CUDA C applications, see the
 from NVIDIA.
 
 The CUDA Driver API is closed source. You can find its documentation
-[here](https://docs.nvidia.com/cuda/cuda-driver-api/index.html). Open source
-implementations exist by communicating to NVIDIA hardware directly via 1. ioctl
-(specifically what NVIDIA's open-gpu-kernel-modules refer to as the rmapi) and
-2. QMD, NVIDIA's MMIO command queue. For more details checkout tinygrad's
-[Python impelementation](https://github.com/tinygrad/tinygrad/blob/master/tinygrad/runtime/ops_nv.py)
-and [LibreCuda](https://news.ycombinator.com/item?id=41194024)'s[ C++ implementation](https://github.com/mikex86/LibreCuda).
+[here](https://docs.nvidia.com/cuda/cuda-driver-api/index.html).
 
+Though they are not commonly used, there are projects that attempt
+to provide or use open sourcealternatives to the CUDA Driver API, like
+[LibreCuda](https://github.com/mikex86/LibreCuda) and
+[tinygrad](https://github.com/tinygrad). See
+[their source code](https://github.com/tinygrad/tinygrad/blob/77f7ddf62a78218bee7b4f7b9ff925a0e581fcad/tinygrad/runtime/ops_nv.py)
+for details.
