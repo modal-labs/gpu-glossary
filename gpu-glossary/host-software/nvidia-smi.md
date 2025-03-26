@@ -8,20 +8,27 @@ Its outputs, a sample of which appears below, are familiar to users of NVIDIA
 GPUs to the point of being a
 [meme](https://x.com/boborado/status/1752724223934578760).
 
-`nvidia-smi` reports GPU identification (model, UUID, PCI ID), utilization 
-metrics (GPU, memory, encoder/decoder), memory usage (FB, BAR1), power draw, 
-temperature, and performance state (P-state). It can also list processes 
-currently using the GPU (`-q`, `--query`, `pmon`).
+`nvidia-smi` reports the following:
+- GPU identity information like the card's model name, a UUID, and the PCI ID
+- live utilization metrics for kernel execution time and memory allocation
+- live power and thermal information
+
+For details on these metrics, including how to interpret power and thermal readings,
+see [this page on the Modal docs](/docs/guide/gpu-metrics).
+
+`nvidia-smi` can also list processes currently using the GPU (`-q`, `--query`, `pmon`).
 Common management tasks include setting persistence mode (`-pm`), compute 
 mode (`-c`), power limits (`-pl`), application/locked clocks 
-(`-ac`, `-lgc`, `-lmc`), and performing GPU resets (`-r`). Output can be 
-formatted as human-readable text or XML (`-x`).
-While `nvidia-smi`'s text output format is not guaranteed backward compatible, 
-the underlying NVML C library and its Python bindings offer a stable API for 
-tool development.
+(`-ac`, `-lgc`, `-lmc`), and performing GPU resets (`-r`).
+
+Output can be  formatted as human-readable text or XML (`-x`).
+While `nvidia-smi`'s text output format is not guaranteed to be stable, 
+the underlying [NVML C library](/gpu-glossary/host-software/nvml)
+offers a stable API for tool development.
+
 The documentation for `nvidia-smi` can be found 
 [here](https://docs.nvidia.com/deploy/nvidia-smi/),
-and the official python bindings also exist 
+and the official Python bindings can be found 
 [here](http://pypi.python.org/pypi/nvidia-ml-py/).
 
 ```
