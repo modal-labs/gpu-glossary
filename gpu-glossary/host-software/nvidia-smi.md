@@ -8,6 +8,22 @@ Its outputs, a sample of which appears below, are familiar to users of NVIDIA
 GPUs to the point of being a
 [meme](https://x.com/boborado/status/1752724223934578760).
 
+`nvidia-smi` reports GPU identification (model, UUID, PCI ID), utilization 
+metrics (GPU, memory, encoder/decoder), memory usage (FB, BAR1), power draw, 
+temperature, and performance state (P-state). It can also list processes 
+currently using the GPU (`-q`, `--query`, `pmon`).
+Common management tasks include setting persistence mode (`-pm`), compute 
+mode (`-c`), power limits (`-pl`), application/locked clocks 
+(`-ac`, `-lgc`, `-lmc`), and performing GPU resets (`-r`). Output can be 
+formatted as human-readable text or XML (`-x`).
+While `nvidia-smi`'s text output format is not guaranteed backward compatible, 
+the underlying NVML C library and its Python bindings offer a stable API for 
+tool development.
+The documentation for `nvidia-smi` can be found 
+[here](https://docs.nvidia.com/deploy/nvidia-smi/),
+and the official python bindings also exist 
+[here](http://pypi.python.org/pypi/nvidia-ml-py/).
+
 ```
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
