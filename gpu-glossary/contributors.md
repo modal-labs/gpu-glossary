@@ -2,6 +2,9 @@
 title: Contributors
 ---
 
+This list is incomplete; you can help by
+[expanding it](https://github.com/modal-labs/gpu-glossary).
+
 ### Authors
 
 - [Charles Frye](https://twitter.com/charles_irl) wrote the majority of the
@@ -53,5 +56,3 @@ correct errors:
 - Ismail Zaidi
 - [Michal Nawrot](https://github.com/michalnawrot)
 - [Nicolas Blin](https://www.nicolas-blin.fr/)
-
-You can join them! Just report any errors you see to `glossary@modal.com`.
