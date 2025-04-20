@@ -8,8 +8,8 @@ scalar arithmetic instructions.
 ![The internal architecture of an H100 SM. The CUDA Cores and Tensor Cores are depicted in green. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
 
 They are to be contrasted with the
-[Tensor Cores](/gpu-glossary/device-hardware/tensor-core),
-which execute matrix operations.
+[Tensor Cores](/gpu-glossary/device-hardware/tensor-core), which execute matrix
+operations.
 
 Unlike CPU cores, instructions issued to CUDA Cores are not generally
 independently scheduled. Instead, groups of cores are issued the same
