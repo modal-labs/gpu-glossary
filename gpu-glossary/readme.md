@@ -40,3 +40,6 @@ came across in the article on the
 You can also read it linearly. To navigate between pages, use the arrow keys,
 the arrows at the bottom of each page, or the table of contents (in the sidebar
 on desktop or in the hamburger menu on mobile).
+
+The source for the glossary is available
+[on GitHub](https://github.com/modal-labs/gpu-glossary).
