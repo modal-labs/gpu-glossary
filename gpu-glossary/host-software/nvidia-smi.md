@@ -17,18 +17,18 @@ For details on these metrics, including how to interpret power and thermal readi
 see [this page on the Modal docs](/docs/guide/gpu-metrics).
 
 `nvidia-smi` can also list processes currently using the GPU (`-q`, `--query`, `pmon`).
-Common management tasks include setting persistence mode (`-pm`), compute 
-mode (`-c`), power limits (`-pl`), application/locked clocks 
+Common management tasks include setting persistence mode (`-pm`), compute
+mode (`-c`), power limits (`-pl`), application/locked clocks
 (`-ac`, `-lgc`, `-lmc`), and performing GPU resets (`-r`).
 
 Output can be  formatted as human-readable text or XML (`-x`).
-While `nvidia-smi`'s text output format is not guaranteed to be stable, 
+While `nvidia-smi`'s text output format is not guaranteed to be stable,
 the underlying [NVML C library](/gpu-glossary/host-software/nvml)
 offers a stable API for tool development.
 
-The documentation for `nvidia-smi` can be found 
+The documentation for `nvidia-smi` can be found
 [here](https://docs.nvidia.com/deploy/nvidia-smi/),
-and the official Python bindings can be found 
+and the official Python bindings can be found
 [here](http://pypi.python.org/pypi/nvidia-ml-py/).
 
 ```
