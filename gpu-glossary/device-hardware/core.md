@@ -34,5 +34,4 @@ to store information,
 cores to transform it,
 and an
 [instruction scheduler](/gpu-glossary/device-hardware/warp-scheduler)
-to define specify and
-command transformations.
+to specify and command transformations.

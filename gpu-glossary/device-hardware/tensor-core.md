@@ -55,7 +55,7 @@ who also [coined the term](https://www.semanticscholar.org/paper/4d3a941a5749dbf
 That assembler-level instruction might be produced by a compiler to implement
 [PTX-level](/gpu-glossary/device-software/parallel-thread-execution)
 matrix-multiply-and-accumlate instructions like `wmma` (documented
-[here](https://docs.nvidia.com/cuda/parallel-thread-execution/#tensors)).
+[here](https://docs.nvidia.com/cuda/archive/12.8.0/parallel-thread-execution/index.html#warp-level-matrix-instructions)).
 Those instructions also calculate D = AB + C for matrices A, B, C, and D,
 but are generally compiled into many individual
 [SASS](/gpu-glossary/device-software/streaming-assembler)
@@ -121,13 +121,6 @@ eight rows and eight columns in B and within an entire column of A,
 calculations occur inside the Tensor Core concurrently, with respect to the instruction --
 each instruction handles all `m` rows of A for the given block of rows and columns from B.
 
-Outputs appear in row-major order by register index
-(`R20` and then `R24`),
-presumably laying them out in the
-[register file](/gpu-glossary/device-hardware/register-file)
-for faster writes to
-[shared memory](/gpu-glossary/device-software/shared-memory).
-
 Explore [this compiler output on Godbolt](https://godbolt.org/z/e6cqn8491)
 if you want to dive deeper. Note that this is far from a
 [utilization-maximizing](https://modal.com/blog/gpu-utilization-guide)
@@ -160,5 +153,5 @@ The internals of Tensor Cores are unknown, and likely differ from
 [SM Architecture](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 to
 [SM Architecture](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture).
-They are commonly assumed to be systolic arrays,
+They are commonly assumed to be systolic arrays, like TPUs,
 but there is no consensus in the microbenchmarking literature.
