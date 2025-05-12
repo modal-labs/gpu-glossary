@@ -90,10 +90,10 @@ HMMA.1688.F32 R20, R14, R16, R20  // 3
 HMMA.1688.F32 R24, R14, R18, R24  // 4
 ```
 
-The operands to each `HMMA` instruction can be read as D = AB + C, and so instruction 3
-uses register 20 for its output D, registers 14 and 16 for its inputs A and B,
-respectively, and re-uses register 20 for its input D, effecting the computation
-`C += AB`. See the diagram below.
+The operands to each `HMMA` instruction can be read as D = AB + C, and so
+instruction 3 uses register 20 for its output D, registers 14 and 16 for its
+inputs A and B, respectively, and re-uses register 20 for its input D, effecting
+the computation `C += AB`. See the diagram below.
 
 ![Register usage in a Tensor Core MMA. See surrounding text for details.](themed-image://tensor-core-mma.svg)
 
