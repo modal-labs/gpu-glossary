@@ -1,0 +1,15 @@
+{
+  "name": "gpu-glossary",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write --ignore-unknown gpu-glossary/*",
+    "format:check": "prettier --check --ignore-unknown gpu-glossary/*"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "prettier": {
+    "proseWrap": "always",
+    "trailingComma": "all"
+  }
+}
