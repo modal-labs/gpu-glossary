@@ -47,7 +47,7 @@ like the systolic arrays in Google Tensor Processing Units (TPUs), as a form of
 hardware. For more on this perspective, applied to TPUs, see
 [this talk by computer architect David Patterson](https://youtu.be/fhHAArxwzvQ?t=2072),
 who also
-[coined the term](https://www.semanticscholar.org/paper/4d3a941a5749dbf0dd39554f12597c449c3c07ff).
+[coined the terms CISC and RISC](https://www.semanticscholar.org/paper/4d3a941a5749dbf0dd39554f12597c449c3c07ff).
 
 That assembler-level instruction might be produced by a compiler to implement
 [PTX-level](/gpu-glossary/device-software/parallel-thread-execution)
@@ -65,19 +65,19 @@ architecture are exposed in the high-level
 intrinsics.
 
 In reverse order, a line of [CUDA C++](/gpu-glossary/host-software/cuda-c)
-coding a matrix multiplication C = AB + C, like
+coding a matrix multiplication `C = A @ B`, of two 16 by 16 matrices, like
 
 ```cpp
 wmma::mma_sync(c, a, b, c);
 ```
 
-might be compiled by [`nvcc`](/gpu-glossary/host-software/nvcc) to the
-[PTX](/gpu-glossary/device-software/parallel-thread-execution) intermediate
-representation as
+where `c` is initialized to all zeros, and the first appearance indicates it is
+also the output, might be compiled by [`nvcc`](/gpu-glossary/host-software/nvcc)
+to the [PTX](/gpu-glossary/device-software/parallel-thread-execution)
+intermediate representation as
 
 ```ptx
-wmma.load.a.sync.aligned.col.m16n16k16.global.f16       {%r2, %r3, %r4, %r5, %r6, %r7, %r8, %r9}, [%rd6], %r1;
-wmma.load.b.sync.aligned.row.m16n16k16.global.f16       {%r10, %r11, %r12, %r13, %r14, %r15, %r16, %r17}, [%rd4], %r1;
+wmma.mma.sync.aligned.col.row.m16n16k16.f32.f32 {%f2, %f3, %f4, %f5, %f6, %f7, %f8, %f9}, {%r2, %r3, %r4, %r5, %r6, %r7, %r8, %r9}, {%r10, %r11, %r12, %r13, %r14, %r15, %r16, %r17}, {%f1, %f1, %f1, %f1, %f1, %f1, %f1, %f1};
 ```
 
 and then finally compiled by `ptxas` to
@@ -90,27 +90,38 @@ HMMA.1688.F32 R20, R14, R16, R20  // 3
 HMMA.1688.F32 R24, R14, R18, R24  // 4
 ```
 
-The operands to each `HMMA` instruction can be read as D = AB + C, and so
-instruction 3 uses register 20 for its output D, registers 14 and 16 for its
-inputs A and B, respectively, and re-uses register 20 for its input D, effecting
-the computation `C += AB`. See the diagram below.
+The operands to each `HMMA` instruction can be read, in order, as
+`D = A @ B + C`. For example, instruction 3 uses
+[register](/gpu-glossary/device-hardware/register-file) 20 for its output `D`,
+registers 14 and 16 for its inputs `A` and `B`, respectively, and re-uses
+register 20 for its input `C`, effecting the computation `C += A @ B`.
 
-![Register usage in a Tensor Core MMA. See surrounding text for details.](themed-image://tensor-core-mma.svg)
+This program partitions the full 16 by 16 square matrix multiplication into four
+separate instructions, each itself a matrix multiplication of a 16 by 8 matrix
+with an 8 by 8 matrix. Similarly, programs running large-scale matrix
+multiplications must break their work down into smaller matrix multiplications,
+like the 16 by 16 square matrix multiplication performed by the `mma_sync` call
+we are dissecting. We walk through this program below.
 
-This program splits the accumulation dimension -- `k`, the column dimension of A
-and the row dimension of B -- across time: instructions 1 and 3 accumulate by
-reusing the "C matrix register" of 1, `R20`, as the "D matrix register" of 3
-(`RZ` is a special-purpose "register" that contains the value `Z`ero). On
-machines that support `16816` matrix multiplications, we might expect these two
-instructions to run concurrently on the Tensor Core.
+![Register usage in a Tensor Core MMA for C = A @ B. The R11, R17, R16, and R18 registers are used in instructions 1, 2, 3, and 4, respectively. See surrounding text for details.](themed-image://tensor-core-mma.svg)
 
-The program splits `n`, the column dimension of B, across time and across space:
-that is, distinct instructions 1 and 3 (time) operate on distinct
-[registers](/gpu-glossary/device-software/registers) `R11` and `R16` (space)
-holding distinct columns in B. Within a block of eight rows and eight columns in
-B and within an entire column of A, calculations occur inside the Tensor Core
-concurrently, with respect to the instruction -- each instruction handles all
-`m` rows of A for the given block of rows and columns from B.
+The first two instructions compute the matrix multiplication of the first eight
+columns of the input `a`, from `R12`, with the first eight rows of the input
+`b`, from `R11` and `R17`, producing a 16 by 16 matrix, which is stored in `R20`
+and `R24`. This is a sort of "outer product": a tall and skinny matrix
+mutliplied by a short and wide matrix. (`RZ` is a special-purpose "register"
+that contains the value `Z`ero).
+
+The second two instructions compute a similar "outer product" for the second
+eight columns of `a` and second eight rows of `b`, accumulating with the output
+of the first two instructions to produce the final value in `c`.
+
+Put another way: within a block of eight rows out of eight columns in B and
+within an entire column of A, a number of multiplications and additions occur
+inside the Tensor Core concurrently, with respect to the instruction, to
+implement a matrix multiplication. Each instruction handles all `m` rows of A
+for the given block of rows and columns from B. Together, they handle the full
+matrix multiplication.
 
 Explore [this compiler output on Godbolt](https://godbolt.org/z/e6cqn8491) if
 you want to dive deeper. Note that this is far from a
