@@ -77,7 +77,11 @@ to the [PTX](/gpu-glossary/device-software/parallel-thread-execution)
 intermediate representation as
 
 ```ptx
-wmma.mma.sync.aligned.col.row.m16n16k16.f32.f32 {%f2, %f3, %f4, %f5, %f6, %f7, %f8, %f9}, {%r2, %r3, %r4, %r5, %r6, %r7, %r8, %r9}, {%r10, %r11, %r12, %r13, %r14, %r15, %r16, %r17}, {%f1, %f1, %f1, %f1, %f1, %f1, %f1, %f1};
+wmma.mma.sync.aligned.col.row.m16n16k16.f32.f32 \
+    {%f2, %f3, %f4, %f5, %f6, %f7, %f8, %f9}, \
+    {%r2, %r3, %r4, %r5, %r6, %r7, %r8, %r9}, \
+    {%r10, %r11, %r12, %r13, %r14, %r15, %r16, %r17}, \
+    {%f1, %f1, %f1, %f1, %f1, %f1, %f1, %f1};
 ```
 
 and then finally compiled by `ptxas` to
