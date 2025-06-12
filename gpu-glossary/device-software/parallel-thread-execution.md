@@ -36,7 +36,7 @@ compilation.
 
 Some exemplary PTX:
 
-```nasm
+```ptx
 .reg .f32 %f<7>;
 ```
 
@@ -50,7 +50,7 @@ Some exemplary PTX:
   [SM](/gpu-glossary/device-hardware/streaming-multiprocessor)'s
   [register file](/gpu-glossary/device-hardware/register-file).
 
-```nasm
+```ptx
 fma.rn.f32 %f5, %f4, %f3, 0f3FC00000;
 ```
 
@@ -60,7 +60,7 @@ fma.rn.f32 %f5, %f4, %f3, 0f3FC00000;
   suffix for the FMA operation sets the floating point rounding mode to
   [IEEE 754 "round even"](https://en.wikipedia.org/wiki/IEEE_754) (the default).
 
-```nasm
+```ptx
 mov.u32 %r1, %ctaid.x;
 mov.u32 %r2, %ntid.x;
 mov.u32 %r3, %tid.x;
