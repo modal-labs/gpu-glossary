@@ -24,10 +24,13 @@ def create_aggregated_markdown(root_dir: str, links: bool) -> str:
     
     def process_file(filepath: str) -> str:
         content = read_file_content(filepath)
-        return re.sub(r'\[.*?\]\(.*?\)[\s.,;:!?]*', '', content) if not links else content
+        return re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', content) if not links else content
     
     processed_contents = list(map(process_file, markdown_files))
-    return reduce(lambda acc, content: acc + content, processed_contents, "")
+    aggregated_content = []
+    for content in processed_contents:
+        aggregated_content.append(content)
+    return "\n".join(aggregated_content)
 
 
 def get_program_arguments() -> Tuple[str, str, bool]:
