@@ -55,11 +55,11 @@ is shared among threads within a
 [thread block](/gpu-glossary/device-software/thread-block):
 
 ```cpp
-#DEFINE TILE_WIDTH 16
+#define TILE_WIDTH 16
 
 __global__ void matmul_tiled(float* A, float* B, float* C, int N) {
 
-    //declare variables in shared memory
+    // declare variables in shared memory
     __shared__ float As[TILE_WIDTH][TILE_WIDTH];
     __shared__ float Bs[TILE_WIDTH][TILE_WIDTH];
 
@@ -67,18 +67,18 @@ __global__ void matmul_tiled(float* A, float* B, float* C, int N) {
     int col = blockIdx.x * TILE_WIDTH + threadIdx.x;
 
     float c_output = 0;
-    // Loop over the A and B tiles
+    // loop over the A and B tiles
     for (int m = 0; m < N/TILE_WIDTH; ++m) {
 
-        // Load A and B tiles into shared memory
-        As[ty][tx] = A[row * N + (m*TILE_WIDTH + tx)];
-        Bs[ty][tx] = B[(m*TILE_WIDTH + ty)*N + col];
+        // load A and B tiles into shared memory
+        As[threadIdx.y][threadIdx.x] = A[row * N + (m * TILE_WIDTH + threadIdx.x)];
+        Bs[threadIdx.y][threadIdx.x] = B[(m* TILE_WIDTH + threadIdx.y)* N + col];
 
         // all threads in the block must wait before anything is allowed to proceed
         __syncthreads();
 
         for (int k = 0; k < TILE_WIDTH; ++k) {
-            c_output += As[ty][k] * Bs[k][tx];
+            c_output += As[threadIdx.y][k] * Bs[k][threadIdx.x];
         }
         __syncthreads();
     }
