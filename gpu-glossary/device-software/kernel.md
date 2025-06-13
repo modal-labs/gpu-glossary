@@ -27,13 +27,16 @@ In [CUDA C++](/gpu-glossary/host-software/cuda-c), kernels are passed pointers
 to [global memory](/gpu-glossary/device-software/global-memory) on the device
 when they are invoked by the host and return nothing — they just mutate memory.
 
-For example, here is a naive matrix multiplication kernel for two square matrices of size N which assigns each [thread](/gpu-glossary/device-software/thread) to compute one element in the output matrix.
+For example, here is a naive matrix multiplication kernel for two square
+matrices of size N which assigns each
+[thread](/gpu-glossary/device-software/thread) to compute one element in the
+output matrix.
 
 ```cpp
 __global__ void matmul_naive(float* A, float* B, float* C, int N) {
     int row = blockIdx.y * blockDim.y + threadIdx.y;
     int col = blockIdx.x * blockDim.x + threadIdx.x;
-    
+
     if (row < N && col < N) {
         float sum = 0.0f;
         for (int k = 0; k < N; k++) {
@@ -44,7 +47,12 @@ __global__ void matmul_naive(float* A, float* B, float* C, int N) {
 }
 ```
 
-The kernel accesses [global memory](/gpu-glossary/device-software/global-memory) directly for all matrix elements. A more sophisticated approach makes use of the [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy) by loading data into fast [shared memory](/gpu-glossary/device-software/shared-memory) that is shared among threads within a [thread block](/gpu-glossary/device-software/thread-block):
+The kernel accesses [global memory](/gpu-glossary/device-software/global-memory)
+directly for all matrix elements. A more sophisticated approach makes use of the
+[memory hierarchy](/gpu-glossary/device-software/memory-hierarchy) by loading
+data into fast [shared memory](/gpu-glossary/device-software/shared-memory) that
+is shared among threads within a
+[thread block](/gpu-glossary/device-software/thread-block):
 
 ```cpp
 #DEFINE TILE_WIDTH 16
@@ -54,21 +62,21 @@ __global__ void matmul_tiled(float* A, float* B, float* C, int N) {
     //declare variables in shared memory
     __shared__ float As[TILE_WIDTH][TILE_WIDTH];
     __shared__ float Bs[TILE_WIDTH][TILE_WIDTH];
-    
+
     int row = blockIdx.y * TILE_WIDTH + threadIdx.y;
     int col = blockIdx.x * TILE_WIDTH + threadIdx.x;
-    
+
     float c_output = 0;
     // Loop over the A and B tiles
     for (int m = 0; m < N/TILE_WIDTH; ++m) {
-        
+
         // Load A and B tiles into shared memory
         As[ty][tx] = A[row * N + (m*TILE_WIDTH + tx)];
         Bs[ty][tx] = B[(m*TILE_WIDTH + ty)*N + col];
 
         // all threads in the block must wait before anything is allowed to proceed
         __syncthreads();
-        
+
         for (int k = 0; k < TILE_WIDTH; ++k) {
             c_output += As[ty][k] * Bs[k][tx];
         }
