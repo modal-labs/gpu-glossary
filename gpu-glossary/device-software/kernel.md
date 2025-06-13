@@ -72,7 +72,7 @@ __global__ void matmul_tiled(float* A, float* B, float* C, int N) {
 
         // load A and B tiles into shared memory
         As[threadIdx.y][threadIdx.x] = A[row * N + (m * TILE_WIDTH + threadIdx.x)];
-        Bs[threadIdx.y][threadIdx.x] = B[(m* TILE_WIDTH + threadIdx.y)* N + col];
+        Bs[threadIdx.y][threadIdx.x] = B[(m * TILE_WIDTH + threadIdx.y) * N + col];
 
         // all threads in the block must wait before anything is allowed to proceed
         __syncthreads();
