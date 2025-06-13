@@ -76,7 +76,7 @@ of
 we map the loading of submatrices of `A` and `B` and the computation of
 submatrices of `C` onto
 [shared memory](/gpu-glossary/device-software/shared-memory) and
-[thread blocks](/gpy-glossary/device-software/thread-block) respectively.
+[thread blocks](/gpu-glossary/device-software/thread-block) respectively.
 
 ```cpp
 #define TILE_WIDTH 16
