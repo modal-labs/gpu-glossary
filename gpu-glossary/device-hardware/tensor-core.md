@@ -10,10 +10,10 @@ entire matrices with each instruction.
 Operating on more data for a single instruction fetch dramatically reduces power
 requirements, which unlocks increased performance (see
 [this talk](https://youtu.be/kLiwvnr4L80?t=868) by Bill Dally, Chief Scientist
-at NVIDIA). As of the Blackwell
+at NVIDIA). Since their introduction in the Volta
 [Streaming Multiprocessor (SM) Architecture](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
-generation, they are the only way to achieve the highest arithmetic throughput
-on NVIDIA GPUs.
+generation, they have been the only way to achieve the highest arithmetic
+throughput on NVIDIA GPUs.
 
 As an example, the `HMMA16.16816.F32`
 [SASS](/gpu-glossary/device-software/streaming-assembler) instruction calculates
@@ -29,7 +29,7 @@ generally named `m`, `k`, and `n` by NVIDIA, for example in
 outer dimensions of A and B, aka `m` and `n`, come first and last, respectively,
 and the shared inner dimension for the accumulation, `k`, is in the middle.
 Multiplying these out, we see that the `HMMA16.16816.32` instruction performs 16
-× 8 × 8 × 16 = 16,384 multiply-accumulate (MAC) operations.
+× 8 × 16 = 2,048 multiply-accumulate (MAC) operations.
 
 Note that a single instruction in a single
 [thread](/gpu-glossary/device-software/thread) does not produce the entire
@@ -39,7 +39,7 @@ executing the instruction together. Most of the per-instruction power overhead
 is in decoding, which is shared across a
 [warp](/gpu-glossary/device-software/warp) thanks to the
 [warp scheduler](/gpu-glossary/device-hardware/warp-scheduler). But even spread
-across those 32 threads, that's 512 = 16,384 ÷ 32 MACs per instruction.
+across those 32 threads, that's 64 = 2,048 ÷ 32 MACs per instruction.
 
 For this reason, it is helpful to think of Tensor Cores, and similar hardware
 like the systolic arrays in Google Tensor Processing Units (TPUs), as a form of
