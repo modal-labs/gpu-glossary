@@ -21,7 +21,7 @@ by the [Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler).
 The intermediate level consists of
 [thread blocks](/gpu-glossary/device-software/thread-block), which are also
 known as
-[cooperative thread arrays](gpu-glosary/device-software/cooperative-thread-array)
+[cooperative thread arrays](/gpu-glossary/device-software/cooperative-thread-array)
 in [PTX](/gpu-glossary/device-software/parallel-thread-execution) and
 [SASS](/gpu-glossary/device-software/streaming-assembler). Each
 [thread](/gpu-glossary/device-software/thread) has a unique identifier within
