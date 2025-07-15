@@ -147,7 +147,7 @@ only four Tensor Cores per
 hundreds of [CUDA Cores](/gpu-glossary/device-hardware/cuda-core).
 
 Tensor Cores were introduced in the V100 GPU, which represented a major
-improvement in the suitability of NVIDIA GPUs for large neural network worloads.
+improvement in the suitability of NVIDIA GPUs for large neural network workloads.
 For more, see
 [the NVIDIA white paper introducing the V100](https://images.nvidia.com/content/volta-architecture/pdf/volta-architecture-whitepaper.pdf).
 
