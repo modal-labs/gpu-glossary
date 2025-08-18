@@ -31,7 +31,7 @@ execution.
 
 In the case of NVIDIA GPUs, PTX is forward-compatible: GPUs with a matching or
 higher [compute capability](/gpu-glossary/device-software/compute-capability)
-version will be able to run the program, thanks to this mechanisn of JIT
+version will be able to run the program, thanks to this mechanism of JIT
 compilation.
 
 Some exemplary PTX:
