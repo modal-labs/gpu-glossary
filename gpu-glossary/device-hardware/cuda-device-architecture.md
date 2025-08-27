@@ -42,7 +42,7 @@ and their main subcomponents are the
 For an accessible introduction to the history and design of CUDA hardware
 architectures, see [this blog post](https://fabiensanglard.net/cuda/) by Fabien
 Sanglard. That blog post cites its (high-quality) sources, like NVIDIA's
-[Fermi Compute Architecture white paper](https://fabiensanglard.net/cuda/Fermi_Compute_Architecture_Whitepaper.pdf).
+[Fermi Compute Architecture white paper](https://www.nvidia.com/content/pdf/fermi_white_papers/nvidia_fermi_compute_architecture_whitepaper.pdf).
 The white paper by
 [Lindholm et al. in 2008](https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf)
 introducing the Tesla architecture is both well-written and thorough. The
