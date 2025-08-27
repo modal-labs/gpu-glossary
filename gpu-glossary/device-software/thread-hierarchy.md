@@ -38,7 +38,7 @@ At the highest level, multiple
 [thread blocks](/gpu-glossary/device-software/thread-block) are organized into a
 [thread block grid](/gpu-glossary/device-software/thread-block-grid) that spans
 the entire GPU. [Thread blocks](/gpu-glossary/device-software/thread-block) are
-strictly limited in their coordiation and communication. Blocks within a grid
+strictly limited in their coordination and communication. Blocks within a grid
 execute concurrently with respect to each other, with no guaranteed execution
 order. CUDA programs must be written so that any interleaving of blocks is
 valid, from fully serial to fully parallel. That means

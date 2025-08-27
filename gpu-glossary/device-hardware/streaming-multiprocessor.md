@@ -58,7 +58,7 @@ sophisticated instruction prediction. This extra hardware limits the fraction of
 their silicon area, power, and heat budgets that CPUs can allocate to
 computation.
 
-![GPUs dedicate more of their area to compute (green), and less to control and caching (orange and blue), than do CPUs. Modified from a diagram in [Fabien Sanglard's blog](https://fabiensanglard.net/cuda), itself likely modifed from a diagram in [the CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/).](themed-image://cpu-vs-gpu.svg)
+![GPUs dedicate more of their area to compute (green), and less to control and caching (orange and blue), than do CPUs. Modified from a diagram in [Fabien Sanglard's blog](https://fabiensanglard.net/cuda), itself likely modified from a diagram in [the CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/).](themed-image://cpu-vs-gpu.svg)
 
 For programs or functions like neural network inference or sequential database
 scans for which it is relatively straightforward for programmers to

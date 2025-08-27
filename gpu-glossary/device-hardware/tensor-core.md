@@ -51,7 +51,7 @@ who also
 
 That assembler-level instruction might be produced by a compiler to implement
 [PTX-level](/gpu-glossary/device-software/parallel-thread-execution)
-matrix-multiply-and-accumlate instructions like `wmma` (documented
+matrix-multiply-and-accumulate instructions like `wmma` (documented
 [here](https://docs.nvidia.com/cuda/archive/12.8.0/parallel-thread-execution/index.html#warp-level-matrix-instructions)).
 Those instructions also calculate D = AB + C for matrices A, B, C, and D, but
 are generally compiled into many individual
@@ -109,7 +109,7 @@ The first two instructions compute the matrix multiplication of the first eight
 columns of the input `a`, from `R12`, with the first eight rows of the input
 `b`, from `R11` and `R17`, producing a 16 by 16 matrix, which is stored in `R20`
 and `R24`. This is a sort of "outer product": a tall and skinny matrix
-mutliplied by a short and wide matrix. (`RZ` is a special-purpose "register"
+multiplied by a short and wide matrix. (`RZ` is a special-purpose "register"
 that contains the value `Z`ero).
 
 The second two instructions compute a similar "outer product" for the second
