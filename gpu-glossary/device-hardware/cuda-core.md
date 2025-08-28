@@ -14,16 +14,19 @@ operations.
 Unlike CPU cores, instructions issued to CUDA Cores are not generally
 independently scheduled. Instead, groups of cores are issued the same
 instruction simultaneously by the
-[Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler) but apply it to
-different [registers](/gpu-glossary/device-software/registers). Commonly, these
-groups are of size 32, the size of a [warp](/gpu-glossary/device-software/warp),
-but for contemporary GPUs groups can contain as little as one thread, at a cost
-to performance.
+[Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler) but apply that
+instruction to different [registers](/gpu-glossary/device-software/registers).
+Commonly, these groups are of size 32, the size of a
+[warp](/gpu-glossary/device-software/warp), but for contemporary GPUs groups can
+contain as little as one thread, at a cost to performance.
 
 The term "CUDA Core" is slightly slippery: in different
 [Streaming Multiprocessor architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 CUDA Cores can consist of different units -- a different mixture of 32 bit
-integer and 32 bit and 64 bit floating point units.
+integer and 32 bit and 64 bit floating point units. They are perhaps best
+thought of in contrast to early GPUs, which contained a variety of much more
+specialized compute units mapped onto shader pipelines (see
+[CUDA Device Architecture](/gpu-glossary/device-hardware/cuda-device-architecture)).
 
 So, for example, the
 [H100 whitepaper](https://resources.nvidia.com/en-us-tensor-core) indicates that

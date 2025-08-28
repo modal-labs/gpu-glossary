@@ -22,9 +22,9 @@ matrix as D). The `MMA` stands for "Matrix Multiply and Accumulate". `HMMA16`
 indicates that the inputs are half-precision (`16` bits) and the `F32` indicates
 that the outputs are accumulated into `32` bit (aka single-precision) floats.
 
-`16816` is not single number larger than 16,000. Instead, the string of numbers
-`16`, `8`, `16` denote the dimensions of the matrices. These dimensions are
-generally named `m`, `k`, and `n` by NVIDIA, for example in
+`16816` is not a single number larger than 16,000. Instead, the string of
+numbers `16`, `8`, `16` denote the dimensions of the matrices. These dimensions
+are generally named `m`, `k`, and `n` by NVIDIA, for example in
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) instructions. The
 outer dimensions of A and B, aka `m` and `n`, come first and last, respectively,
 and the shared inner dimension for the accumulation, `k`, is in the middle.
@@ -130,7 +130,7 @@ multiplication using Tensor Cores! For that, see
 [this worklog by Pranjal Shandkar](https://cudaforfun.substack.com/p/outperforming-cublas-on-h100-a-worklog).
 
 Programming Hopper and Blackwell Tensor Cores for maximum performance cannot be
-done in pure CUDA C++, requiring instead
+done in pure [CUDA C++](/gpu-glossary/host-software/cuda-c), requiring instead
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) intrinsics for
 both computation and memory. It is generally recommended to instead use existing
 kernels from kernel libraries like
@@ -140,11 +140,12 @@ or higher-level kernel programming interfaces like
 For an introduction to CUTLASS, see
 [this blog post series by Colfax Research](https://research.colfax-intl.com/cutlass-tutorial-wgmma-hopper/).
 
-Tensor Cores are much larger and less numerous than CUDA Cores. An H100 SXM5 has
-only four Tensor Cores per
+Tensor Cores are much larger and less numerous than
+[CUDA Cores](/gpu-glossary/device-hardware/cuda-core). An H100 SXM5 has only
+four Tensor Cores per
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), i.e. one per
-[Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler), compared to
-hundreds of [CUDA Cores](/gpu-glossary/device-hardware/cuda-core).
+[Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler), but has hundreds
+of [CUDA Cores](/gpu-glossary/device-hardware/cuda-core).
 
 Tensor Cores were introduced in the V100 GPU, which represented a major
 improvement in the suitability of NVIDIA GPUs for large neural network

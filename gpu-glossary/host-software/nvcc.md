@@ -4,7 +4,7 @@ abbreviation: nvcc
 ---
 
 The NVIDIA CUDA Compiler Driver is a toolchain for compiling
-[CUDA C](/gpu-glossary/host-software/cuda-c)/C++ programs. It outputs binary
+[CUDA C/C++](/gpu-glossary/host-software/cuda-c) programs. It outputs binary
 executables that conform to the host ABI and include
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) and/or
 [SASS](/gpu-glossary/device-software/streaming-assembler) to be executed on the

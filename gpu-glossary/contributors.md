@@ -11,8 +11,10 @@ This list is incomplete; you can help by
   material and takes full responsibility for any errors.
 - [Matthew Nappo](https://www.linkedin.com/in/mattnappo/) wrote the initial
   internal "GPU Glossary" document from which this sprung.
-- [You](mailto:glossary@modal.com?subject=Contributing%20to%20GPU%20glossary)
-  can contribute to keep the glossary up-to-date and erratum-free!
+- [Harmya Bhatt](https://twitter.com/racerfunction) of
+  [Tensara](https://tensara.org/) wrote some additional material.
+- [You](https://github.com/modal-labs/gpu-glossary) can contribute to keep the
+  glossary up-to-date and erratum-free!
 
 ### Design
 
@@ -25,9 +27,9 @@ This list is incomplete; you can help by
   [Coding Confessions](https://blog.codingconfessions.com/) and
   [`@Pauleonix`](https://github.com/pauleonix) of the
   [GPU MODE Discord](https://discord.gg/gpumode), from outside Modal, provided
-  valuable external technical review of the glossary. We particularly thank
-  Abhinav for his perspective on comparisons with CPUs and Pauleonix for his
-  detailed insights on GPU hardware internals.
+  valuable external technical review of the first version of the glossary. We
+  particularly thank Abhinav for his perspective on comparisons with CPUs and
+  Pauleonix for his detailed insights on GPU hardware internals.
 - [Akshat Bubna](https://twitter.com/akshat_b),
   [Nathan Wang](https://www.linkedin.com/in/nathan-r-wang/), and
   [Colin Weld](https://www.linkedin.com/in/colin-weld/) gave technical feedback
@@ -51,7 +53,7 @@ correct errors:
 
 <!-- This list is ordered alphabetically by the anchor text, ignoring case -->
 
-- [Alex Zhang](https://alexzhang13.github.io/blog/2024/efficient-dl/)
+- [Alex Zhang](https://alexzhang13.github.io/)
 - [Erik Schultheis](https://www.linkedin.com/in/erik-schultheis-606a52119/)
 - Ismail Zaidi
 - [Michal Nawrot](https://github.com/michalnawrot)

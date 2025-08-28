@@ -3,9 +3,12 @@ title: What is the CUDA Software Platform?
 ---
 
 CUDA stands for _Compute Unified Device Architecture_. Depending on the context,
-"CUDA" can refer to multiple distinct things: a high-level device architecture,
-a parallel programming model for architectures with that design, or a software
-platform that extends high-level languages like C to add that programming model.
+"CUDA" can refer to multiple distinct things: a
+[high-level device architecture](/gpu-glossary/device-hardware/cuda-device-architecture),
+a
+[parallel programming model for architectures with that design](/gpu-glossary/device-software/cuda-programming-model),
+or a software platform that extends high-level languages like C to add that
+programming model.
 
 The vision for CUDA is laid out in the
 [Lindholm et al., 2008](https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf)
