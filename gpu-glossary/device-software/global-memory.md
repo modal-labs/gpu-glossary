@@ -6,7 +6,9 @@ title: What is Global Memory?
 
 As part of the
 [CUDA programming model](/gpu-glossary/device-software/cuda-programming-model),
-each level of the thread group hierarchy has access to matching memory from the
+each level of the
+[thread hierarchy](/gpu-glossary/device-software/thread-hierarchy) has access to
+matching memory from the
 [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy). This memory
 can be used for coordination and communication and is managed by the programmer
 (not the hardware or a runtime).
@@ -28,3 +30,11 @@ implemented in the [GPU's RAM](/gpu-glossary/device-hardware/gpu-ram) and
 allocated from the host using a memory allocator provided by the
 [CUDA Driver API](/gpu-glossary/host-software/cuda-driver-api) or the
 [CUDA Runtime API](/gpu-glossary/host-software/cuda-runtime-api).
+
+The terminology "global" unfortunately collides with the `__global__` keyword in
+[CUDA C/C++](/gpu-glossary/host-software/cuda-c), which annotates functions that
+are launched on the host but run on the device
+([kernels](/gpu-glossary/device-software/kernel)), whereas global memory is only
+on the device. Early CUDA architect Nicholas Wilt wrily notes that this choice
+was made "for maximum developer confusion" in his
+[_CUDA Handbook_](https://www.cudahandbook.com/).

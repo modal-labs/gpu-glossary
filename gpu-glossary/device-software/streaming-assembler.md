@@ -27,8 +27,8 @@ Some exemplary instructions in SASS for the SM90a architecture of Hopper GPUs:
   [Cooperative Thread Array](/gpu-glossary/device-software/cooperative-thread-array)'s
   `I`n`D`ex from its `S`pecial `R`egister to `U`niform `R`egister 4.
 
-As for CPUs, writing this "GPU assembler" by hand is very uncommon. Viewing
-compiler-generated SASS while profiling and editing high-level
+Even more so than for CPUs, writing this "GPU assembler" by hand is very
+uncommon. Viewing compiler-generated SASS while profiling and editing high-level
 [CUDA C/C++](/gpu-glossary/host-software/cuda-c) code or in-line
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) is
 [more common](https://docs.nvidia.com/gameworks/content/developertools/desktop/ptx_sass_assembly_debugging.htm),

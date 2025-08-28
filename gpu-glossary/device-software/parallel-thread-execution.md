@@ -6,7 +6,9 @@ abbreviation: PTX
 Parallel Thread eXecution (PTX) is an intermediate representation (IR) for code
 that will run on a parallel processor (almost always an NVIDIA GPU). It is one
 of the formats output by `nvcc`, the
-[NVIDIA CUDA Compiler Driver](/gpu-glossary/host-software/nvcc).
+[NVIDIA CUDA Compiler Driver](/gpu-glossary/host-software/nvcc). It is
+pronounced "pee-tecks" by many NVIDIA engineers and "pee-tee-ecks" by everyone
+else.
 
 NVIDIA documentation refers to PTX as both a "virtual machine" and an
 "instruction set architecture".
@@ -32,7 +34,9 @@ execution.
 In the case of NVIDIA GPUs, PTX is forward-compatible: GPUs with a matching or
 higher [compute capability](/gpu-glossary/device-software/compute-capability)
 version will be able to run the program, thanks to this mechanism of JIT
-compilation.
+compilation. In this way, PTX is a
+["narrow waist"](https://www.oilshell.org/blog/2022/02/diagrams.html) that
+separates the worlds of hardware and software.
 
 Some exemplary PTX:
 
@@ -93,12 +97,12 @@ is synonymous with "minimum supported
 [Streaming Multiprocessor architecture](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 version".
 
-Writing in-line PTX by hand is uncommon but not unheard of, similar to writing
-in-line `x86_64` assembly, as is done in high-performance vectorized query
-operators in analytical databases and in performance-sensitive sections of
-operating system kernels. At time of writing in October of 2024, in-line PTX is
-the only way to take advantage of some Hopper-specific hardware features like
-the `wgmma` and `tma` instructions, as in
+Writing in-line PTX by hand is uncommon outside of the cutting edge of
+performance, similar to writing in-line `x86_64` assembly, as is done in
+high-performance vectorized query operators in analytical databases and in
+performance-sensitive sections of operating system kernels. At time of writing
+in September of 2025, in-line PTX is the only way to take advantage of some
+Hopper-specific hardware features like the `wgmma` and `tma` instructions, as in
 [Flash Attention 3](https://arxiv.org/abs/2407.08608) or in the
 [Machete w4a16 kernels](https://youtu.be/-4ZkpQ7agXM). Viewing
 [CUDA C/C++](/gpu-glossary/host-software/cuda-c),

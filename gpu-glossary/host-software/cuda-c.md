@@ -11,9 +11,9 @@ CUDA C++ adds several features to C++ to implement the
 including:
 
 - **[Kernel](/gpu-glossary/device-software/kernel) definition** with
-  **`global`**. CUDA [kernels](/gpu-glossary/device-software/kernel) are
-  implemented as C functions that take in pointers and have return type `void`,
-  annotated with this keyword.
+  **`__global__`**. CUDA [kernels](/gpu-glossary/device-software/kernel) are
+  implemented as C++ functions that take in pointers and have return type
+  `void`, annotated with this keyword.
 - **[Kernel](/gpu-glossary/device-software/kernel) launches** with **`<<<>>>`**.
   [Kernels](/gpu-glossary/device-software/kernel) are executed from the CPU host
   using a triple bracket syntax that sets the
@@ -30,5 +30,5 @@ CUDA C++ programs are compiled by a combination of host C/C++ compiler drivers
 like `gcc` and the
 [NVIDIA CUDA Compiler Driver](/gpu-glossary/host-software/nvcc), `nvcc`.
 
-For information on how to use CUDA C++ on Modal, see
+For information on how to use CUDA C++ on [Modal](https://modal.com), see
 [this guide](https://modal.com/docs/guide/cuda).

@@ -15,7 +15,8 @@ GPUs to the point of being a
 - live power and thermal information
 
 For details on these metrics, including how to interpret power and thermal
-readings, see [this page on the Modal docs](/docs/guide/gpu-metrics).
+readings, see
+[this page on the Modal docs](https://modal.com/docs/guide/gpu-metrics).
 
 `nvidia-smi` can also list processes currently using the GPU (`-q`, `--query`,
 `pmon`). Common management tasks include setting persistence mode (`-pm`),
@@ -33,42 +34,42 @@ bindings can be found [here](http://pypi.python.org/pypi/nvidia-ml-py/).
 
 ```
 +-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 550.90.07              Driver Version: 550.90.07      CUDA Version: 12.4     |
+| NVIDIA-SMI 575.57.08              Driver Version: 575.57.08      CUDA Version: 12.9     |
 |-----------------------------------------+------------------------+----------------------+
 | GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
-|   0  NVIDIA H100 80GB HBM3          On  |   00000000:53:00.0 Off |                    0 |
-| N/A   25C    P0             92W /  700W |       1MiB /  81559MiB |      0%      Default |
+|   0  NVIDIA B200                    On  |   00000000:51:00.0 Off |                    0 |
+| N/A   27C    P0            136W / 1000W |       0MiB / 183359MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   1  NVIDIA H100 80GB HBM3          On  |   00000000:64:00.0 Off |                    0 |
-| N/A   27C    P0             93W /  700W |       1MiB /  81559MiB |      0%      Default |
+|   1  NVIDIA B200                    On  |   00000000:52:00.0 Off |                    0 |
+| N/A   25C    P0            140W / 1000W |       0MiB / 183359MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   2  NVIDIA H100 80GB HBM3          On  |   00000000:75:00.0 Off |                    0 |
-| N/A   26C    P0             96W /  700W |       1MiB /  81559MiB |      0%      Default |
+|   2  NVIDIA B200                    On  |   00000000:62:00.0 Off |                    0 |
+| N/A   27C    P0            138W / 1000W |       0MiB / 183359MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   3  NVIDIA H100 80GB HBM3          On  |   00000000:86:00.0 Off |                    0 |
-| N/A   27C    P0             93W /  700W |       1MiB /  81559MiB |      0%      Default |
+|   3  NVIDIA B200                    On  |   00000000:63:00.0 Off |                    0 |
+| N/A   26C    P0            138W / 1000W |       0MiB / 183359MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   4  NVIDIA H100 80GB HBM3          On  |   00000000:97:00.0 Off |                    0 |
-| N/A   27C    P0             95W /  700W |       1MiB /  81559MiB |      0%      Default |
+|   4  NVIDIA B200                    On  |   00000000:75:00.0 Off |                    0 |
+| N/A   27C    P0            139W / 1000W |       0MiB / 183359MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   5  NVIDIA H100 80GB HBM3          On  |   00000000:A8:00.0 Off |                    0 |
-| N/A   25C    P0             91W /  700W |       1MiB /  81559MiB |      0%      Default |
+|   5  NVIDIA B200                    On  |   00000000:76:00.0 Off |                    0 |
+| N/A   25C    P0            140W / 1000W |       0MiB / 183359MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   6  NVIDIA H100 80GB HBM3          On  |   00000000:B9:00.0 Off |                    0 |
-| N/A   26C    P0             91W /  700W |       1MiB /  81559MiB |      0%      Default |
+|   6  NVIDIA B200                    On  |   00000000:86:00.0 Off |                    0 |
+| N/A   27C    P0            142W / 1000W |       0MiB / 183359MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
-|   7  NVIDIA H100 80GB HBM3          On  |   00000000:CA:00.0 Off |                    0 |
-| N/A   24C    P0             91W /  700W |       1MiB /  81559MiB |      0%      Default |
+|   7  NVIDIA B200                    On  |   00000000:87:00.0 Off |                    0 |
+| N/A   26C    P0            138W / 1000W |       0MiB / 183359MiB |      0%      Default |
 |                                         |                        |             Disabled |
 +-----------------------------------------+------------------------+----------------------+
 ```

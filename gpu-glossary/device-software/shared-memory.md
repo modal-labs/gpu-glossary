@@ -7,7 +7,7 @@ title: What is Shared Memory?
 Shared memory is the level of the
 [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy) corresponding
 to the [thread block](/gpu-glossary/device-software/thread-block) level of the
-thread group hierarchy in the
+[thread hierarchy](/gpu-glossary/device-software/thread-hierarchy) in the
 [CUDA programming model](/gpu-glossary/device-software/cuda-programming-model).
 It is generally expected to be much smaller but much faster (in throughput and
 latency) than the [global memory](/gpu-glossary/device-software/global-memory).

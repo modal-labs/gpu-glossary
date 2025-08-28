@@ -10,10 +10,11 @@ memory subsystems of the GPU.
 
 Most importantly for
 [CUDA programmers](/gpu-glossary/host-software/cuda-software-platform) they
-interact with the
+interact directly with the
 [Streaming Multiprocessor](/gpu-glossary/device-hardware/streaming-multiprocessor)'s
 on-chip SRAM [L1 data cache](/gpu-glossary/device-hardware/l1-data-cache) and
-the off-chip, on-device [global RAM](/gpu-glossary/device-hardware/gpu-ram) that
-respectively implement the lowest and highest levels of the
+indirectly with the off-chip, on-device
+[global RAM](/gpu-glossary/device-hardware/gpu-ram) that respectively implement
+the lowest and highest levels of the
 [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy) in the
 [CUDA programming model](/gpu-glossary/device-software/cuda-programming-model).

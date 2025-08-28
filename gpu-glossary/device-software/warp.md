@@ -3,8 +3,9 @@ title: What is a Warp?
 ---
 
 A warp is a group of [threads](/gpu-glossary/device-software/thread) that are
-scheduled together and execute in parallel. All threads in a warp are scheduled
-onto a single
+scheduled together and execute in parallel. All
+[threads](/gpu-glossary/device-software/thread) in a warp are scheduled onto a
+single
 [Streaming Multiprocessor (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor).
 A single [SM](/gpu-glossary/device-hardware/streaming-multiprocessor) typically
 executes multiple warps, at the very least all warps from the same
@@ -15,7 +16,7 @@ Warps are the typical unit of execution on a GPU. In normal execution, all
 [threads](/gpu-glossary/device-software/thread) of a warp execute the same
 instruction in parallel — the so-called "Single-Instruction, Multiple Thread" or
 SIMT model. Warp size is technically a machine-dependent constant, but in
-practice it is 32.
+practice (and elsewhere in this glossary) it is 32.
 
 When a warp is issued an instruction, the results are generally not available
 within a single clock cycle, and so dependent instructions cannot be issued.
@@ -23,11 +24,11 @@ While this is most obviously true for fetches from
 [global memory](/gpu-glossary/device-software/global-memory), which generally
 [go off-chip](/gpu-glossary/device-hardware/gpu-ram), it is also true for some
 arithmetic instructions (see
-[the CUDA C++ Programing Guide's "Performance Guidelines"](https://docs.nvidia.com/cuda/cuda-c-programming-guide/#arithmetic-instructions-throughput-native-arithmetic-instructions)
+[the CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#arithmetic-instructions)
 for a table of results per clock cycle for specific instructions).
 
-Instead of waiting for a warp to return results, when multiple warps are
-scheduled onto a single
+Instead of waiting for an instructions results to return, when multiple warps
+are scheduled onto a single
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), the
 [Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler) will select
 another warp to execute. This "latency-hiding" is how GPUs achieve high
@@ -40,9 +41,9 @@ always a warp ready for the
 
 Warps are not actually part of the
 [CUDA programming model](/gpu-glossary/device-software/cuda-programming-model)'s
-thread group hierarchy. Instead, they are an implementation detail of the
-implementation of that model on NVIDIA GPUs. In that way, they are somewhat akin
-to
+[thread hierarchy](/gpu-glossary/device-software/thread-hierarchy). Instead,
+they are an implementation detail of the implementation of that model on NVIDIA
+GPUs. In that way, they are somewhat akin to
 [cache lines](https://www.nic.uoregon.edu/~khuck/ts/acumem-report/manual_html/ch03s02.html)
 in CPUs: a feature of the hardware that you don't directly control and don't
 need to consider for program correctness, but which is important for achieving

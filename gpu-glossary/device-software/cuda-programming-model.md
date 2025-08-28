@@ -24,14 +24,14 @@ Per the
 [NVIDIA CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/#a-scalable-programming-model),
 there are three key abstractions in the CUDA programming model:
 
-- **Hierarchy of thread groups**. Programs are executed in threads but can make
-  reference to groups of threads in a nested hierarchy, from
+- [**Hierarchy of thread groups**](/gpu-glossary/device-software/thread-hierarchy).
+  Programs are executed in threads but can make reference to groups of threads
+  in a nested hierarchy, from
   [blocks](/gpu-glossary/device-software/thread-block) to
   [grids](/gpu-glossary/device-software/thread-block-grid).
-- **Hierarchy of memories**. Thread groups have access to a
-  [memory resource](/gpu-glossary/device-software/memory-hierarchy) for
-  communication between [threads](/gpu-glossary/device-software/thread) in the
-  group. Accessing the
+- [**Hierarchy of memories**](/gpu-glossary/device-software/memory-hierarchy).
+  Thread groups at each level of the hierarchy have access to a memory resource
+  for communication within the group. Accessing the
   [lowest layer](/gpu-glossary/device-software/shared-memory) of the memory
   hierarchy should be
   [nearly as fast as executing an instruction](/gpu-glossary/device-hardware/l1-data-cache).
@@ -56,7 +56,7 @@ that fail to get faster when the program's user buys a new NVIDIA GPU.
 For example, each [thread block](/gpu-glossary/device-software/thread-block) in
 a CUDA program can coordinate tightly, but coordination between blocks is
 limited. This ensures blocks capture parallelizable components of the program
-and can be scheduled in any order — in the terminology of NVIDIA documentation,
+and can be scheduled in any order — in the terminology of computer architecture,
 the programmer "exposes" this parallelism to the compiler and hardware. When the
 program is executed on a new GPU that has more scheduling units (specifically,
 more

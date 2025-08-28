@@ -19,14 +19,12 @@ penalty.
 
 As when programming CPUs, these registers are not directly manipulated by
 high-level languages like [CUDA C](/gpu-glossary/host-software/cuda-c). They are
-only visible to lower-level languages like
-[Parallel Thread Execution (PTX)](/gpu-glossary/device-software/parallel-thread-execution)
-or
-[Streaming Assembler (SASS)](/gpu-glossary/device-software/streaming-assembler)
-and so are typically managed by a compiler like
-[nvcc](/gpu-glossary/host-software/nvcc). Among the compiler's goals is to limit
-the register space used by each [thread](/gpu-glossary/device-software/thread)
-so that more [thread blocks](/gpu-glossary/device-software/thread-block) can be
+only visible to a lower-level language, here
+[Parallel Thread Execution (PTX)](/gpu-glossary/device-software/parallel-thread-execution).
+They are typically managed by a compiler like `ptaxs`. Among the compiler's
+goals is to limit the register space used by each
+[thread](/gpu-glossary/device-software/thread) so that more
+[thread blocks](/gpu-glossary/device-software/thread-block) can be
 simultaneously scheduled into a single
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor).
 
