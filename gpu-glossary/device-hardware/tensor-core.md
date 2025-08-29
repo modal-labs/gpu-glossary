@@ -134,7 +134,7 @@ done in pure [CUDA C++](/gpu-glossary/host-software/cuda-c), requiring instead
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) intrinsics for
 both computation and memory. It is generally recommended to instead use existing
 kernels from kernel libraries like
-[cuBLAS (CUDA Basic Linear Algebra Subroutines)](/gpu-glossary/host-software/cublas.md)
+[cuBLAS (CUDA Basic Linear Algebra Subroutines)](/gpu-glossary/host-software/cublas)
 or higher-level kernel programming interfaces like
 [CUTLASS (CUDA Templates for Linear Algebra Subroutines)](https://github.com/NVIDIA/cutlass).
 For an introduction to CUTLASS, see
