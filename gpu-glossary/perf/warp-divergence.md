@@ -26,9 +26,10 @@ __global__ void divergent_kernel(float* data, int n) {
 
 When the [threads](/gpu-glossary/device-software/thread) within a
 [warp](/gpu-glossary/device-software/warp) encounter the data-dependent
-conditional, some [threads](/gpu-glossary/device-software/thread) must execute block A while others must execute block
-B, depending on the value at `data[idx]`. Because of this data-dependency and
-the structural constraints of the
+conditional, some [threads](/gpu-glossary/device-software/thread) must execute
+block A while others must execute block B, depending on the value at
+`data[idx]`. Because of this data-dependency and the structural constraints of
+the
 [CUDA programming model](/gpu-glossary/device-software/cuda-programming-model)
 and its implementation in the
 [PTX machine model](/gpu-glossary/device-software/parallel-thread-execution),
@@ -37,8 +38,9 @@ flow inside of the [warp](/gpu-glossary/device-software/warp).
 
 Instead, the [warp scheduler](/gpu-glossary/device-hardware/warp-scheduler) must
 handle concurrent execution of these divergent code paths, which it achieves by
-"masking" some [threads](/gpu-glossary/device-software/thread) so that they don't execute the instruction. This is
-achieved using predicate [registers](/gpu-glossary/device-software/registers).
+"masking" some [threads](/gpu-glossary/device-software/thread) so that they
+don't execute the instruction. This is achieved using predicate
+[registers](/gpu-glossary/device-software/registers).
 
 Let's examine the generated
 [SASS](/gpu-glossary/device-software/streaming-assembler)

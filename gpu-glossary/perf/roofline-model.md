@@ -13,8 +13,7 @@ In the roofline model, two hardware‑derived "roofs" put a "ceiling" on the
 possible performance:
 
 - the "compute roof" – the [peak rate](/gpu-glossary/perf/peak-rate) of the
-  target hardware
-  ([CUDA Cores](/gpu-glossary/device-hardware/cuda-core) or
+  target hardware ([CUDA Cores](/gpu-glossary/device-hardware/cuda-core) or
   [Tensor Cores](/gpu-glossary/device-hardware/tensor-core)), aka the
   [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth)
 - the "memory roof" – the peak memory throughput of the target hardware, aka the
@@ -106,5 +105,5 @@ Applications of those systems that wanted to achieve peak performance would
 therefore need to have high operational intensity for that hardware's
 specialized operations — in the case of GPUs,
 [arithmetic intensity](/gpu-glossary/perf/arithmetic-intensity) for
-[Tensor Cores](/gpu-glossary/device-hardware/tensor-core), which is to say very large
-matrix multiplications.
+[Tensor Cores](/gpu-glossary/device-hardware/tensor-core), which is to say very
+large matrix multiplications.
