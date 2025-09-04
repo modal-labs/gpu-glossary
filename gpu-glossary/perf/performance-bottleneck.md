@@ -22,10 +22,10 @@ In [this talk for Jane Street](https://youtu.be/139UPjoq7Kw?t=1229), Horace He b
 
 And so for GPU [kernels](/gpu-glossary/device-software/kernel), performance bottlenecks fall into three main* categories:
 
-- [compute-bound](/gpu-glossary/perf/FIXME) [kernels](/gpu-glossary/device-software/kernel), bottlenecked by the [arithmetic bandwidth](/gpu-glossary/perf/FIXME) of compute units, like large matrix-matrix multiplication,
-- [memory-bound](/gpu-glossary/perf/FIXME) [kernels](/gpu-glossary/device-software/kernel), bottlenecked by the [bandwidth of memory subsystems](/gpu-glossary/perf/FIXME), like large vector-vector multiplication, and
-- [overhead-bound](/gpu-glossary/perf/FIXME) [kernels](/gpu-glossary/device-software/kernel) bottlenecked by latency, like small array operations.
+- [compute-bound](/gpu-glossary/perf/compute-bound) [kernels](/gpu-glossary/device-software/kernel), bottlenecked by the [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) of compute units, like large matrix-matrix multiplication,
+- [memory-bound](/gpu-glossary/perf/memory-bound) [kernels](/gpu-glossary/device-software/kernel), bottlenecked by the [bandwidth of memory subsystems](/gpu-glossary/perf/memory-bandwidth), like large vector-vector multiplication, and
+- [overhead-bound](/gpu-glossary/perf/overhead) [kernels](/gpu-glossary/device-software/kernel) bottlenecked by latency, like small array operations.
 
-[Roofline model](/gpu-glossary/perf/FIXME) analysis helps identify whether a program's performance is bottlenecked by compute/[arithmetic bandwidth](/gpu-glossary/perf/FIXME) or [memory bandwidth](/gpu-glossary/perf/FIXME).
+[Roofline model](/gpu-glossary/perf/roofline-model) analysis helps quickly identify whether a program's performance is bottlenecked by compute/[arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) or [memory bandwidth](/gpu-glossary/perf/memory-bandwidth).
 
 <small>Of course, *any* resource can become a bottleneck. For instance, power ingress and heat egress can and does bottleneck some GPUs below their theoretical maximum performance. See [this article from NVIDIA](https://developer.nvidia.com/blog/nvidia-sets-new-generative-ai-performance-and-scale-records-in-mlperf-training-v4-0/) explaining a 4% end-to-end performance improvement by redirecting power from the L2 cache to the [Streaming Multiprocessors](/gpu-glossary/device-hardware/streaming-multiprocessor) or [this article from Horace He](https://www.thonking.ai/p/strangely-matrix-multiplications) indicating that matrix multiplication performance varies depending on the input data via the amount of power demanded by transistor switching. But compute and memory are the most important resources and the most common bottlenecks.</small>

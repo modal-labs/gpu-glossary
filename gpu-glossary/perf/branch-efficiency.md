@@ -4,7 +4,7 @@ title: What is branch efficiency?
 
 Branch efficiency measures how often all [threads](/gpu-glossary/device-software/thread) in a [warp](/gpu-glossary/device-software/warp) take the same execution path when encountering conditional statements.
 
-Branch efficiency is calculated as the ratio of uniform control flow decisions to total branch instructions executed. Control flow uniformity is measured at the level of [warps](/gpu-glossary/device-software/warp), and so branch efficiency indicates the absence of [warp divergence](/gpu-glossary/perf/FIXME).
+Branch efficiency is calculated as the ratio of uniform control flow decisions to total branch instructions executed. Control flow uniformity is measured at the level of [warps](/gpu-glossary/device-software/warp), and so branch efficiency indicates the absence of [warp divergence](/gpu-glossary/perf/warp-divergence).
 
 Not all conditionals reduce branch efficiency. The common "bounds-check" fragment that appears in most [kernels](https://godbolt.org/z/d1PsYYPnW)
 
