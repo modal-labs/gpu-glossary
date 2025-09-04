@@ -7,9 +7,11 @@ GPUs are used when the performance of an application is inadequate on general-pu
 That makes programming for them quite different from most other forms of programming.
 
 For a traditional computer application, like a database management system or a web server, correctness is the primary concern.
-If the application loses data or returns incorrect results, then the application has failed.
+If the application loses data or returns incorrect results, then the application has failed. Performance is often ignored.
 
-When programming GPUs, program correctness is necessary but not sufficient.
+When programming GPUs, correctness is often poorly-defined. "Correct" outputs are defined only up to some number of significant bits
+or only for some underdetermined subset of "well-behaved" inputs.
+And correctness is at best necessary but not sufficient.
 If the programmers of the application cannot achieve superior performance (per second, per dollar, or per Watt), then the application has failed.
 Programming GPUs is too hard and too limited, and running them too expensive, for anything else to be the case.
 
