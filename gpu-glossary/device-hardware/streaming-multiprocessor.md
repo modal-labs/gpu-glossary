@@ -47,16 +47,18 @@ CPUs can also run many threads concurrently. But switches between
 clock cycle (over 1000x faster than context switches on a CPU), again powered by
 the SM's [Warp Schedulers](/gpu-glossary/device-hardware/warp-scheduler). The
 volume of available [warps](/gpu-glossary/device-software/warp) and the speed of
-warp switches help hide latency caused by memory reads, thread synchronization,
-or other expensive instructions, ensuring that the compute resources (especially
-the [CUDA Cores](/gpu-glossary/device-hardware/cuda-core) and
-[Tensor Cores](/gpu-glossary/device-hardware/tensor-core)) are well utilized.
+[warp switches](/gpu-glossary/device-hardware/warp-scheduler) help
+[hide latency](/gpu-glossary/perf/latency-hiding) caused by memory reads, thread
+synchronization, or other expensive instructions, ensuring that the
+[arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) provided by the
+[CUDA Cores](/gpu-glossary/device-hardware/cuda-core) and
+[Tensor Cores](/gpu-glossary/device-hardware/tensor-core) is well utilized.
 
-This latency-hiding is the secret to GPUs' strengths. CPUs seek to hide latency
-from end-users and programmers by maintaining large, hardware-managed caches and
-sophisticated instruction prediction. This extra hardware limits the fraction of
-their silicon area, power, and heat budgets that CPUs can allocate to
-computation.
+This [latency-hiding](/gpu-glossary/perf/latency-hiding) is the secret to GPUs'
+strengths. CPUs seek to hide latency from end-users and programmers by
+maintaining large, hardware-managed caches and sophisticated instruction
+prediction. This extra hardware limits the fraction of their silicon area,
+power, and heat budgets that CPUs can allocate to computation.
 
 ![GPUs dedicate more of their area to compute (green), and less to control and caching (orange and blue), than do CPUs. Modified from a diagram in [Fabien Sanglard's blog](https://fabiensanglard.net/cuda), itself likely modified from a diagram in [the CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/).](themed-image://cpu-vs-gpu.svg)
 

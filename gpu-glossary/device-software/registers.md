@@ -26,7 +26,8 @@ goals is to limit the register space used by each
 [thread](/gpu-glossary/device-software/thread) so that more
 [thread blocks](/gpu-glossary/device-software/thread-block) can be
 simultaneously scheduled into a single
-[SM](/gpu-glossary/device-hardware/streaming-multiprocessor).
+[SM](/gpu-glossary/device-hardware/streaming-multiprocessor), increasing
+[occupancy](/gpu-glossary/perf/occupancy).
 
 The registers used in the
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) instruction set

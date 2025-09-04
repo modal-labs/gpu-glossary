@@ -25,5 +25,12 @@ intermediate representation.
 Allocation of physical registers to
 [threads](/gpu-glossary/device-software/thread) in
 [Streaming Assembler (SASS)](/gpu-glossary/device-software/streaming-assembler)
-is managed by a compiler like `ptxas`, which optimizes register usage by
-[thread blocks](/gpu-glossary/device-software/thread-block).
+is managed by a compiler like `ptxas`, which optimizes register file usage by
+[thread blocks](/gpu-glossary/device-software/thread-block). If each
+[thread block](/gpu-glossary/device-software/thread-block) consumes too much of
+the register file (colloquially, high
+"[register pressure](/gpu-glossary/perf/register-pressure)"), then the number of
+concurrently schedulable [threads](/gpu-glossary/device-software/thread) will be
+reduced, leading to a low [occupancy](/gpu-glossary/perf/occupancy) and possibly
+impacting performance by reducing opportunities for
+[latency hiding](/gpu-glossary/perf/latency-hiding).

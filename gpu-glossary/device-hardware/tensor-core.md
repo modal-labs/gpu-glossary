@@ -12,8 +12,10 @@ requirements, which unlocks increased performance (see
 [this talk](https://youtu.be/kLiwvnr4L80?t=868) by Bill Dally, Chief Scientist
 at NVIDIA). Since their introduction in the Volta
 [Streaming Multiprocessor (SM) Architecture](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
-generation, they have been the only way to achieve the highest arithmetic
-throughput on NVIDIA GPUs.
+generation, they have been the only way to achieve the highest
+[arithmetic throughput](/gpu-glossary/perf/arithmetic-bandwidth) on NVIDIA GPUs
+-- providing 100x more floating point operations per second than
+[CUDA Cores](/gpu-glossary/device-hardware/cuda-core).
 
 As an example, the `HMMA16.16816.F32`
 [SASS](/gpu-glossary/device-software/streaming-assembler) instruction calculates
@@ -145,7 +147,9 @@ Tensor Cores are much larger and less numerous than
 four Tensor Cores per
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), i.e. one per
 [Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler), but has hundreds
-of [CUDA Cores](/gpu-glossary/device-hardware/cuda-core).
+of [CUDA Cores](/gpu-glossary/device-hardware/cuda-core). Tensor Cores are the
+primary producers and consumers of
+[Tensor Memory](/gpu-glossary/device-hardware/tensor-memory).
 
 Tensor Cores were introduced in the V100 GPU, which represented a major
 improvement in the suitability of NVIDIA GPUs for large neural network

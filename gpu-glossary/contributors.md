@@ -12,7 +12,10 @@ This list is incomplete; you can help by
 - [Matthew Nappo](https://www.linkedin.com/in/mattnappo/) wrote the initial
   internal "GPU Glossary" document from which this sprung.
 - [Harmya Bhatt](https://twitter.com/racerfunction) of
-  [Tensara](https://tensara.org/) wrote some additional material.
+  [Tensara](https://tensara.org/) co-wrote the material on
+  [performance](/gpu-glossary/perf).
+- [Philip Fabianek](https://www.linkedin.com/in/philip-fabianek/) contributed
+  the [cuBLAS article](/gpu-glossary/host-software/cublas).
 - [You](https://github.com/modal-labs/gpu-glossary) can contribute to keep the
   glossary up-to-date and erratum-free!
 
@@ -30,6 +33,11 @@ This list is incomplete; you can help by
   valuable external technical review of the first version of the glossary. We
   particularly thank Abhinav for his perspective on comparisons with CPUs and
   Pauleonix for his detailed insights on GPU hardware internals.
+- [Alex Zhang](https://alexzhang13.github.io/),
+  [David Wang](https://www.linkedin.com/in/dcw02/),
+  [Mark Saroufim](https://twitter.com/marksaroufim), and
+  [Mit Kotak](https://mitkotak.github.io/) reviewed the material on
+  [performance](/gpu-glossary/perf).
 - [Akshat Bubna](https://twitter.com/akshat_b),
   [Nathan Wang](https://www.linkedin.com/in/nathan-r-wang/), and
   [Colin Weld](https://www.linkedin.com/in/colin-weld/) gave technical feedback

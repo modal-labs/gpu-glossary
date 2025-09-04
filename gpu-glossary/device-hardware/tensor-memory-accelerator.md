@@ -23,9 +23,12 @@ memory resources. The TMA hardware calculates addresses for bulk affine memory
 accesses, i.e. accesses of the form `addr = width * base + offset` for many
 bases and offsets concurrently, which are the most common accesses for arrays.
 Offloading this work to the TMA saves space in the
-[register file](/gpu-glossary/device-hardware/register-file) and cycles of the
-[CUDA Cores](/gpu-glossary/device-hardware/cuda-core). The savings are more
-pronounced for large (KB-scale) accesses to arrays with two or more dimensions.
+[register file](/gpu-glossary/device-hardware/register-file), reducing
+"[register pressure](/gpu-glossary/perf/register-pressure)", and reduces demand
+on the [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) provided
+by the [CUDA Cores](/gpu-glossary/device-hardware/cuda-core). The savings are
+more pronounced for large (KB-scale) accesses to arrays with two or more
+dimensions.
 
 The second advantage comes from the asynchronous execution model of TMA copies.
 A single [CUDA thread](/gpu-glossary/device-software/thread) can trigger a large
@@ -41,4 +44,4 @@ and the
 [NVIDIA Hopper Tuning Guide](https://docs.nvidia.com/cuda/hopper-tuning-guide/index.html#tensor-memory-accelerator).
 
 Note that, despite the name, the Tensor Memory Accelerator does not accelerate
-operations using [tensor memory](/gpu-glossary/device-hardware/tensor-memory).
+operations using [Tensor Memory](/gpu-glossary/device-hardware/tensor-memory).
