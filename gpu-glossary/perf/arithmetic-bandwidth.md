@@ -4,7 +4,7 @@ title: What is arithmetic bandwidth?
 
 Arithmetic bandwidth is the [peak rate](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) at which arithmetic work can be performed by a system.
 
-It represents the theoretical maximum of the achievable throughput for arithmetic operations per second. It determines the height of the “compute roof” in a [roofline model](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) of the hardware.
+It represents the theoretical maximum of the achievable throughput for arithmetic operations per second. It determines the height of the "compute roof" in a [roofline model](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) of the hardware.
 
 There are many arithmetic bandwidths in a complete system — one for each grouping of hardware units that provide bandwidth for executing arithmetic operations.
 

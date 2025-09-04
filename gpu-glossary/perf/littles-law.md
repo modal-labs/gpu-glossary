@@ -8,7 +8,7 @@ Little's Law establishes the amount of concurrency required to fully [hide laten
 concurrency (ops) = latency (s) * throughput (ops/s)
 ```
 
-Little’s Law is described as “the most important of the fundamental laws” of analysis in [the classic quantitative systems textbook by Lazowska and others](https://homes.cs.washington.edu/~lazowska/qsp/Images/Chap_03.pdf).
+Little’s Law is described as "the most important of the fundamental laws" of analysis in [the classic quantitative systems textbook by Lazowska and others](https://homes.cs.washington.edu/~lazowska/qsp/Images/Chap_03.pdf).
 
 Little’s Law determines how many instructions must be "in flight" for GPUs to [hide latency](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) through [warp](https://modal.com/gpu-glossary/device-software/warp) switching by [warp schedulers](https://modal.com/gpu-glossary/device-hardware/warp-scheduler) (aka fine-grained thread-level parallelism, like [simultaneous multi-threading](https://en.wikipedia.org/wiki/Simultaneous_multithreading) in CPUs).
 

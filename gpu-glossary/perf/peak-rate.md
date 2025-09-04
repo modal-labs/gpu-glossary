@@ -6,9 +6,9 @@ Peak rate is the theoretical maximum rate at which a hardware system can complet
 
 Peak rate represents the absolute upper bound of GPU performance when every execution unit operates at maximum capacity with perfect efficiency. It assumes ideal operation, where no resource constraints ([registers](https://modal.com/gpu-glossary/device-software/registers), [memory bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21), synchronization barriers, etc.) create [bottlenecks](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21).
 
-Peak rate is the yardstick against which all achieved performance is measured. It sets the [compute-bound](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) “roof” in a [roofline analysis](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21). It is the denominator in the utilization fraction reported in [pipe utilization](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) metrics and the [ultimate arbiter of GPU utilization](https://modal.com/blog/gpu-utilization-guide).
+Peak rate is the yardstick against which all achieved performance is measured. It sets the [compute-bound](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) "roof" in a [roofline analysis](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21). It is the denominator in the utilization fraction reported in [pipe utilization](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) metrics and the [ultimate arbiter of GPU utilization](https://modal.com/blog/gpu-utilization-guide).
 
-Poetically, NVIDIA engineers often call it the “speed of light” — the limit on program speed imposed by physics.
+Poetically, NVIDIA engineers often call it the "speed of light" — the limit on program speed imposed by physics.
 
 Peak rate is computed directly from the fixed hardware specifications of each GPU architecture.
 

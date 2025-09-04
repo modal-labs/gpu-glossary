@@ -8,7 +8,7 @@ When multiple [threads](https://modal.com/gpu-glossary/device-software/thread) i
 
 When bank conflicts occur, the accesses by the distinct [threads](https://modal.com/gpu-glossary/device-software/thread) are serialized. This reduces memory throughput substantially, that is by an integral factor, preventing the saturation of [memory bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21).
 
-Like other SRAM cache memories, the [shared memory](https://modal.com/gpu-glossary/device-software/shared-memory) in a [Streaming Multiprocessor](https://modal.com/gpu-glossary/device-hardware/streaming-multiprocessor) is organized into groups called “banks”. These banks can be accessed simultaneously, which increases the bandwidth.
+Like other SRAM cache memories, the [shared memory](https://modal.com/gpu-glossary/device-software/shared-memory) in a [Streaming Multiprocessor](https://modal.com/gpu-glossary/device-hardware/streaming-multiprocessor) is organized into groups called "banks". These banks can be accessed simultaneously, which increases the bandwidth.
 
 In GPUs, there are 32 banks, each bank is 4 bytes wide, and consecutive words of 32 bits (not 64 bits; GPUs were designed with 32-bit floats and integers in mind) map to consecutive banks.
 

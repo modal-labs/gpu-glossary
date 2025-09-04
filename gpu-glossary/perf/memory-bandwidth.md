@@ -4,7 +4,7 @@ title: What is memory bandwidth?
 
 Memory bandwidth is the maximum rate at which data can be transferred between different levels of the [memory hierarchy](https://modal.com/gpu-glossary/device-software/memory-hierarchy).
 
-It represents the theoretical maximum achievable throughput for moving data in bytes per second. It determines the slope of the “memory roof” in a [roofline model](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) of the hardware.
+It represents the theoretical maximum achievable throughput for moving data in bytes per second. It determines the slope of the "memory roof" in a [roofline model](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) of the hardware.
 
 There are many memory bandwidths in a complete system — one between each level of the [memory hierarchy](https://modal.com/gpu-glossary/device-software/memory-hierarchy).
 
