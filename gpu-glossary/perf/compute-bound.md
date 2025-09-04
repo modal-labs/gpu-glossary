@@ -33,4 +33,4 @@ are in the TB/s range, and so batches of hundreds of inputs are required
 to provide sufficient [arithmetic intensity](/gpu-glossary/perf/arithmetic-intensity)
 for execution to be compute-bound.
 
-For more on LLM inference, see our [LLM Engineer’s Almanac](https://modal.com/llm-almanac/summary).
+For more on LLM inference, see our [LLM Engineer's Almanac](https://modal.com/llm-almanac/summary).

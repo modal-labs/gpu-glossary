@@ -13,7 +13,7 @@ int idx = blockIdx.x * blockDim.x + threadIdx.x;
     if (idx < n)
 ```
 
-will generally have very high branch efficiency, since most [warps](https://modal.com/gpu-glossary/device-software/warp) will be composed of [threads](https://modal.com/gpu-glossary/device-software/thread) that all have the same value for the conditional, save for a single [warp](https://modal.com/gpu-glossary/device-software/warp) whose [threads](https://modal.com/gpu-glossary/device-software/thread)’ indices are above and below `n`.
+will generally have very high branch efficiency, since most [warps](https://modal.com/gpu-glossary/device-software/warp) will be composed of [threads](https://modal.com/gpu-glossary/device-software/thread) that all have the same value for the conditional, save for a single [warp](https://modal.com/gpu-glossary/device-software/warp) whose [threads](https://modal.com/gpu-glossary/device-software/thread)' indices are above and below `n`.
 
 While CPUs also care about the uniformity of branching behavior, they tend to care primarily about uniformity of branch behavior over time, as part of hardware-controlled branch prediction and speculative execution. That is, as circuits within the CPU accumulate data about a branch as it is encountered multiple times during program execution, the performance should improve.
 

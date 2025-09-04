@@ -4,7 +4,7 @@ title: What does it mean to be memory-bound?
 
 [Kernels](/gpu-glossary/device-software/kernel) that are memory-bound are limited by the [memory bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) of the GPU.
 
-![Roofline diagrams, like the one above, help identify whether a program’s performance is bottlenecked by compute power, memory bandwidth, or something else Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-roofline-model(1)%203.png)
+![Roofline diagrams, like the one above, help identify whether a program's performance is bottlenecked by compute power, memory bandwidth, or something else Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-roofline-model(1)%203.png)
 
 Specifically, they are limited by [the bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) between the [GPU RAM](https://modal.com/gpu-glossary/device-hardware/gpu-ram) and the [local cache](https://modal.com/gpu-glossary/device-hardware/l1-data-cache) of the [Streaming Multiprocessors](https://modal.com/gpu-glossary/device-hardware/streaming-multiprocessor), because the problems of interest for GPU performance generally have [working set sizes](https://en.wikipedia.org/wiki/Working_set_size) much larger than any higher level of the [memory hierarchy](https://modal.com/gpu-glossary/device-software/memory-hierarchy).
 
@@ -27,4 +27,4 @@ By batching multiple inputs together, we can linearly increase the number of flo
 in principle up the point of [compute-boundedness](/gpu-glossary/perf/compute-bound),
 without incurring any additional latency, which implies that the throughput improves linearly in the batch size.
 
-For more on LLM inference, see our [LLM Engineer’s Almanac](https://modal.com/llm-almanac/summary).
+For more on LLM inference, see our [LLM Engineer's Almanac](https://modal.com/llm-almanac/summary).

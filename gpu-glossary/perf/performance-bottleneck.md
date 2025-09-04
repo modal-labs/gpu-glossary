@@ -17,7 +17,7 @@ This approach is formalized in, for instance, the ["Theory of Constraints" by El
 In [this talk for Jane Street](https://youtu.be/139UPjoq7Kw?t=1229), Horace He broke down the work done by the [kernels](/gpu-glossary/device-software/kernel) of programs run on GPUs into three categories:
 
 - Compute (running floating point operations on [CUDA Cores](/gpu-glossary/device-hardware/cuda-core) or [Tensor Cores](/gpu-glossary/device-hardware/tensor-core))
-- Memory (moving data in the system’s [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy))
+- Memory (moving data in the system's [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy))
 - Overhead (everything else)
 
 And so for GPU [kernels](/gpu-glossary/device-software/kernel), performance bottlenecks fall into three main* categories:
@@ -26,6 +26,6 @@ And so for GPU [kernels](/gpu-glossary/device-software/kernel), performance bott
 - [memory-bound](/gpu-glossary/perf/FIXME) [kernels](/gpu-glossary/device-software/kernel), bottlenecked by the [bandwidth of memory subsystems](/gpu-glossary/perf/FIXME), like large vector-vector multiplication, and
 - [overhead-bound](/gpu-glossary/perf/FIXME) [kernels](/gpu-glossary/device-software/kernel) bottlenecked by latency, like small array operations.
 
-[Roofline model](/gpu-glossary/perf/FIXME) analysis helps identify whether a program’s performance is bottlenecked by compute/[arithmetic bandwidth](/gpu-glossary/perf/FIXME) or [memory bandwidth](/gpu-glossary/perf/FIXME).
+[Roofline model](/gpu-glossary/perf/FIXME) analysis helps identify whether a program's performance is bottlenecked by compute/[arithmetic bandwidth](/gpu-glossary/perf/FIXME) or [memory bandwidth](/gpu-glossary/perf/FIXME).
 
 <small>Of course, *any* resource can become a bottleneck. For instance, power ingress and heat egress can and does bottleneck some GPUs below their theoretical maximum performance. See [this article from NVIDIA](https://developer.nvidia.com/blog/nvidia-sets-new-generative-ai-performance-and-scale-records-in-mlperf-training-v4-0/) explaining a 4% end-to-end performance improvement by redirecting power from the L2 cache to the [Streaming Multiprocessors](/gpu-glossary/device-hardware/streaming-multiprocessor) or [this article from Horace He](https://www.thonking.ai/p/strangely-matrix-multiplications) indicating that matrix multiplication performance varies depending on the input data via the amount of power demanded by transistor switching. But compute and memory are the most important resources and the most common bottlenecks.</small>
