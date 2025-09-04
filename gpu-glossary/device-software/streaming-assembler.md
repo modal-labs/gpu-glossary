@@ -34,10 +34,9 @@ uncommon. Viewing compiler-generated SASS while profiling and editing high-level
 [more common](https://docs.nvidia.com/gameworks/content/developertools/desktop/ptx_sass_assembly_debugging.htm),
 especially in the production of the highest-performance kernels. Viewing
 [CUDA C/C++](/gpu-glossary/host-software/cuda-c), SASS, and
-[PTX](/gpu-glossary/device-software/parallel-thread-execution)
-together is supported on
-[Godbolt](https://godbolt.org/z/5r9ej3zjW).
-For more detail on SASS with a focus on performance debugging workflows, see
+[PTX](/gpu-glossary/device-software/parallel-thread-execution) together is
+supported on [Godbolt](https://godbolt.org/z/5r9ej3zjW). For more detail on SASS
+with a focus on performance debugging workflows, see
 [this talk](https://www.youtube.com/watch?v=we3i5VuoPWk) from Arun Demeure.
 
 SASS is _very_ lightly documented — the instructions are listed in the

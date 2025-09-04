@@ -4,15 +4,16 @@ title: What is Tensor Memory?
 
 Tensor Memory is a specialized memory in the
 [Streaming Multiprocessor (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor)
-of certain GPUs, like the [B200](https://modal.com/blog/introducing-b200-h200), for storing the inputs and outputs of
+of certain GPUs, like the [B200](https://modal.com/blog/introducing-b200-h200),
+for storing the inputs and outputs of
 [Tensor Cores](/gpu-glossary/device-hardware/tensor-core).
 
 Tensor Memory access is highly restricted. Data must be moved collectively by
 four [warps](/gpu-glossary/device-software/warp) in a warpgroup, and they can
 move memory only in specific patterns between Tensor Memory and
 [registers](/gpu-glossary/device-software/registers), write
-[shared memory](/gpu-glossary/device-software/shared-memory) to Tensor Memory, or
-issue matrix-multiply-accumulate (MMA) instructions to
+[shared memory](/gpu-glossary/device-software/shared-memory) to Tensor Memory,
+or issue matrix-multiply-accumulate (MMA) instructions to
 [Tensor Cores](/gpu-glossary/device-hardware/tensor-core) that use Tensor Memory
 for specific operands. So much for a
 ["compute-unified" device architecture](/gpu-glossary/device-hardware/cuda-device-architecture)!

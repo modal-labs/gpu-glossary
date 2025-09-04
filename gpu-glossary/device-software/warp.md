@@ -15,13 +15,13 @@ aka [thread block](/gpu-glossary/device-software/thread-block).
 Warps are the typical unit of execution on a GPU. In normal execution, all
 [threads](/gpu-glossary/device-software/thread) of a warp execute the same
 instruction in parallel — the so-called "Single-Instruction, Multiple Thread" or
-SIMT model. When the [threads](/gpu-glossary/device-software/thread)
-in a warp split from one another to execute different instructions,
-also known as [warp divergence](/gpu-glossary/perf/warp-divergence),
-performance generally drops precipitously.
+SIMT model. When the [threads](/gpu-glossary/device-software/thread) in a warp
+split from one another to execute different instructions, also known as
+[warp divergence](/gpu-glossary/perf/warp-divergence), performance generally
+drops precipitously.
 
-Warp size is technically a machine-dependent constant, but in
-practice (and elsewhere in this glossary) it is 32.
+Warp size is technically a machine-dependent constant, but in practice (and
+elsewhere in this glossary) it is 32.
 
 When a warp is issued an instruction, the results are generally not available
 within a single clock cycle, and so dependent instructions cannot be issued.
@@ -39,16 +39,18 @@ Instead of waiting for an instructions results to return, when multiple warps
 are scheduled onto a single
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), the
 [Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler) will select
-another warp to execute. This [latency-hiding](/gpu-glossary/perf/latency-hiding) is how GPUs achieve high
+another warp to execute. This
+[latency-hiding](/gpu-glossary/perf/latency-hiding) is how GPUs achieve high
 throughput and ensure work is always available for all of their cores during
 execution. For this reason, it is often beneficial to maximize the number of
 warps scheduled onto each
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), ensuring there is
 always an [eligible](/gpu-glossary/perf/warp-execution-state) warp for the
-[SM](/gpu-glossary/device-hardware/streaming-multiprocessor) to run.
-The fraction of cycles on which a warp was issued an instruction is known as the
-[issue efficiency](/gpu-glossary/perf/issue-efficiency).
-The degree of concurrency in warp scheduling is known as [occupancy](/gpu-glossary/perf/occupancy).
+[SM](/gpu-glossary/device-hardware/streaming-multiprocessor) to run. The
+fraction of cycles on which a warp was issued an instruction is known as the
+[issue efficiency](/gpu-glossary/perf/issue-efficiency). The degree of
+concurrency in warp scheduling is known as
+[occupancy](/gpu-glossary/perf/occupancy).
 
 Warps are not actually part of the
 [CUDA programming model](/gpu-glossary/device-software/cuda-programming-model)'s

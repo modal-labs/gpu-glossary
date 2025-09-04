@@ -15,14 +15,14 @@ cycle basis — roughly one nanosecond - much like the fine-grained thread-level
 parallelism of simultaneous multi-threading ("hyper-threading") in CPUs, but at
 a much larger scale. The ability of the Warp Schedulers to switch rapidly
 between a large number of concurrent tasks as soon as their instructions'
-operands are available is key to the [latency hiding](/gpu-glossary/perf/latency-hiding)
-capabilities of GPUs.
+operands are available is key to the
+[latency hiding](/gpu-glossary/perf/latency-hiding) capabilities of GPUs.
 
-Full CPU thread context switches take a few hundred to a few
-thousand clock cycles (more like a microsecond than a nanosecond) due to the
-need to save the context of one thread and restore the context of another.
-Additionally, context switches on CPUs lead to reduced locality, further
-reducing performance by increasing cache miss rates (see
+Full CPU thread context switches take a few hundred to a few thousand clock
+cycles (more like a microsecond than a nanosecond) due to the need to save the
+context of one thread and restore the context of another. Additionally, context
+switches on CPUs lead to reduced locality, further reducing performance by
+increasing cache miss rates (see
 [Mogul and Borg, 1991](https://www.researchgate.net/publication/220938995_The_Effect_of_Context_Switches_on_Cache_Performance)).
 
 Because each [thread](/gpu-glossary/device-software/thread) has its own private
@@ -42,4 +42,5 @@ details on the interaction between programmer-managed caches and
 hardware-managed caches in GPUs, see
 [the "Maximize Memory Throughput" section of the CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#maximize-memory-throughput).
 
-The Warp Schedulers also manage the [execution state of warps](/gpu-glossary/perf/warp-execution-state).
+The Warp Schedulers also manage the
+[execution state of warps](/gpu-glossary/perf/warp-execution-state).

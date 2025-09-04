@@ -17,9 +17,9 @@ types (e.g. FP32, FP16), matrix sizes, and
 At runtime, cuBLAS uses (unknown) internal heuristics to select the most
 performant kernel and its optimal launch parameters for the target
 [hardware](/gpu-glossary/device-hardware). As a result, cuBLAS is the foundation
-for a lot of [high-performance](/gpu-glossary/perf) numerical computing on NVIDIA GPUs and is used
-extensively by deep learning frameworks like PyTorch to accelerate their core
-operations.
+for a lot of [high-performance](/gpu-glossary/perf) numerical computing on
+NVIDIA GPUs and is used extensively by deep learning frameworks like PyTorch to
+accelerate their core operations.
 
 The single most common source of error when using cuBLAS is the matrix data
 layout. For historical reasons, and to maintain compatibility with the original

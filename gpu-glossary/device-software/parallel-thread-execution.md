@@ -108,8 +108,6 @@ Hopper-specific hardware features like the `wgmma` and `tma` instructions, as in
 [CUDA C/C++](/gpu-glossary/host-software/cuda-c),
 [SASS](/gpu-glossary/device-software/streaming-assembler), and
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) together is
-supported on
-[Godbolt](https://godbolt.org/z/5r9ej3zjW).
-See the
+supported on [Godbolt](https://godbolt.org/z/5r9ej3zjW). See the
 [NVIDIA "Inline PTX Assembly in CUDA" guide](https://docs.nvidia.com/cuda/inline-ptx-assembly/)
 for details.

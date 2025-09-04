@@ -66,13 +66,15 @@ floating point operation (FLOP) per read from
 [global memory](/gpu-glossary/device-software/global-memory): a multiply and an
 add; a load from `A` and a load from `B`. You'll never
 [use the whole GPU](https://modal.com/blog/gpu-utilization-guide) that way,
-since the [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) of the [CUDA Cores](/gpu-glossary/device-hardware/cuda-core)
-in FLOPs/s is much higher than the [memory bandwidth](/gpu-glossary/perf/memory-bandwidth) between the
+since the [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) of the
+[CUDA Cores](/gpu-glossary/device-hardware/cuda-core) in FLOPs/s is much higher
+than the [memory bandwidth](/gpu-glossary/perf/memory-bandwidth) between the
 [GPU RAM](/gpu-glossary/device-hardware/gpu-ram) and the
 [SMs](/gpu-glossary/device-hardware/streaming-multiprocessor).
 
-We can increase [the ratio of FLOPs to memory operations](/gpu-glossary/perf/arithmetic-intensity) by more carefully mapping the work
-in this algorithm onto the
+We can increase
+[the ratio of FLOPs to memory operations](/gpu-glossary/perf/arithmetic-intensity)
+by more carefully mapping the work in this algorithm onto the
 [thread hierarchy](/gpu-glossary/device-software/thread-hierarchy) and
 [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy). In the
 "tiled" matmul kernel below, inspired by that in Figure 5.9 of the 4th edition
@@ -132,5 +134,5 @@ his Kernel 1 and Kernel 3; the worklog covers ten kernels.
 That worklog and this article only consider writing kernels for execution on the
 [CUDA Cores](/gpu-glossary/device-hardware/cuda-core). The absolute fastest
 matrix multiplication kernels run instead on
-[Tensor Cores](/gpu-glossary/device-hardware/tensor-core),
-which have a much higher [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth).
+[Tensor Cores](/gpu-glossary/device-hardware/tensor-core), which have a much
+higher [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth).

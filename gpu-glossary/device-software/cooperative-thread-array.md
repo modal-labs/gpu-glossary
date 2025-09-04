@@ -27,10 +27,9 @@ runtime, CTA execution order is indeterminate and blocking a CTA on another CTA
 can easily lead to deadlock.
 
 The number of CTAs that can be scheduled onto a single
-[SM](/gpu-glossary/device-hardware/streaming-multiprocessor)
-sets the [achievable occupancy](/gpu-glossary/perf/occupancy)
-and depends on a number
-of factors. Fundamentally, the
+[SM](/gpu-glossary/device-hardware/streaming-multiprocessor) sets the
+[achievable occupancy](/gpu-glossary/perf/occupancy) and depends on a number of
+factors. Fundamentally, the
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor) has a limited set
 of resources — lines in the
 [register file](/gpu-glossary/device-hardware/register-file), "slots" for

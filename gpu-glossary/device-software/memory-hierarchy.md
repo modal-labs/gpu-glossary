@@ -38,5 +38,7 @@ the [thread block](/gpu-glossary/device-software/thread-block) level of the
 thread hierarchy is stored in the
 [L1 data cache](/gpu-glossary/device-hardware/l1-data-cache) of each
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor). Careful management
-of this cache — e.g. loading data into it to support the [maximum number of arithmetic operations before new data is loaded](/gpu-glossary/perf/arithmetic-intensity) — is key to the art of designing
-[high-performance](/gpu-glossary/perf) CUDA [kernels](/gpu-glossary/device-software/kernel).
+of this cache — e.g. loading data into it to support the
+[maximum number of arithmetic operations before new data is loaded](/gpu-glossary/perf/arithmetic-intensity)
+— is key to the art of designing [high-performance](/gpu-glossary/perf) CUDA
+[kernels](/gpu-glossary/device-software/kernel).
