@@ -26,7 +26,7 @@ __global__ void divergent_kernel(float* data, int n) {
 
 When the [threads](/gpu-glossary/device-software/thread) within a
 [warp](/gpu-glossary/device-software/warp) encounter the data-dependent
-conditional, some threads must execute block A while others must execute block
+conditional, some [threads](/gpu-glossary/device-software/thread) must execute block A while others must execute block
 B, depending on the value at `data[idx]`. Because of this data-dependency and
 the structural constraints of the
 [CUDA programming model](/gpu-glossary/device-software/cuda-programming-model)
@@ -37,7 +37,7 @@ flow inside of the [warp](/gpu-glossary/device-software/warp).
 
 Instead, the [warp scheduler](/gpu-glossary/device-hardware/warp-scheduler) must
 handle concurrent execution of these divergent code paths, which it achieves by
-"masking" some threads so that they don't execute the instruction. This is
+"masking" some [threads](/gpu-glossary/device-software/thread) so that they don't execute the instruction. This is
 achieved using predicate [registers](/gpu-glossary/device-software/registers).
 
 Let's examine the generated
@@ -64,7 +64,7 @@ After loading the data into `R4` (`L1`), all 32
 to `R0`. Only those for whom `P0` is true then execute the code in B (`L4`),
 over-writing the value written to `R0` in `L3`. On this instruction, the
 [warp](/gpu-glossary/device-software/warp) is said to be "divergent". On `L5`,
-all [threads](/gpu-glossary/device-software/threads) are back to executing the
+all [threads](/gpu-glossary/device-software/thread) are back to executing the
 same code. Once the
 [warp scheduler](/gpu-glossary/device-hardware/warp-scheduler) brings them back
 into alignment by issuing the same instruction on the same clock cycle, the warp

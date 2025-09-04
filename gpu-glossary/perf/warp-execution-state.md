@@ -99,6 +99,6 @@ pool of eligible [warps](/gpu-glossary/device-software/warp), select one if
 there are any, and issue it an instruction. There is a selected
 [warp](/gpu-glossary/device-software/warp) on each cycle with an eligible
 [warp](/gpu-glossary/device-software/warp). The fraction of
-[active cycles](/gpu-glossary/perf/active-cycles) on which a
+[active cycles](/gpu-glossary/perf/active-cycle) on which a
 [warp](/gpu-glossary/device-software/warp) is selected and an instruction is
 issued is the [issue efficiency](/gpu-glossary/perf/issue-efficiency).

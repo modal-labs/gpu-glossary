@@ -9,7 +9,7 @@ GPU.
 ![Roofline diagrams, like the one above, help identify whether a program's performance is bottlenecked by compute power, memory bandwidth, or something else Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](themed-image://roofline-model.svg)
 
 Specifically, they are limited by
-[the bandwidth](/gpu-glossary/perf/memort-bandwidth) between the
+[the bandwidth](/gpu-glossary/perf/memory-bandwidth) between the
 [GPU RAM](/gpu-glossary/device-hardware/gpu-ram) and the
 [local cache](/gpu-glossary/device-hardware/l1-data-cache) of the
 [Streaming Multiprocessors](/gpu-glossary/device-hardware/streaming-multiprocessor),

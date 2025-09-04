@@ -22,7 +22,7 @@ fine-grained thread-level parallelism, like
 in CPUs).
 
 If a GPU has a peak throughput of 1 instruction per cycle and a
-[memory access latency](/gpu-glossary/performance/warp-latency) of 400 cycles,
+memory access latency of 400 cycles,
 then 400 concurrent memory operations are needed across all
 [active warps](/gpu-glossary/perf/warp-execution-state) in a program. If the
 throughput goes up to 10 instructions per cycle, then the program needs 4000

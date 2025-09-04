@@ -14,7 +14,7 @@ possible performance:
 
 - the "compute roof" – the [peak rate](/gpu-glossary/perf/peak-rate) of the
   target hardware
-  ([CUDA Cores](modal.com/gpu-glossary/device-hardware/cuda-core) or
+  ([CUDA Cores](/gpu-glossary/device-hardware/cuda-core) or
   [Tensor Cores](/gpu-glossary/device-hardware/tensor-core)), aka the
   [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth)
 - the "memory roof" – the peak memory throughput of the target hardware, aka the
@@ -49,7 +49,7 @@ pushed the ridge points of systems to the right over time.
 The compute and memory roofs need only be derived once per subsystem (though
 importantly they vary depending on the subsystem, not just the system;
 [Tensor Cores](/gpu-glossary/device-hardware/tensor-core) have more FLOPS than
-[CUDA Cores](modal.com/gpu-glossary/device-hardware/cuda-core)).
+[CUDA Cores](/gpu-glossary/device-hardware/cuda-core)).
 
 NVIDIA's NSight Compute tool for [kernel](/gpu-glossary/device-software/kernel)
 performance engineering automatically performs roofline analysis for profiled
@@ -106,5 +106,5 @@ Applications of those systems that wanted to achieve peak performance would
 therefore need to have high operational intensity for that hardware's
 specialized operations — in the case of GPUs,
 [arithmetic intensity](/gpu-glossary/perf/arithmetic-intensity) for
-[Tensor Cores](/gpu-glossary/perf/tensor-core), which is to say very large
+[Tensor Cores](/gpu-glossary/device-hardware/tensor-core), which is to say very large
 matrix multiplications.

@@ -13,7 +13,7 @@ requirements, which unlocks increased performance (see
 at NVIDIA). Since their introduction in the Volta
 [Streaming Multiprocessor (SM) Architecture](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 generation, they have been the only way to achieve the highest
-[arithmetic throughput](/gpu-glossary/pref/arithmetic-bandwidth) on NVIDIA GPUs
+[arithmetic throughput](/gpu-glossary/perf/arithmetic-bandwidth) on NVIDIA GPUs
 -- providing 100x more floating point operations per second than
 [CUDA Cores](/gpu-glossary/device-hardware/cuda-core).
 
