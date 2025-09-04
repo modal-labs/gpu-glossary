@@ -21,8 +21,6 @@ The compute and memory roofs need only be derived once per subsystem (though imp
 
 NVIDIA's NSight Compute tool for [kernel](/gpu-glossary/device-software/kernel) performance engineering automatically performs roofline analysis for profiled [kernels](/gpu-glossary/device-software/kernel).
 
-![A sample roofline analysis output by NVIDIA's NSight Compute/`ncu` kernel performance engineering tool. This analysis indicates that the kernel is bound by overhead.](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/image.png)
-
 The roofline model is deceptively simple. Note that, for instance, system latencies do not appear anywhere in the diagram, only bandwidths and throughputs. It is simple because it is highly opinionated, and understanding those opinions and their reasoning is key to understanding the power and the proper application of the roofline.
 
 The roofline model was introduced by Samuel Williams, Andrew Waterman, and David Patterson in [this 2008 paper](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf). They introduced it in the face of several hardware scaling trends that shaped system architectures before and since.
