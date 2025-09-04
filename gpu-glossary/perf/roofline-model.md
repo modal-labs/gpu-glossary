@@ -4,7 +4,7 @@ title: What is the roofline model?
 
 The roofline model is a simplified, visual model of performance used to quickly determine whether a program is bound by [memory bandwidth](/gpu-glossary/perf/FIXME) or [arithmetic bandwidth](/gpu-glossary/perf/FIXME).
 
-![[Kernels](/gpu-glossary/device-software/kernel) to the left of the ridge point are [limited by the bandwidth of the memory subsystem](/gpu-glossary/perf/FIXME) and [kernels](/gpu-glossary/device-software/kernel) to the right of the ridge point are [limited by the bandwidth of the arithmetic subsystem](/gpu-glossary/perf/FIXME). Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf), which introduced the roofline model.](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-roofline-model(1)%201.png)
+![[Kernels](/gpu-glossary/device-software/kernel) to the left of the ridge point are [limited by the bandwidth of the memory subsystem](/gpu-glossary/perf/FIXME) and [kernels](/gpu-glossary/device-software/kernel) to the right of the ridge point are [limited by the bandwidth of the arithmetic subsystem](/gpu-glossary/perf/FIXME). Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf), which introduced the roofline model.](themed-image://FIXMEroofline-model(1)%201.png)
 
 In the roofline model, two hardware‑derived "roofs" put a "ceiling" on the possible performance:
 

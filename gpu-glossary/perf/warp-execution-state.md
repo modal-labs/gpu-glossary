@@ -4,7 +4,7 @@ title: What is warp execution state?
 
 The state of the [warps](/gpu-glossary/device-software/warp) running a [kernel](/gpu-glossary/device-software/kernel) is described with a number of non-exclusive adjectives: active, stalled, eligible, and selected.
 
-![Warp execution states are indicated by color and transparency. Diagram inspired by the [CUDA Techniques to Maximize Compute and Instruction Throughput](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-cycles(2).png)
+![Warp execution states are indicated by color and transparency. Diagram inspired by the [CUDA Techniques to Maximize Compute and Instruction Throughput](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](themed-image://FIXMEcycles(2).png)
 
 A [warp](/gpu-glossary/device-software/warp) is considered *active* from the time its [threads](/gpu-glossary/device-software/thread) begin executing to the time when all [threads](/gpu-glossary/device-software/thread) in the [warp](/gpu-glossary/device-software/warp) have exited from the [kernel](/gpu-glossary/device-software/kernel). Active [warps](/gpu-glossary/device-software/warp) form the pool from which [warp schedulers](/gpu-glossary/device-hardware/warp-scheduler) select candidates for instruction issue each cycle (i.e. to be put in one of the issue slots).
 

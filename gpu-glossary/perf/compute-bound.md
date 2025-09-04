@@ -4,7 +4,7 @@ title: What does it mean to be compute-bound?
 
 [Kernels](/gpu-glossary/device-software/kernel) that are compute-bound are limited by the [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) of the [CUDA Cores](/gpu-glossary/device-hardware/cuda-core) or [Tensor Cores](/gpu-glossary/device-hardware/tensor-core).
 
-![In the [roofline diagram](/gpu-glossary/perf/roofline-model) above, [kernels](/gpu-glossary/device-software/kernel) underneath the blue line are compute-bound. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-roofline-model(1)%202.png)
+![In the [roofline diagram](/gpu-glossary/perf/roofline-model) above, [kernels](/gpu-glossary/device-software/kernel) underneath the blue line are compute-bound. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](themed-image://FIXMEroofline-model(1)%202.png)
 
 Compute-bound kernels are characterized by high [arithmetic intensity](/gpu-glossary/perf/FIXME) (many arithmetic operations per byte of memory loaded or stored). [Utilization of arithmetic pipes](/gpu-glossary/perf/FIXME) is the limiting factor for a compute-bound kernel.
 

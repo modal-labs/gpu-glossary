@@ -4,7 +4,7 @@ title: What is a bank conflict?
 
 When multiple [threads](/gpu-glossary/device-software/thread) in a [warp](/gpu-glossary/device-software/warp) simultaneously request memory within the same bank in [shared memory](/gpu-glossary/device-software/shared-memory) but across distinct addresses, we say there is a bank conflict.
 
-![When [threads](/gpu-glossary/device-software/thread) access distinct [shared memory](/gpu-glossary/device-software/shared-memory) banks, accesses are serviced in parallel (left). When they all access the same bank, but at different addresses, accesses are serialized (right).](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-bank-conflict.png)
+![When [threads](/gpu-glossary/device-software/thread) access distinct [shared memory](/gpu-glossary/device-software/shared-memory) banks, accesses are serviced in parallel (left). When they all access the same bank, but at different addresses, accesses are serialized (right).](themed-image://FIXMEbank-conflict.png)
 
 When bank conflicts occur, the accesses by the distinct [threads](/gpu-glossary/device-software/thread) are serialized. This reduces memory throughput substantially, that is by an integral factor, preventing the saturation of [memory bandwidth](/gpu-glossary/perf/FIXME).
 

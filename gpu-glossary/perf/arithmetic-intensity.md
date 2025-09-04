@@ -4,7 +4,7 @@ title: What is arithmetic intensity?
 
 Arithmetic intensity is the ratio of arithmetic operations to memory operations in a [kernel](/gpu-glossary/device-software/kernel).
 
-![In the [roofline model](/gpu-glossary/perf/FIXME), operational/arithmetic intensity is plotted on the horizontal axis. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-roofline-model(1)%204.png)
+![In the [roofline model](/gpu-glossary/perf/FIXME), operational/arithmetic intensity is plotted on the horizontal axis. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](themed-image://FIXMEroofline-model(1)%204.png)
 
 A high arithmetic intensity indicates that a [kernel](/gpu-glossary/device-software/kernel) performs many arithmetic operations per byte loaded. Due to the high ratio between [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) and [memory bandwidth](/gpu-glossary/perf/FIXME) in modern GPUs, the most efficient kernels have high arithmetic intensity. That means that when elevating a memory [bottleneck](/gpu-glossary/perf/FIXME), we can often shift work from the memory subsystem to the compute subsystem, saving on [memory bandwidth](/gpu-glossary/perf/FIXME) but adding to the load on the arithmetic units.
 
