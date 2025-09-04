@@ -4,7 +4,7 @@ title: What is warp divergence?
 
 Warp divergence occurs when threads within a [warp](/gpu-glossary/device-software/warp) take different execution paths due to control flow statements.
 
-For example, consider this [kernel](https://godbolt.org/z/d1PsYYPnW):
+For example, consider this [kernel](/gpu-glossary/device-software/kernel):
 
 ```cpp
 __global__ void divergent_kernel(float* data, int n) {

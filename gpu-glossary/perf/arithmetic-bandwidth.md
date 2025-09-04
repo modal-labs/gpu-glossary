@@ -20,7 +20,7 @@ Representative bandwidth numbers for NVIDIA data center GPUs between the Ampere 
 [Streaming Multiprocessor architecures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 are listed in the table below.
 
-| **System (Compute / Memory)** | **[Arithmetic Bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) (TFLOPs/s)** | **[Memory Bandwidth](/gpu-glossary/perf/memory-bandwidth) (TB/s)** | **[Ridge Point](/gpu-glossary/perf/roofline-model) (FLOPs/byte)** |
+| **System (Compute / Memory)** | **Arithmetic Bandwidth (TFLOPs/s)** | **[Memory Bandwidth](/gpu-glossary/perf/memory-bandwidth) (TB/s)** | **[Ridge Point](/gpu-glossary/perf/roofline-model) (FLOPs/byte)** |
 | :-- | --: | --: | --: |
 | [A100 80GB SXM BF16 TC / HBM2e](https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf) | 312 | 2 | 156 |
 | [H100 SXM BF16 TC / HBM3](https://resources.nvidia.com/en-us-gpu-resources/h100-datasheet-24306) | 989 | 3.35 | 295 |

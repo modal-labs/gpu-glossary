@@ -15,7 +15,7 @@ that make up a typical workload.
 
 Large diffusion model inference workloads are generally compute-bound. Contemporary large language model inference workloads are often compute-bound during batch prefill/prompt processing, when each weight can be loaded into [shared memory](/gpu-glossary/device-software/shared-memory) once and then used across many tokens.
 
-Let's do a simple estimation, inspired by [kipperrii]'s
+Let's do a simple estimation, inspired by [kipperrii](https://twitter.com/kipperrii)'s
 [Transformer inference arithmetic](https://kipp.ly/transformer-inference-arithmetic) framework,
 of the minimum latency between tokens (inter-token latency or time per output token) for compute-bound Transformer language model inference.
 Assume the model has 500B parameters, stored in 16-bit precision, for a total of 1 TB.
