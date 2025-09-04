@@ -14,7 +14,7 @@ There are two types of occupancy measurements:
   kernel launch configuration and device capabilities.
 - _Achieved Occupancy_ measures the actual occupancy during
   [kernel](/gpu-glossary/device-software/kernel) execution, aka on
-  [active cycles](/gpu-glossary/perf/active-cycles).
+  [active cycles](/gpu-glossary/perf/active-cycle).
 
 As part of the
 [CUDA programming model](/gpu-glossary/device-software/cuda-programming-model),
