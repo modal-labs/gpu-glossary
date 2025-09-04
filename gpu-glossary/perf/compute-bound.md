@@ -2,7 +2,7 @@
 title: What does it mean to be compute-bound?
 ---
 
-[Kernels](/gpu-glossary/device-software/kernel) that are compute-bound are limited by the [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) of the [CUDA Cores](https://modal.com/gpu-glossary/device-hardware/cuda-core) or [Tensor Cores](https://modal.com/gpu-glossary/device-hardware/tensor-core).
+[Kernels](/gpu-glossary/device-software/kernel) that are compute-bound are limited by the [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) of the [CUDA Cores](/gpu-glossary/device-hardware/cuda-core) or [Tensor Cores](/gpu-glossary/device-hardware/tensor-core).
 
 ![In the [roofline diagram](/gpu-glossary/perf/roofline-model) above, [kernels](/gpu-glossary/device-software/kernel) underneath the blue line are compute-bound. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-roofline-model(1)%202.png)
 
@@ -13,7 +13,7 @@ as part of the [roofline model](/gpu-glossary/perf/roofline-model),
 but with a bit of squinting it can be generalized to cover the multiple [kernels](/gpu-glossary/device-software/kernel)
 that make up a typical workload.
 
-Large diffusion model inference workloads are generally compute-bound. Contemporary large language model inference workloads are often compute-bound during batch prefill/prompt processing, when each weight can be loaded into [shared memory](https://modal.com/gpu-glossary/device-software/shared-memory) once and then used across many tokens.
+Large diffusion model inference workloads are generally compute-bound. Contemporary large language model inference workloads are often compute-bound during batch prefill/prompt processing, when each weight can be loaded into [shared memory](/gpu-glossary/device-software/shared-memory) once and then used across many tokens.
 
 Let's do a simple estimation, inspired by [kipperrii]'s
 [Transformer inference arithmetic](https://kipp.ly/transformer-inference-arithmetic) framework,
