@@ -2,13 +2,13 @@
 title: What does it mean to be memory-bound?
 ---
 
-[Kernels](/gpu-glossary/device-software/kernel) that are memory-bound are limited by the [memory bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) of the GPU.
+[Kernels](/gpu-glossary/device-software/kernel) that are memory-bound are limited by the [memory bandwidth](/gpu-glossary/perf/FIXME) of the GPU.
 
 ![Roofline diagrams, like the one above, help identify whether a program's performance is bottlenecked by compute power, memory bandwidth, or something else Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-roofline-model(1)%203.png)
 
-Specifically, they are limited by [the bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) between the [GPU RAM](/gpu-glossary/device-hardware/gpu-ram) and the [local cache](/gpu-glossary/device-hardware/l1-data-cache) of the [Streaming Multiprocessors](/gpu-glossary/device-hardware/streaming-multiprocessor), because the problems of interest for GPU performance generally have [working set sizes](https://en.wikipedia.org/wiki/Working_set_size) much larger than any higher level of the [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy).
+Specifically, they are limited by [the bandwidth](/gpu-glossary/perf/FIXME) between the [GPU RAM](/gpu-glossary/device-hardware/gpu-ram) and the [local cache](/gpu-glossary/device-hardware/l1-data-cache) of the [Streaming Multiprocessors](/gpu-glossary/device-hardware/streaming-multiprocessor), because the problems of interest for GPU performance generally have [working set sizes](https://en.wikipedia.org/wiki/Working_set_size) much larger than any higher level of the [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy).
 
-Memory-bound kernels have a lower [arithmetic intensity](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) (fewer operations per byte moved), relative to the ridge point of their [roofline model](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21).
+Memory-bound kernels have a lower [arithmetic intensity](/gpu-glossary/perf/FIXME) (fewer operations per byte moved), relative to the ridge point of their [roofline model](/gpu-glossary/perf/FIXME).
 
 Technically, memory-boundedness is only defined for a single [kernel](/gpu-glossary/device-software/kernel),
 as part of the [roofline model](/gpu-glossary/perf/roofline-model),

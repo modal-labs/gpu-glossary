@@ -6,7 +6,7 @@ When multiple [threads](/gpu-glossary/device-software/thread) in a [warp](/gpu-g
 
 ![When [threads](/gpu-glossary/device-software/thread) access distinct [shared memory](/gpu-glossary/device-software/shared-memory) banks, accesses are serviced in parallel (left). When they all access the same bank, but at different addresses, accesses are serialized (right).](GPU%20Performance%20Glossary%202251e7f1694980bd93e4f67a75c6e489/terminal-bank-conflict.png)
 
-When bank conflicts occur, the accesses by the distinct [threads](/gpu-glossary/device-software/thread) are serialized. This reduces memory throughput substantially, that is by an integral factor, preventing the saturation of [memory bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21).
+When bank conflicts occur, the accesses by the distinct [threads](/gpu-glossary/device-software/thread) are serialized. This reduces memory throughput substantially, that is by an integral factor, preventing the saturation of [memory bandwidth](/gpu-glossary/perf/FIXME).
 
 Like other SRAM cache memories, the [shared memory](/gpu-glossary/device-software/shared-memory) in a [Streaming Multiprocessor](/gpu-glossary/device-hardware/streaming-multiprocessor) is organized into groups called "banks". These banks can be accessed simultaneously, which increases the bandwidth.
 

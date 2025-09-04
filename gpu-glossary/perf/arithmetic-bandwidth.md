@@ -2,9 +2,9 @@
 title: What is arithmetic bandwidth?
 ---
 
-Arithmetic bandwidth is the [peak rate](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) at which arithmetic work can be performed by a system.
+Arithmetic bandwidth is the [peak rate](/gpu-glossary/perf/FIXME) at which arithmetic work can be performed by a system.
 
-It represents the theoretical maximum of the achievable throughput for arithmetic operations per second. It determines the height of the "compute roof" in a [roofline model](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) of the hardware.
+It represents the theoretical maximum of the achievable throughput for arithmetic operations per second. It determines the height of the "compute roof" in a [roofline model](/gpu-glossary/perf/FIXME) of the hardware.
 
 There are many arithmetic bandwidths in a complete system — one for each grouping of hardware units that provide bandwidth for executing arithmetic operations.
 
@@ -20,7 +20,7 @@ Representative bandwidth numbers for NVIDIA data center GPUs between the Ampere 
 [Streaming Multiprocessor architecures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 are listed in the table below.
 
-| **System (Compute / Memory)** | **[Arithmetic Bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) (TFLOPs/s)** | **[Memory Bandwidth](https://www.notion.so/GPU-Performance-Glossary-2251e7f1694980bd93e4f67a75c6e489?pvs=21) (TB/s)** | **Ridge Point (FLOPs/byte)** |
+| **System (Compute / Memory)** | **[Arithmetic Bandwidth](/gpu-glossary/perf/FIXME) (TFLOPs/s)** | **[Memory Bandwidth](/gpu-glossary/perf/FIXME) (TB/s)** | **Ridge Point (FLOPs/byte)** |
 | :-- | --: | --: | --: |
 | [A100 80GB SXM BF16 TC / HBM2e](https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf) | 312 | 2 | 156 |
 | [H100 SXM BF16 TC / HBM3](https://resources.nvidia.com/en-us-gpu-resources/h100-datasheet-24306) | 989 | 3.35 | 295 |
