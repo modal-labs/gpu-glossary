@@ -11,8 +11,8 @@ web server, correctness is the primary concern. If the application loses data or
 returns incorrect results, then the application has failed. Performance is often
 ignored.
 
-When programming GPUs, correctness is often poorly-defined. "Correct" outputs
-are defined only up to some number of significant bits or only for some
+When programming GPUs, correctness is typically poorly-defined. "Correct"
+outputs are defined only up to some number of significant bits or only for some
 underdetermined subset of "well-behaved" inputs. And correctness is at best
 necessary but not sufficient. If the programmers of the application cannot
 achieve superior performance (per second, per dollar, or per Watt), then the
