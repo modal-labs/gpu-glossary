@@ -9,7 +9,7 @@ profiling execution of [CUDA C++](/gpu-glossary/host-software/cuda-c),
 [SASS](/gpu-glossary/device-software/streaming-assembler) code on GPUs.
 Critically, it synchronizes timestamps across the CPU host and the GPU device.
 
-CUPTI's interfaces are consumed by, for example, the NSight Systems Profiler and
+CUPTI's interfaces are consumed by, for example, the [NSight Systems Profiler](/gpu-glossary/host-software/nsight-systems) and
 the [PyTorch Profiler](https://modal.com/docs/examples/torch_profiling).
 
 You can find its documentation [here](https://docs.nvidia.com/cupti/).

@@ -12,7 +12,7 @@ This list is incomplete; you can help by
 - [Matthew Nappo](https://www.linkedin.com/in/mattnappo/) wrote the initial
   internal "GPU Glossary" document from which this sprung.
 - [Harmya Bhatt](https://twitter.com/racerfunction) of
-  [Tensara](https://tensara.org/) wrote some additional material.
+  [Tensara](https://tensara.org/) co-wrote the material on [performance](/gpu-glossary/perf).
 - [You](https://github.com/modal-labs/gpu-glossary) can contribute to keep the
   glossary up-to-date and erratum-free!
 

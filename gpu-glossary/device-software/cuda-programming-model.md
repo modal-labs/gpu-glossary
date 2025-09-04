@@ -73,6 +73,6 @@ model is implemented in software by an instruction set architecture
 and low-level assembly language
 [(Streaming Assembler, or SASS)](/gpu-glossary/device-software/streaming-assembler).
 For example, the [thread block](/gpu-glossary/device-software/thread-block)
-level of the thread hierarchy is implemented via
+level of the [thread hierarchy](/gpu-glossary/device-software/thread-hierarchy) is implemented via
 [cooperative thread arrays](/gpu-glossary/device-software/cooperative-thread-array)
 in these languages.

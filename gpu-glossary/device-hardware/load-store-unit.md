@@ -9,7 +9,7 @@ memory subsystems of the GPU.
 ![The internal architecture of an H100 SM. Load/Store Units are shown in pink, along with the [Special Function Units](/gpu-glossary/device-hardware/special-function-unit). Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
 
 Most importantly for
-[CUDA programmers](/gpu-glossary/host-software/cuda-software-platform) they
+[CUDA programmers](/gpu-glossary/host-software/cuda-software-platform), they
 interact directly with the
 [Streaming Multiprocessor](/gpu-glossary/device-hardware/streaming-multiprocessor)'s
 on-chip SRAM [L1 data cache](/gpu-glossary/device-hardware/l1-data-cache) and
