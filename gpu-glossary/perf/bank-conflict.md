@@ -46,7 +46,7 @@ __shared__ float data[1024];  // array in shared memory
 
 // all 32 threads access consecutive elements of data
 int tid = threadIdx.x;
-float value = data[tid];  // addresses: 0x000, 0x001, 0x002, ...
+float value = data[tid];  // addresses: 0x00, 0x04, 0x08, ...
 ```
 
 All 32 accesses complete in one memory transaction because each
