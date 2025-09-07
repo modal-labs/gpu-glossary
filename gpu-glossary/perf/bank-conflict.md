@@ -25,10 +25,10 @@ In GPUs, there are 32 banks, each bank is 4 bytes wide, and consecutive words of
 mind) map to consecutive banks.
 
 ```
-Address:  0x00  0x04  0x08  0x0C  0x10  0x14  0x18  0x1C  ...  0x7F
+Address:  0x00  0x04  0x08  0x0C  0x10  0x14  0x18  0x1C  ...  0x7C
 Bank:       0     1     2     3     4     5     6     7   ...    31
 
-Address:  0x80  0x84  0x88  0x8C  0x90  0x94  0x98  0x9C  ...  0x7F
+Address:  0x80  0x84  0x88  0x8C  0x90  0x94  0x98  0x9C  ...  0xFC
 
 Bank:       0     1     2     3     4     5     6     7   ...    31
 ```
@@ -46,7 +46,7 @@ __shared__ float data[1024];  // array in shared memory
 
 // all 32 threads access consecutive elements of data
 int tid = threadIdx.x;
-float value = data[tid];  // addresses: 0x000, 0x001, 0x002, ...
+float value = data[tid];  // address LSBs: 0x000, 0x040, 0x080, ...
 ```
 
 All 32 accesses complete in one memory transaction because each
@@ -59,7 +59,7 @@ a column in a row-major
 elements per row, and so we wrote:
 
 ```cpp
-float value = data[tid * 32];  // addresses: 0x000, 0x080, 0x100 ...
+float value = data[tid * 32];  // address LSBs: 0x000, 0x080, 0x100 ...
 // recall: floats are 4 bits wide
 ```
 
