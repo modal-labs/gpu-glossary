@@ -84,7 +84,7 @@ def replace_svgs_with_pngs(text: str, out_dir: Path = ROOT / "dist" / "diagrams"
         if not png_path.exists():
             cairosvg.svg2png(url=svg_url, write_to=str(png_path))
 
-        return str(png_path.relative_to(ROOT))
+        return "/" + str(png_path.relative_to(ROOT))
 
     pattern = r"https://modal-cdn\.com/gpu-glossary/[\w\-.]+\.svg"
     return re.sub(pattern, repl, text)

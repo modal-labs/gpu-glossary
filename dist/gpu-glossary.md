@@ -76,7 +76,7 @@ was challenging for the software and hardware sides alike: it required software
 engineers to map programs onto a fixed pipeline and forced hardware engineers to
 guess the load ratios between pipeline steps.
 
-![A diagram of a fixed-pipeline device architecture (G71). Note the presence of a separate group of processors for handling fragment and vertex shading. Adapted from [Fabien Sanglard's blog](https://fabiensanglard.net/cuda/).](dist/diagrams/light-fixed-pipeline-g71.png)
+![A diagram of a fixed-pipeline device architecture (G71). Note the presence of a separate group of processors for handling fragment and vertex shading. Adapted from [Fabien Sanglard's blog](https://fabiensanglard.net/cuda/).](/dist/diagrams/light-fixed-pipeline-g71.png)
 
 GPU devices with a unified architecture are much simpler: the hardware units are
 entirely uniform, each capable of a wide array of computations. These units are
@@ -159,7 +159,7 @@ maintaining large, hardware-managed caches and sophisticated instruction
 prediction. This extra hardware limits the fraction of their silicon area,
 power, and heat budgets that CPUs can allocate to computation.
 
-![GPUs dedicate more of their area to compute (green), and less to control and caching (orange and blue), than do CPUs. Modified from a diagram in [Fabien Sanglard's blog](https://fabiensanglard.net/cuda), itself likely modified from a diagram in [the CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/).](dist/diagrams/light-cpu-vs-gpu.png)
+![GPUs dedicate more of their area to compute (green), and less to control and caching (orange and blue), than do CPUs. Modified from a diagram in [Fabien Sanglard's blog](https://fabiensanglard.net/cuda), itself likely modified from a diagram in [the CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/).](/dist/diagrams/light-cpu-vs-gpu.png)
 
 For programs or functions like neural network inference or sequential database
 scans for which it is relatively straightforward for programmers to
@@ -173,7 +173,7 @@ outputs — the result is much higher throughput.
 The cores are the primary compute units that make up the
 [Streaming Multiprocessors (SMs)](#streaming-multiprocessor).
 
-![The internal architecture of an H100 GPU's Streaming Multiprocessors. CUDA and Tensor Cores are shown in green. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 GPU's Streaming Multiprocessors. CUDA and Tensor Cores are shown in green. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 Examples of GPU core types include
 [CUDA Cores](#cuda-core) and
@@ -204,7 +204,7 @@ The Special Function Units (SFUs) in
 [Streaming Multiprocessors (SMs)](#streaming-multiprocessor)
 accelerate certain arithmetic operations.
 
-![The internal architecture of an H100 SM. Special Function Units are shown in maroon, along with the [Load/Store Units](#load-store-unit). Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 SM. Special Function Units are shown in maroon, along with the [Load/Store Units](#load-store-unit). Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 Notable for neural network workloads are transcendental mathematical operations,
 like `exp`, `sin`, and `cos`.
@@ -221,7 +221,7 @@ assembly using the `MUFU.EX2` instruction to implement the `expf` intrinsic in
 The Load/Store Units (LSUs) dispatch requests to load or store data to the
 memory subsystems of the GPU.
 
-![The internal architecture of an H100 SM. Load/Store Units are shown in pink, along with the [Special Function Units](#special-function-unit). Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 SM. Load/Store Units are shown in pink, along with the [Special Function Units](#special-function-unit). Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 Most importantly for
 [CUDA programmers](#cuda-software-platform), they
@@ -241,7 +241,7 @@ The Warp Scheduler of the
 decides which group of [threads](#thread) to
 execute on each clock cycle.
 
-![The internal architecture of an H100 SM. The Warp Scheduler and Dispatch Unit are shown in orange. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 SM. The Warp Scheduler and Dispatch Unit are shown in orange. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 These groups of [threads](#thread), known as
 [warps](#warp), are switched out on a per clock
@@ -284,7 +284,7 @@ The Warp Schedulers also manage the
 The CUDA Cores are GPU [cores](#core) that execute
 scalar arithmetic instructions.
 
-![The internal architecture of an H100 SM. The CUDA Cores and Tensor Cores are depicted in green. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 SM. The CUDA Cores and Tensor Cores are depicted in green. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 They are to be contrasted with the
 [Tensor Cores](#tensor-core), which execute matrix
@@ -322,7 +322,7 @@ given operation.
 Tensor Cores are GPU [cores](#core) that operate on
 entire matrices with each instruction.
 
-![The internal architecture of an H100 SM. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 SM. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 Operating on more data for a single instruction fetch dramatically reduces power
 requirements, which unlocks increased performance (see
@@ -422,7 +422,7 @@ multiplications must break their work down into smaller matrix multiplications,
 like the 16 by 16 square matrix multiplication performed by the `mma_sync` call
 we are dissecting. We walk through this program below.
 
-![Register usage in a Tensor Core MMA for C = A @ B. The R11, R17, R16, and R18 registers are used in instructions 1, 2, 3, and 4, respectively. See surrounding text for details.](dist/diagrams/light-tensor-core-mma.png)
+![Register usage in a Tensor Core MMA for C = A @ B. The R11, R17, R16, and R18 registers are used in instructions 1, 2, 3, and 4, respectively. See surrounding text for details.](/dist/diagrams/light-tensor-core-mma.png)
 
 The first two instructions compute the matrix multiplication of the first eight
 columns of the input `a`, from `R12`, with the first eight rows of the input
@@ -487,7 +487,7 @@ Tensor Memory Accelerators are specialized hardware in Hopper and Blackwell
 GPUs designed to accelerate access to multi-dimensional arrays in
 [GPU RAM](#gpu-ram).
 
-![The internal architecture of an H100 [Streaming Multiprocessor (SM)](#streaming-multiprocessor). Note the Tensor Memory Accelerator at the bottom of the [SM](#streaming-multiprocessor), shared between the four sub-units. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 [Streaming Multiprocessor (SM)](#streaming-multiprocessor). Note the Tensor Memory Accelerator at the bottom of the [SM](#streaming-multiprocessor), shared between the four sub-units. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 The TMA loads data from
 [global memory](#global-memory)/[GPU RAM](#gpu-ram)
@@ -533,9 +533,9 @@ with
 [Streaming Assembler (SASS)](#streaming-assembler)
 code.
 
-![A streaming multiprocessor with the "Hopper" SM90 architecture. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![A streaming multiprocessor with the "Hopper" SM90 architecture. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
-![A streaming multiprocessor with the original "Tesla" SM architecture. Modified from [Fabien Sanglard's blog](https://fabiensanglard.net/cuda)](dist/diagrams/light-tesla-sm.png)
+![A streaming multiprocessor with the original "Tesla" SM architecture. Modified from [Fabien Sanglard's blog](https://fabiensanglard.net/cuda)](/dist/diagrams/light-tesla-sm.png)
 
 Most [SM](#streaming-multiprocessor) versions have
 two components: a major version and a minor version.
@@ -616,7 +616,7 @@ The register file of the
 is the primary store of bits in between their manipulation by the
 [cores](#core).
 
-![The internal architecture of an H100 SM. The register file is depicted in blue. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 SM. The register file is depicted in blue. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 Like registers in CPUs, these registers are made from very fast memory
 technology that can keep pace with the compute
@@ -650,7 +650,7 @@ The L1 data cache is the private memory of the
 [Streaming Multiprocessor](#streaming-multiprocessor)
 (SM).
 
-![The internal architecture of an H100 SM. The L1 data cache is depicted in light blue. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](dist/diagrams/light-gh100-sm.png)
+![The internal architecture of an H100 SM. The L1 data cache is depicted in light blue. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](/dist/diagrams/light-gh100-sm.png)
 
 Each SM partitions that memory among
 [groups of threads](#thread-block) scheduled onto
@@ -722,7 +722,7 @@ see the
 
 ### GPU RAM
 
-![In high-performance data center GPUs like the H100, RAM is located on a die directly next to the processor's. Adapted from the Wikipedia page for [high-bandwidth memory](https://en.wikipedia.org/wiki/High_Bandwidth_Memory).](dist/diagrams/light-hbm-schematic.png)
+![In high-performance data center GPUs like the H100, RAM is located on a die directly next to the processor's. Adapted from the Wikipedia page for [high-bandwidth memory](https://en.wikipedia.org/wiki/High_Bandwidth_Memory).](/dist/diagrams/light-hbm-schematic.png)
 
 The bottom-level memory of the GPU is a large (many megabytes to gigabytes)
 memory store that is addressable by all of the GPU's
@@ -799,7 +799,7 @@ The hierarchies of execution and memory and their mapping onto
 [device hardware](#device-hardware) are summarized in the following
 diagram.
 
-![Left: the abstract thread group and memory hierarchies of the CUDA programming model. Right: the matching hardware implementing those abstractions. Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![Left: the abstract thread group and memory hierarchies of the CUDA programming model. Right: the matching hardware implementing those abstractions. Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 Together, these three abstractions encourage the expression of programs in a way
 that scales transparently as GPU devices scale in their parallel execution
@@ -820,7 +820,7 @@ more
 [Streaming Multiprocessors](#streaming-multiprocessor)),
 more of these blocks can be executed in parallel.
 
-![A CUDA program with eight [blocks](#thread-block) runs in four sequential steps (waves) on a GPU with two [SMs](#streaming-multiprocessor) but in half as many steps on one with twice as many [SMs](#streaming-multiprocessor). Modified from the [CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/).](dist/diagrams/light-wave-scheduling.png)
+![A CUDA program with eight [blocks](#thread-block) runs in four sequential steps (waves) on a GPU with two [SMs](#streaming-multiprocessor) but in half as many steps on one with twice as many [SMs](#streaming-multiprocessor). Modified from the [CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/).](/dist/diagrams/light-wave-scheduling.png)
 
 The CUDA programming model abstractions are made available to programmers as
 extensions to high-level CPU programming languages, like the
@@ -958,7 +958,7 @@ The PTX programming model exposes multiple levels of parallelism to the
 programmer. These levels map directly onto the hardware through the PTX machine
 model, diagrammed below.
 
-![The PTX machine model. Modified from the [PTX documentation](https://docs.nvidia.com/cuda/parallel-thread-execution/#ptx-machine-model).](dist/diagrams/light-ptx-machine-model.png)
+![The PTX machine model. Modified from the [PTX documentation](https://docs.nvidia.com/cuda/parallel-thread-execution/#ptx-machine-model).](/dist/diagrams/light-ptx-machine-model.png)
 
 Notably, in this machine model there is a single instruction unit for multiple
 processors. While each processor runs one
@@ -1036,7 +1036,7 @@ the
 
 ### Thread
 
-![Threads are the lowest level of the thread group hierarchy (top, left) and are mapped onto the [cores](#core) of a [Streaming Multiprocessor](#streaming-multiprocessor). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![Threads are the lowest level of the thread group hierarchy (top, left) and are mapped onto the [cores](#core) of a [Streaming Multiprocessor](#streaming-multiprocessor). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 A _thread of execution_ (or "thread" for short) is the lowest unit of
 programming for GPUs, the base and atom of the
@@ -1140,7 +1140,7 @@ in Metal.
 
 ### Cooperative Thread Array
 
-![Cooperative thread arrays correspond to the [thread block](#thread-block) level of the thread block hierarchy in the [CUDA programming model](#cuda-programming-model). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![Cooperative thread arrays correspond to the [thread block](#thread-block) level of the thread block hierarchy in the [CUDA programming model](#cuda-programming-model). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 A cooperative thread array (CTA) is a collection of threads scheduled onto the
 same
@@ -1180,7 +1180,7 @@ a certain amount of those resources (as calculated at
 
 ### Kernel
 
-![A single kernel launch corresponds to a [thread block grid](#thread-block-grid) in the [CUDA programming model](#cuda-programming-model). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![A single kernel launch corresponds to a [thread block grid](#thread-block-grid) in the [CUDA programming model](#cuda-programming-model). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 A kernel is the unit of
 [CUDA](#cuda-programming-model) code that
@@ -1317,7 +1317,7 @@ higher [arithmetic bandwidth](#arithmetic-bandwidth).
 
 ### Thread Block
 
-![Thread blocks are an intermediate level of the thread group hierarchy of the [CUDA programming model](#cuda-programming-model) (left). A thread block executes on a single [Streaming Multiprocessor](#streaming-multiprocessor) (right, middle). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![Thread blocks are an intermediate level of the thread group hierarchy of the [CUDA programming model](#cuda-programming-model) (left). A thread block executes on a single [Streaming Multiprocessor](#streaming-multiprocessor) (right, middle). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 A thread block is a level of the
 [CUDA programming model's](#cuda-programming-model)
@@ -1345,7 +1345,7 @@ can be arbitrarily sized, but they are typically multiples of the
 
 ### Thread Block Grid
 
-![Thread block grids are the highest level of the thread group hierarchy of the [CUDA programming model](#cuda-programming-model) (left). They map onto multiple [Streaming Multiprocessors](#streaming-multiprocessor) (right, bottom). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![Thread block grids are the highest level of the thread group hierarchy of the [CUDA programming model](#cuda-programming-model) (left). They map onto multiple [Streaming Multiprocessors](#streaming-multiprocessor) (right, bottom). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 When a CUDA [kernel](#kernel) is launched, it
 creates a collection of [threads](#thread) known as
@@ -1366,7 +1366,7 @@ simultaneously.
 
 ### Thread Hierarchy
 
-![The thread hierarchy of the [CUDA programming model](#cuda-programming-model) spans from individual [threads](#thread) to [thread blocks](#thread-block) to [thread block grids](#thread-block-grid) (left), mapping onto the hardware from [CUDA Cores](#cuda-core) to [Streaming Multiprocessors](#streaming-multiprocessor) to the entire GPU (right). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![The thread hierarchy of the [CUDA programming model](#cuda-programming-model) spans from individual [threads](#thread) to [thread blocks](#thread-block) to [thread block grids](#thread-block-grid) (left), mapping onto the hardware from [CUDA Cores](#cuda-core) to [Streaming Multiprocessors](#streaming-multiprocessor) to the entire GPU (right). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 The thread hierarchy is a key abstraction of the
 [CUDA programming model](#cuda-programming-model),
@@ -1424,7 +1424,7 @@ This hierarchy maps directly onto the
 
 ### Memory Hierarchy
 
-![[Shared memory](#shared-memory) and [global memory](#global-memory) are two levels of the memory hierarchy in the [CUDA programming model](#cuda-programming-model) (left), mapping onto the [L1 data cache](#l1-data-cache) and [GPU RAM](#gpu-ram), respectively. Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![[Shared memory](#shared-memory) and [global memory](#global-memory) are two levels of the memory hierarchy in the [CUDA programming model](#cuda-programming-model) (left), mapping onto the [L1 data cache](#l1-data-cache) and [GPU RAM](#gpu-ram), respectively. Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 As part of the
 [CUDA programming model](#cuda-programming-model),
@@ -1466,7 +1466,7 @@ of this cache — e.g. loading data into it to support the
 
 ### Registers
 
-![Registers are the memory of the [memory hierarchy](#memory-hierarchy) associated with individual [threads](#thread) (left). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![Registers are the memory of the [memory hierarchy](#memory-hierarchy) associated with individual [threads](#thread) (left). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 At the lowest level of the
 [memory hierarchy](#memory-hierarchy) are the
@@ -1502,7 +1502,7 @@ are not, to our knowledge, documented.
 
 ### Shared Memory
 
-![Shared memory is the abstract memory associated with the [thread block](#thread-block) level (left, center) of the CUDA thread group hierarchy (left). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![Shared memory is the abstract memory associated with the [thread block](#thread-block) level (left, center) of the CUDA thread group hierarchy (left). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 Shared memory is the level of the
 [memory hierarchy](#memory-hierarchy) corresponding
@@ -1535,7 +1535,7 @@ Shared memory is stored in the
 
 ### Global Memory
 
-![Global memory is the highest level of the [memory hierarchy](#memory-hierarchy) in the [CUDA programming model](#cuda-programming-model). It is stored in the [GPU RAM](#gpu-ram). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](dist/diagrams/light-cuda-programming-model.png)
+![Global memory is the highest level of the [memory hierarchy](#memory-hierarchy) in the [CUDA programming model](#cuda-programming-model). It is stored in the [GPU RAM](#gpu-ram). Modified from diagrams in NVIDIA's [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) and the NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model).](/dist/diagrams/light-cuda-programming-model.png)
 
 As part of the
 [CUDA programming model](#cuda-programming-model),
@@ -1608,7 +1608,7 @@ the components used _within_ or _from_ applications, like the
 [CUDA Runtime API](#cuda-runtime-api), diagrammed
 below.
 
-![The CUDA Toolkit. Adapted from the *Professional CUDA C Programming Guide*.](dist/diagrams/light-cuda-toolkit.png)
+![The CUDA Toolkit. Adapted from the *Professional CUDA C Programming Guide*.](/dist/diagrams/light-cuda-toolkit.png)
 
 Built on top of these APIs are libraries of and for building optimized
 [kernels](#kernel) for general and specific
@@ -1656,7 +1656,7 @@ for applications are, in order, the
 [CUDA Runtime API](#cuda-runtime-api) and the
 [CUDA Driver API](#cuda-driver-api).
 
-![The CUDA Toolkit. The NVIDIA GPU Driver is the only component that communicates directly with the GPU. Adapted from the *Professional CUDA C Programming Guide*.](dist/diagrams/light-cuda-toolkit.png)
+![The CUDA Toolkit. The NVIDIA GPU Driver is the only component that communicates directly with the GPU. Adapted from the *Professional CUDA C Programming Guide*.](/dist/diagrams/light-cuda-toolkit.png)
 
 NVIDIA has released the
 [source](https://github.com/NVIDIA/open-gpu-kernel-modules) for their Linux Open
@@ -1683,7 +1683,7 @@ familiar to users of the C standard library: a `cuMalloc` function for
 allocating [memory](#global-memory) on GPU devices,
 for example.
 
-![The CUDA Toolkit. The CUDA Driver API sits between applications or other toolkit components and the GPU. Adapted from the *Professional CUDA C Programming Guide*.](dist/diagrams/light-cuda-toolkit.png)
+![The CUDA Toolkit. The CUDA Driver API sits between applications or other toolkit components and the GPU. Adapted from the *Professional CUDA C Programming Guide*.](/dist/diagrams/light-cuda-toolkit.png)
 
 Very few CUDA programs are written to directly use the CUDA Driver API. They
 instead use the
@@ -1822,7 +1822,7 @@ The CUDA Runtime API wraps the
 [CUDA Driver API](#cuda-driver-api) and provides a
 higher-level API for the same functions.
 
-![The CUDA Toolkit. The CUDA Runtime API wraps the CUDA Driver API to make it more amenable to application programming. Adapted from the *Professional CUDA C Programming Guide*.](dist/diagrams/light-cuda-toolkit.png)
+![The CUDA Toolkit. The CUDA Runtime API wraps the CUDA Driver API to make it more amenable to application programming. Adapted from the *Professional CUDA C Programming Guide*.](/dist/diagrams/light-cuda-toolkit.png)
 
 It is generally preferred over the
 [Driver API](#cuda-driver-api) for better ergonomics,
@@ -2045,63 +2045,6 @@ exposed via the `cublas_v2.h` header.
 For more information on cuBLAS, see the
 [official cuBLAS documentation](https://docs.nvidia.com/cuda/cublas/).
 
-### cuDNN
-
-NVIDIA's cuDNN (CUDA Deep Neural Network) is a library of primitives for
-building GPU-accelerated deep neural networks.
-
-cuDNN provides highly optimized [kernels](#kernel)
-for operations arising frequently in neural networks. These include convolution,
-self-attention (including scaled dot-product attention, aka "Flash Attention"),
-matrix multiplication, various normalizations, poolings, etc.
-
-cuDNN is a key library at the application layer of the
-[CUDA software platform](#cuda-software-platform),
-alongside its sibling library, [cuBLAS](#cublas).
-Deep learning frameworks like PyTorch typically leverage
-[cuBLAS](#cublas) for general-purpose linear algebra,
-such as the matrix multiplications that form the core of dense (fully-connected)
-layers. They rely on cuDNN for more specialized primitives like convolutional
-layers, normalization routines, and attention mechanisms.
-
-In modern cuDNN code, computations are expressed as operation graphs, which can
-be constructed using open source
-[Python and C++ frontend APIs](https://docs.nvidia.com/deeplearning/cudnn/frontend/latest/developer/overview.html).
-via the declarative
-[Graph API](https://docs.nvidia.com/deeplearning/cudnn/frontend/v1.14.0/developer/graph-api.html).
-
-This API allows the developer to define a sequence of operations as a graph,
-which cuDNN can then analyze to perform optimizations, most importantly
-operation fusion. In operation fusion, a sequence of operations like
-Convolution + Bias + ReLU are merged ("fused") into a single operation run as a
-single [kernel](#kernel). Operation fusion helps
-reduce demand on [memory bandwidth](#memory-bandwidth) by
-keeping program intermediates in
-[shared memory](#shared-memory) throughout a
-sequence of operations.
-
-The frontends interact with a lower-level, closed source
-[C backend](https://docs.nvidia.com/deeplearning/cudnn/backend/latest/api/overview.html),
-which exposes an API for legacy use cases or direct C FFI.
-
-For any given operation, cuDNN maintains multiple underlying implementations and
-uses (unknown) internal heuristics to select the most performant one for the
-target
-[Streaming Multiprocessor (SM) architecture](#streaming-multiprocessor-architecture),
-data types, and input sizes.
-
-cuDNN's initial claim to fame was accelerating convolutional neural networks on
-Ampere
-[SM architecture](#streaming-multiprocessor-architecture)
-GPUs. For Transformer neural networks on Hopper and especially Blackwell
-[SM architectures](#streaming-multiprocessor-architecture),
-NVIDIA has tended to place more emphasis on the
-[CUTLASS](https://github.com/NVIDIA/cutlass) library.
-
-For more information on cuDNN, see the
-[official cuDNN documentation](https://docs.nvidia.com/deeplearning/cudnn/), and
-the [open source frontend APIs](https://github.com/NVIDIA/cudnn-frontend).
-
 ## Performance
 
 GPUs are used when the performance of an application is inadequate on
@@ -2138,7 +2081,7 @@ The literal neck of a bottle limits the rate at which liquid can be poured; a
 metaphorical performance bottleneck in a system limits the rate at which tasks
 can be completed.
 
-![[Roofline diagrams](#roofline-model) like this one are used to quickly identify performance bottlenecks in throughput-oriented systems. Adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](dist/diagrams/light-roofline-model.png)
+![[Roofline diagrams](#roofline-model) like this one are used to quickly identify performance bottlenecks in throughput-oriented systems. Adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](/dist/diagrams/light-roofline-model.png)
 
 Bottlenecks are the target of performance optimization. The textbook approach to
 optimization is to
@@ -2204,7 +2147,7 @@ determine whether a program is bound by
 [memory bandwidth](#memory-bandwidth) or
 [arithmetic bandwidth](#arithmetic-bandwidth).
 
-![[Kernels](#kernel) to the left of the ridge point are [limited by the bandwidth of the memory subsystem](#memory-bound) and [kernels](#kernel) to the right of the ridge point are [limited by the bandwidth of the arithmetic subsystem](#compute-bound). Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf), which introduced the roofline model.](dist/diagrams/light-roofline-model.png)
+![[Kernels](#kernel) to the left of the ridge point are [limited by the bandwidth of the memory subsystem](#memory-bound) and [kernels](#kernel) to the right of the ridge point are [limited by the bandwidth of the arithmetic subsystem](#compute-bound). Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf), which introduced the roofline model.](/dist/diagrams/light-roofline-model.png)
 
 In the roofline model, two hardware‑derived "roofs" put a "ceiling" on the
 possible performance:
@@ -2312,7 +2255,7 @@ limited by the [arithmetic bandwidth](#arithmetic-bandwidth)
 of the [CUDA Cores](#cuda-core) or
 [Tensor Cores](#tensor-core).
 
-![In the [roofline diagram](#roofline-model) above, [kernels](#kernel) underneath the blue line are compute-bound. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](dist/diagrams/light-roofline-model.png)
+![In the [roofline diagram](#roofline-model) above, [kernels](#kernel) underneath the blue line are compute-bound. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](/dist/diagrams/light-roofline-model.png)
 
 Compute-bound kernels are characterized by high
 [arithmetic intensity](#arithmetic-intensity) (many arithmetic
@@ -2362,7 +2305,7 @@ For more on LLM inference, see our
 limited by the [memory bandwidth](#memory-bandwidth) of the
 GPU.
 
-![Roofline diagrams, like the one above, help identify whether a program's performance is bottlenecked by compute power, memory bandwidth, or something else Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](dist/diagrams/light-roofline-model.png)
+![Roofline diagrams, like the one above, help identify whether a program's performance is bottlenecked by compute power, memory bandwidth, or something else Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](/dist/diagrams/light-roofline-model.png)
 
 Specifically, they are limited by
 [the bandwidth](#memory-bandwidth) between the
@@ -2411,7 +2354,7 @@ For more on LLM inference, see our
 Arithmetic intensity is the ratio of arithmetic operations to memory operations
 in a [kernel](#kernel).
 
-![In the [roofline model](#roofline-model), operational/arithmetic intensity is plotted on the horizontal axis. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](dist/diagrams/light-roofline-model.png)
+![In the [roofline model](#roofline-model), operational/arithmetic intensity is plotted on the horizontal axis. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](/dist/diagrams/light-roofline-model.png)
 
 A high arithmetic intensity indicates that a
 [kernel](#kernel) performs many arithmetic
@@ -2715,7 +2658,7 @@ The state of the [warps](#warp) running a
 [kernel](#kernel) is described with a number of
 non-exclusive adjectives: active, stalled, eligible, and selected.
 
-![Warp execution states are indicated by color. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](dist/diagrams/light-cycles.png)
+![Warp execution states are indicated by color. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](/dist/diagrams/light-cycles.png)
 
 A [warp](#warp) is considered _active_ from the
 time its [threads](#thread) begin executing to the
@@ -2821,7 +2764,7 @@ resident. The [warp](#warp) may be
 [eligible](#warp-execution-state) or
 [stalled](#warp-execution-state).
 
-![All cycles depicted in this diagram are active cycles. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](dist/diagrams/light-cycles.png)
+![All cycles depicted in this diagram are active cycles. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](/dist/diagrams/light-cycles.png)
 
 ### Occupancy
 
@@ -2829,7 +2772,7 @@ Occupancy is the ratio of the
 [active warps](#warp-execution-state) to the maximum number of
 [active warps](#warp-execution-state) on a device.
 
-![There are four warp slots per cycle on each of four clock cycles and so there are 16=4*4 total warp slots, and there are active warps in 15 of them, for an occupancy of ~94%. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](dist/diagrams/light-cycles.png)
+![There are four warp slots per cycle on each of four clock cycles and so there are 16=4*4 total warp slots, and there are active warps in 15 of them, for an occupancy of ~94%. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](/dist/diagrams/light-cycles.png)
 
 There are two types of occupancy measurements:
 
@@ -2994,7 +2937,7 @@ Issue efficiency measures how effectively the
 pipes busy by issuing instructions from
 [eligible warps](#warp-execution-state).
 
-![Of the four clock cycles in this diagram, instructions were issued on three, for an issue efficiency of 75%. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](dist/diagrams/light-cycles.png)
+![Of the four clock cycles in this diagram, instructions were issued on three, for an issue efficiency of 75%. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](/dist/diagrams/light-cycles.png)
 
 An issue efficiency of 100% means every
 [scheduler](#warp-scheduler) issued an instruction
@@ -3177,7 +3120,7 @@ When multiple [threads](#thread) in a
 the same bank in [shared memory](#shared-memory)
 but across distinct addresses, we say there is a bank conflict.
 
-![When [threads](#thread) access distinct [shared memory](#shared-memory) banks, accesses are serviced in parallel (left). When they all access the same bank, but at different addresses, accesses are serialized (right).](dist/diagrams/light-bank-conflict.png)
+![When [threads](#thread) access distinct [shared memory](#shared-memory) banks, accesses are serviced in parallel (left). When they all access the same bank, but at different addresses, accesses are serialized (right).](/dist/diagrams/light-bank-conflict.png)
 
 When bank conflicts occur, the accesses by the distinct
 [threads](#thread) are serialized. This reduces
