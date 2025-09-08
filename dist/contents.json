@@ -1,0 +1,327 @@
+[
+  {
+    "title": "Home",
+    "href": "/gpu-glossary",
+    "pages": [
+      {
+        "title": "README",
+        "href": "/gpu-glossary/readme"
+      },
+      {
+        "title": "Device Hardware",
+        "href": "/gpu-glossary/device-hardware",
+        "pages": [
+          {
+            "title": "CUDA (Device Architecture)",
+            "href": "/gpu-glossary/device-hardware/cuda-device-architecture"
+          },
+          {
+            "title": "Streaming Multiprocessor",
+            "href": "/gpu-glossary/device-hardware/streaming-multiprocessor",
+            "abbreviation": "SM"
+          },
+          {
+            "title": "Core",
+            "href": "/gpu-glossary/device-hardware/core"
+          },
+          {
+            "title": "Special Function Unit",
+            "href": "/gpu-glossary/device-hardware/special-function-unit",
+            "abbreviation": "SFU"
+          },
+          {
+            "title": "Load/Store Unit",
+            "href": "/gpu-glossary/device-hardware/load-store-unit",
+            "abbreviation": "LSU"
+          },
+          {
+            "title": "Warp Scheduler",
+            "href": "/gpu-glossary/device-hardware/warp-scheduler"
+          },
+          {
+            "title": "CUDA Core",
+            "href": "/gpu-glossary/device-hardware/cuda-core"
+          },
+          {
+            "title": "Tensor Core",
+            "href": "/gpu-glossary/device-hardware/tensor-core"
+          },
+          {
+            "title": "Tensor Memory Accelerator",
+            "href": "/gpu-glossary/device-hardware/tensor-memory-accelerator",
+            "abbreviation": "TMA"
+          },
+          {
+            "title": "Streaming Multiprocessor Architecture",
+            "href": "/gpu-glossary/device-hardware/streaming-multiprocessor-architecture"
+          },
+          {
+            "title": "Texture Processing Cluster",
+            "href": "/gpu-glossary/device-hardware/texture-processing-cluster",
+            "abbreviation": "TPC"
+          },
+          {
+            "title": "Graphics/GPU Processing Cluster",
+            "href": "/gpu-glossary/device-hardware/graphics-processing-cluster",
+            "abbreviation": "GPC"
+          },
+          {
+            "title": "Register File",
+            "href": "/gpu-glossary/device-hardware/register-file"
+          },
+          {
+            "title": "L1 Data Cache",
+            "href": "/gpu-glossary/device-hardware/l1-data-cache"
+          },
+          {
+            "title": "Tensor Memory",
+            "href": "/gpu-glossary/device-hardware/tensor-memory"
+          },
+          {
+            "title": "GPU RAM",
+            "href": "/gpu-glossary/device-hardware/gpu-ram"
+          }
+        ]
+      },
+      {
+        "title": "Device Software",
+        "href": "/gpu-glossary/device-software",
+        "pages": [
+          {
+            "title": "CUDA (Programming Model)",
+            "href": "/gpu-glossary/device-software/cuda-programming-model"
+          },
+          {
+            "title": "Streaming ASSembler",
+            "href": "/gpu-glossary/device-software/streaming-assembler",
+            "abbreviation": "SASS"
+          },
+          {
+            "title": "Parallel Thread eXecution",
+            "href": "/gpu-glossary/device-software/parallel-thread-execution",
+            "abbreviation": "PTX"
+          },
+          {
+            "title": "Compute Capability",
+            "href": "/gpu-glossary/device-software/compute-capability"
+          },
+          {
+            "title": "Thread",
+            "href": "/gpu-glossary/device-software/thread"
+          },
+          {
+            "title": "Warp",
+            "href": "/gpu-glossary/device-software/warp"
+          },
+          {
+            "title": "Cooperative Thread Array",
+            "href": "/gpu-glossary/device-software/cooperative-thread-array"
+          },
+          {
+            "title": "Kernel",
+            "href": "/gpu-glossary/device-software/kernel"
+          },
+          {
+            "title": "Thread Block",
+            "href": "/gpu-glossary/device-software/thread-block"
+          },
+          {
+            "title": "Thread Block Grid",
+            "href": "/gpu-glossary/device-software/thread-block-grid"
+          },
+          {
+            "title": "Thread Hierarchy",
+            "href": "/gpu-glossary/device-software/thread-hierarchy"
+          },
+          {
+            "title": "Memory Hierarchy",
+            "href": "/gpu-glossary/device-software/memory-hierarchy"
+          },
+          {
+            "title": "Registers",
+            "href": "/gpu-glossary/device-software/registers"
+          },
+          {
+            "title": "Shared Memory",
+            "href": "/gpu-glossary/device-software/shared-memory"
+          },
+          {
+            "title": "Global Memory",
+            "href": "/gpu-glossary/device-software/global-memory"
+          }
+        ]
+      },
+      {
+        "title": "Host Software",
+        "href": "/gpu-glossary/host-software",
+        "pages": [
+          {
+            "title": "CUDA (Software Platform)",
+            "href": "/gpu-glossary/host-software/cuda-software-platform"
+          },
+          {
+            "title": "CUDA C++ (programming language)",
+            "href": "/gpu-glossary/host-software/cuda-c"
+          },
+          {
+            "title": "NVIDIA GPU Drivers",
+            "href": "/gpu-glossary/host-software/nvidia-gpu-drivers"
+          },
+          {
+            "title": "nvidia.ko",
+            "href": "/gpu-glossary/host-software/nvidia-ko"
+          },
+          {
+            "title": "CUDA Driver API",
+            "href": "/gpu-glossary/host-software/cuda-driver-api"
+          },
+          {
+            "title": "libcuda.so",
+            "href": "/gpu-glossary/host-software/libcuda"
+          },
+          {
+            "title": "NVIDIA Management Library",
+            "href": "/gpu-glossary/host-software/nvml",
+            "abbreviation": "NVML"
+          },
+          {
+            "title": "libnvml.so",
+            "href": "/gpu-glossary/host-software/libnvml"
+          },
+          {
+            "title": "nvidia-smi",
+            "href": "/gpu-glossary/host-software/nvidia-smi"
+          },
+          {
+            "title": "CUDA Runtime API",
+            "href": "/gpu-glossary/host-software/cuda-runtime-api"
+          },
+          {
+            "title": "libcudart.so",
+            "href": "/gpu-glossary/host-software/libcudart"
+          },
+          {
+            "title": "NVIDIA CUDA Compiler Driver",
+            "href": "/gpu-glossary/host-software/nvcc",
+            "abbreviation": "nvcc"
+          },
+          {
+            "title": "NVIDIA Runtime Compiler",
+            "href": "/gpu-glossary/host-software/nvrtc"
+          },
+          {
+            "title": "NVIDIA CUDA Profiling Tools Interface",
+            "href": "/gpu-glossary/host-software/cupti",
+            "abbreviation": "CUPTI"
+          },
+          {
+            "title": "NVIDIA Nsight Systems",
+            "href": "/gpu-glossary/host-software/nsight-systems"
+          },
+          {
+            "title": "CUDA Binary Utilities",
+            "href": "/gpu-glossary/host-software/cuda-binary-utilities"
+          },
+          {
+            "title": "cuBLAS",
+            "href": "/gpu-glossary/host-software/cublas"
+          }
+        ]
+      },
+      {
+        "title": "Performance",
+        "href": "/gpu-glossary/perf",
+        "pages": [
+          {
+            "title": "Performance Bottleneck",
+            "href": "/gpu-glossary/perf/performance-bottleneck"
+          },
+          {
+            "title": "Roofline Model",
+            "href": "/gpu-glossary/perf/roofline-model"
+          },
+          {
+            "title": "Compute-bound",
+            "href": "/gpu-glossary/perf/compute-bound"
+          },
+          {
+            "title": "Memory-bound",
+            "href": "/gpu-glossary/perf/memory-bound"
+          },
+          {
+            "title": "Arithmetic Intensity",
+            "href": "/gpu-glossary/perf/arithmetic-intensity"
+          },
+          {
+            "title": "Overhead",
+            "href": "/gpu-glossary/perf/overhead"
+          },
+          {
+            "title": "Little's Law",
+            "href": "/gpu-glossary/perf/littles-law"
+          },
+          {
+            "title": "Memory Bandwidth",
+            "href": "/gpu-glossary/perf/memory-bandwidth"
+          },
+          {
+            "title": "Arithmetic Bandwidth",
+            "href": "/gpu-glossary/perf/arithmetic-bandwidth"
+          },
+          {
+            "title": "Latency Hiding",
+            "href": "/gpu-glossary/perf/latency-hiding"
+          },
+          {
+            "title": "Warp Execution State",
+            "href": "/gpu-glossary/perf/warp-execution-state"
+          },
+          {
+            "title": "Active Cycle",
+            "href": "/gpu-glossary/perf/active-cycle"
+          },
+          {
+            "title": "Occupancy",
+            "href": "/gpu-glossary/perf/occupancy"
+          },
+          {
+            "title": "Pipe Utilization",
+            "href": "/gpu-glossary/perf/pipe-utilization"
+          },
+          {
+            "title": "Peak Rate",
+            "href": "/gpu-glossary/perf/peak-rate"
+          },
+          {
+            "title": "Issue Efficiency",
+            "href": "/gpu-glossary/perf/issue-efficiency"
+          },
+          {
+            "title": "Streaming Multiprocessor Utilization",
+            "href": "/gpu-glossary/perf/streaming-multiprocessor-utilization"
+          },
+          {
+            "title": "Warp Divergence",
+            "href": "/gpu-glossary/perf/warp-divergence"
+          },
+          {
+            "title": "Branch Efficiency",
+            "href": "/gpu-glossary/perf/branch-efficiency"
+          },
+          {
+            "title": "Bank Conflict",
+            "href": "/gpu-glossary/perf/bank-conflict"
+          },
+          {
+            "title": "Register Pressure",
+            "href": "/gpu-glossary/perf/register-pressure"
+          }
+        ]
+      },
+      {
+        "title": "Contributors",
+        "href": "/gpu-glossary/contributors"
+      }
+    ]
+  }
+]
