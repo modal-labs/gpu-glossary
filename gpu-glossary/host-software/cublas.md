@@ -4,28 +4,29 @@ title: What is cuBLAS?
 
 cuBLAS (CUDA Basic Linear Algebra Subroutines) is NVIDIA's high-performance
 implementation of the
-[BLAS (Basic Linear Algebra Subprograms)](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms)
+[Basic Linear Algebra Subprograms (BLAS)](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms)
 standard. It is a proprietary software library that provides highly optimized
 [kernels](/gpu-glossary/device-software/kernel) for common linear algebra
 operations.
 
-Instead of writing and optimizing complex operations like matrix multiplication
+Instead of writing and optimizing common operations like matrix multiplication
 from scratch, developers can call cuBLAS functions from their host code. The
 library contains a wide array of kernels, each fine-tuned for specific data
 types (e.g. FP32, FP16), matrix sizes, and
-[GPU architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture).
+[Streaming Multiprocessor (SM) architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture).
 At runtime, cuBLAS uses (unknown) internal heuristics to select the most
-performant kernel and its optimal launch parameters for the target
-[hardware](/gpu-glossary/device-hardware). As a result, cuBLAS is the foundation
-for a lot of [high-performance](/gpu-glossary/perf) numerical computing on
-NVIDIA GPUs and is used extensively by deep learning frameworks like PyTorch to
-accelerate their core operations.
+performant kernel and its optimal launch parameters. As a result, cuBLAS is the
+foundation for most [high-performance](/gpu-glossary/perf) numerical computing
+on NVIDIA GPUs and is used extensively by deep learning frameworks like PyTorch
+to accelerate their core operations, along with more specialized
+[kernel](/gpu-glossary/device-software/kernel) libraries like
+[cuDNN](/gpu-glossary/host-software/cudnn).
 
 The single most common source of error when using cuBLAS is the matrix data
 layout. For historical reasons, and to maintain compatibility with the original
 BLAS standard (which was written in Fortran), cuBLAS expects matrices to be in
 [column-major order](https://en.wikipedia.org/wiki/Row-_and_column-major_order).
-This is the opposite of the commonly used row-major order in C, C++ and Python.
+This is the opposite of the commonly used row-major order in C, C++, and Python.
 Furthermore, a BLAS function needs to know not just the size of the operation
 (e.g., `M`, `N`, `K`), but also how to find the start of each column in memory.
 This is specified by the leading dimension (e.g. `lda`). The leading dimension
