@@ -32,3 +32,8 @@ the components used _within_ or _from_ applications, like the
 below.
 
 ![The CUDA Toolkit. Adapted from the *Professional CUDA C Programming Guide*.](themed-image://cuda-toolkit.svg)
+
+Built on top of these APIs are libraries of and for building optimized
+[kernels](/gpu-glossary/device-software/kernel) for general and specific
+domains, like [cuBLAS](/gpu-glossary/host-software/cublas) for linear algebra
+and [cuDNN](/gpu-glossary/host-software/cudnn) for deep neural networks.

@@ -15,7 +15,8 @@ This list is incomplete; you can help by
   [Tensara](https://tensara.org/) co-wrote the material on
   [performance](/gpu-glossary/perf).
 - [Philip Fabianek](https://www.linkedin.com/in/philip-fabianek/) contributed
-  the [cuBLAS article](/gpu-glossary/host-software/cublas).
+  the articles on [cuBLAS](/gpu-glossary/host-software/cublas) and
+  [cuDNN](/gpu-glossary/host-software/cudnn).
 - [You](https://github.com/modal-labs/gpu-glossary) can contribute to keep the
   glossary up-to-date and erratum-free!
 
