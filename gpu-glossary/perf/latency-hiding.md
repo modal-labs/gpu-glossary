@@ -33,8 +33,8 @@ IMUL R6, R4, 0x1337       // integer multiply, 6 cycles
 
 Executed sequentially, this would take 416 cycles to complete. We can hide this
 latency by operating concurrently. If we assume we can issue one instruction
-every two cycles, then, by [Little's Law](/gpu-glossary/perf/littles-law), if we
-run 832 concurrent [threads](/gpu-glossary/device-software/thread), we can still
+every cycle, then, by [Little's Law](/gpu-glossary/perf/littles-law), if we run
+416 concurrent [threads](/gpu-glossary/device-software/thread), we can still
 finish the sequence once per cycle (on average), hiding the latency of memory
 from consumers of the data in `R6`.
 
@@ -42,7 +42,7 @@ Note that [threads](/gpu-glossary/device-software/thread) are not the unit of
 instruction issuance, [warps](/gpu-glossary/device-software/warp) are. Each
 [warp](/gpu-glossary/device-software/warp) contains 32
 [threads](/gpu-glossary/device-software/thread), and so our fragment requires
-832 ÷ 32 = 13 [warps](/gpu-glossary/device-software/warp). When successfully
+416 ÷ 32 = 13 [warps](/gpu-glossary/device-software/warp). When successfully
 hiding latency, the GPU's scheduling system maintains this many
 [warps](/gpu-glossary/device-software/warp) in flight, switching between them
 whenever one stalls, ensuring the execution units never idle while waiting for
