@@ -29,8 +29,8 @@ specialized compute units mapped onto shader pipelines (see
 [CUDA Device Architecture](/gpu-glossary/device-hardware/cuda-device-architecture)).
 
 So, for example, the
-[H100 whitepaper](https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c) indicates that
-an H100 GPU's
+[H100 whitepaper](https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c)
+indicates that an H100 GPU's
 [Streaming Multiprocessors (SMs)](/gpu-glossary/device-hardware/streaming-multiprocessor)
 each have 128 "FP32 CUDA Cores", which accurately counts the number of 32 bit
 floating point units but is double the number of 32 bit integer or 64 bit
