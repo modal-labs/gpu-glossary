@@ -13,7 +13,7 @@ Each SM partitions that memory among
 it.
 
 The L1 data cache is co-located with and only about an order of magnitude slower
-than the components that effect computations (e.g. the
+than the components that perform computations (e.g., the
 [CUDA Cores](/gpu-glossary/device-hardware/cuda-core)).
 
 It is implemented with SRAM, the same basic semiconductor cell used in CPU
@@ -24,7 +24,7 @@ The L1 data cache is accessed by the
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor).
 
 CPUs also maintain an L1 cache. In CPUs, that cache is fully hardware-managed.
-In GPUs that cache is mostly programmer-managed, even in high-level languages
+In GPUs, that cache is mostly programmer-managed, even in high-level languages
 like [CUDA C](/gpu-glossary/host-software/cuda-c).
 
 Each L1 data cache in each of an H100's SMs can store 256 KiB (2,097,152 bits).

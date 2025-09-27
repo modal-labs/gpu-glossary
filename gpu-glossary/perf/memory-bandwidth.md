@@ -20,8 +20,8 @@ The most important bandwidth is that between the
 because the [working sets](https://en.wikipedia.org/wiki/Working_set_size) of
 most [kernels](/gpu-glossary/device-software/kernel) only fit in
 [GPU RAM](/gpu-glossary/device-software/memory-hierarchy), not anywhere higher
-up in the [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy). It
-is for this reason that that bandwidth is the primary one used in
+up in the [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy).
+For this reason, that bandwidth is the primary one used in
 [roofline modeling](/gpu-glossary/perf/roofline-model) of GPU
 [kernel](/gpu-glossary/device-software/kernel) performance.
 
@@ -35,7 +35,7 @@ leading to increased [ridge point](/gpu-glossary/perf/roofline-model)
 
 Representative bandwidth numbers for NVIDIA data center GPUs between the Ampere
 and Blackwell
-[Streaming Multiprocessor architecures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
+[Streaming Multiprocessor architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 are listed in the table below.
 
 | **System (Compute / Memory)**                                                                                                                               | **[Arithmetic Bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) (TFLOPs/s)** | **Memory Bandwidth (TB/s)** | **[Ridge Point](/gpu-glossary/perf/roofline-model) (FLOPs/byte)** |

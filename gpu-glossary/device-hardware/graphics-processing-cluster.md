@@ -23,5 +23,5 @@ scheduled onto the same GPC, just as the threads of a
 [thread block](/gpu-glossary/device-software/thread-block) are scheduled onto
 the same [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), and have
 their own level of the
-[memory hierarchy](/gpu-glossary/device-software/memory-hierarchy), distributed
-shared memory. Elsewhere, we elide discussion of this feature.
+[memory hierarchy](/gpu-glossary/device-software/memory-hierarchy), called
+distributed shared memory. Elsewhere, we elide discussion of this feature.

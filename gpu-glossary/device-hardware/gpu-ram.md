@@ -2,7 +2,7 @@
 title: What is GPU RAM?
 ---
 
-![In high-performance data center GPUs like the H100, RAM is located on a die directly next to the processor's. Adapted from the Wikipedia page for [high-bandwidth memory](https://en.wikipedia.org/wiki/High_Bandwidth_Memory).](themed-image://hbm-schematic.svg)
+![In high-performance data center GPUs like the H100, RAM is located on a die directly next to the processor's die. Adapted from the Wikipedia page for [high-bandwidth memory](https://en.wikipedia.org/wiki/High_Bandwidth_Memory).](themed-image://hbm-schematic.svg)
 
 The bottom-level memory of the GPU is a large (many megabytes to gigabytes)
 memory store that is addressable by all of the GPU's

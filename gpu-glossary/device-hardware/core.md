@@ -12,7 +12,7 @@ Examples of GPU core types include
 [Tensor Cores](/gpu-glossary/device-hardware/tensor-core).
 
 Though GPU cores are comparable to CPU cores in that they are the component that
-effects actual computations, this analogy can be quite misleading. Instead, it
+performs actual computations, this analogy can be quite misleading. Instead, it
 is perhaps more helpful to take the viewpoint of the
 [quantitative computer architect](https://archive.org/details/computerarchitectureaquantitativeapproach6thedition)
 and think of them as "pipes" into which data goes in and out of which

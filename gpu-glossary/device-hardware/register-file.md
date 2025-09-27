@@ -9,7 +9,7 @@ is the primary store of bits in between their manipulation by the
 
 ![The internal architecture of an H100 SM. The register file is depicted in blue. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
 
-Like registers in CPUs, these registers are made from very fast memory
+Like registers in CPUs, these registers are made from extremely fast memory
 technology that can keep pace with the compute
 [cores](/gpu-glossary/device-hardware/core), about an order of magnitude faster
 than the [L1 data cache](/gpu-glossary/device-hardware/l1-data-cache).

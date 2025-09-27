@@ -14,7 +14,7 @@ threads up to entire GPU devices.
 At the lowest level are individual
 [threads](/gpu-glossary/device-software/thread). Like a thread of execution on a
 CPU, each [CUDA thread](/gpu-glossary/device-software/thread) executes a stream
-of instructions. The hardware resources that effect arithmetic and logic
+of instructions. The hardware resources that execute arithmetic and logic
 instructions are called [cores](/gpu-glossary/device-hardware/core) or sometimes
 "pipes". Threads are selected for execution by the
 [Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler).
