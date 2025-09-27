@@ -10,7 +10,7 @@ state. For details on these metrics, including how to interpret power and
 thermal readings, see
 [this page on the Modal docs](https://modal.com/docs/guide/gpu-metrics).
 
-The function of NVML are frequently accessed via the
+The functions of NVML are frequently accessed via the
 [nvidia-smi](/gpu-glossary/host-software/nvidia-smi) command line utility, but
 are also accessible to programs via wrappers, like
 [pynvml in Python](https://pypi.org/project/pynvml/) and

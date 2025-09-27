@@ -36,4 +36,4 @@ The H100 can operate its compute subsystem clock at a maximum rate of 1980 MHz
 66,908 billion FLOPS, or 66.9 TFLOPS.
 
 This precisely matches the Peak FP32 TFLOPS (non-Tensor) rate advertised in
-[NVIDIA's H100 whitepaper](https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c).
+[NVIDIA's H100 white paper](https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c).

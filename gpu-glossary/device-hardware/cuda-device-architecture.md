@@ -45,8 +45,7 @@ Sanglard. That blog post cites its (high-quality) sources, like NVIDIA's
 [Fermi Compute Architecture white paper](https://www.nvidia.com/content/pdf/fermi_white_papers/nvidia_fermi_compute_architecture_whitepaper.pdf).
 The white paper by
 [Lindholm et al. in 2008](https://www.cs.cmu.edu/afs/cs/academic/class/15869-f11/www/readings/lindholm08_tesla.pdf)
-introducing the Tesla architecture is both well-written and thorough. The
-[NVIDIA whitepaper for the Tesla P100](https://images.nvidia.com/content/pdf/tesla/whitepaper/pascal-architecture-whitepaper.pdf)
+introducing the Tesla architecture is both well-written and thorough. The [NVIDIA white paper for the Tesla P100](https://images.nvidia.com/content/pdf/tesla/whitepaper/pascal-architecture-whitepaper.pdf)
 is less scholarly but documents the introduction of a number of features that
 are critical for today's large-scale neural network workloads, like NVLink and
 [on-package high-bandwidth memory](/gpu-glossary/device-hardware/gpu-ram).

@@ -10,7 +10,7 @@ This list is incomplete; you can help by
 - [Charles Frye](https://twitter.com/charles_irl) wrote the majority of the
   material and takes full responsibility for any errors.
 - [Matthew Nappo](https://www.linkedin.com/in/mattnappo/) wrote the initial
-  internal "GPU Glossary" document from which this sprung.
+  internal "GPU Glossary" document from which this has sprung.
 - [Harmya Bhatt](https://twitter.com/racerfunction) of
   [Tensara](https://tensara.org/) co-wrote the material on
   [performance](/gpu-glossary/perf).

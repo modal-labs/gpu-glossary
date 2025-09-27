@@ -10,8 +10,8 @@ execute on each clock cycle.
 ![The internal architecture of an H100 SM. The Warp Scheduler and Dispatch Unit are shown in orange. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
 
 These groups of [threads](/gpu-glossary/device-software/thread), known as
-[warps](/gpu-glossary/device-software/warp), are switched out on a per clock
-cycle basis — roughly one nanosecond - much like the fine-grained thread-level
+[warps](/gpu-glossary/device-software/warp), are switched out on a per-clock-cycle
+basis—roughly one nanosecond—much like the fine-grained thread-level
 parallelism of simultaneous multi-threading ("hyper-threading") in CPUs, but at
 a much larger scale. The ability of the Warp Schedulers to switch rapidly
 between a large number of concurrent tasks as soon as their instructions'
@@ -29,7 +29,7 @@ Because each [thread](/gpu-glossary/device-software/thread) has its own private
 [registers](/gpu-glossary/device-software/registers) allocated from the
 [register file](/gpu-glossary/device-hardware/register-file) of the
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), context switches
-on the GPU do not require any data movement to save or restore contexts.
+on GPUs do not require any data movement to save or restore contexts.
 
 And because the [L1 caches](/gpu-glossary/device-hardware/l1-data-cache) on GPUs
 can be entirely programmer-managed and are

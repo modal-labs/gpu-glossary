@@ -100,7 +100,7 @@ version".
 Writing in-line PTX by hand is uncommon outside of the cutting edge of
 performance, similar to writing in-line `x86_64` assembly, as is done in
 high-performance vectorized query operators in analytical databases and in
-performance-sensitive sections of operating system kernels. At time of writing
+performance-sensitive sections of operating system kernels. At the time of writing
 in September of 2025, in-line PTX is the only way to take advantage of some
 Hopper-specific hardware features like the `wgmma` and `tma` instructions, as in
 [Flash Attention 3](https://arxiv.org/abs/2407.08608) or in the

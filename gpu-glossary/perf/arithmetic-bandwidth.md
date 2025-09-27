@@ -42,7 +42,7 @@ nine PFLOPS when running 4-bit floating point matrix multiplications.
 
 Representative bandwidth numbers for NVIDIA data center GPUs between the Ampere
 and Blackwell
-[Streaming Multiprocessor architecures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
+[Streaming Multiprocessor architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 are listed in the table below.
 
 | **System (Compute / Memory)**                                                                                                                               | **Arithmetic Bandwidth (TFLOPs/s)** | **[Memory Bandwidth](/gpu-glossary/perf/memory-bandwidth) (TB/s)** | **[Ridge Point](/gpu-glossary/perf/roofline-model) (FLOPs/byte)** |

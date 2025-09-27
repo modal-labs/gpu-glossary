@@ -12,7 +12,7 @@ A high arithmetic intensity indicates that a
 operations per byte loaded. Due to the high ratio between
 [arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) and
 [memory bandwidth](/gpu-glossary/perf/memory-bandwidth) in modern GPUs, the most
-efficient kernels have high arithmetic intensity. That means that when elevating
+efficient kernels have high arithmetic intensity. This means that when alleviating
 a memory [bottleneck](/gpu-glossary/perf/performance-bottleneck), we can often
 shift work from the memory subsystem to the compute subsystem, saving on
 [memory bandwidth](/gpu-glossary/perf/memory-bandwidth) but adding to the load
@@ -28,7 +28,7 @@ increasing the arithmetic intensity.
 
 As another example, the
 [backpropagation algorithm](https://www.nature.com/articles/323533a0) creates
-long-lived intermediates (activation values) that generally must stored in
+long-lived intermediates (activation values) that generally must be stored in
 [global memory](/gpu-glossary/device-software/global-memory) during a forward
 pass and then retrieved during a backwards pass. In some cases, it is faster to
 store only a fraction of these intermediates and then recompute the remainder (a

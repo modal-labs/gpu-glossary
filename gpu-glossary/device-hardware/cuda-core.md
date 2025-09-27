@@ -18,7 +18,7 @@ instruction simultaneously by the
 instruction to different [registers](/gpu-glossary/device-software/registers).
 Commonly, these groups are of size 32, the size of a
 [warp](/gpu-glossary/device-software/warp), but for contemporary GPUs groups can
-contain as little as one thread, at a cost to performance.
+contain as few as one thread, at a cost to performance.
 
 The term "CUDA Core" is slightly slippery: in different
 [Streaming Multiprocessor architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
@@ -29,7 +29,7 @@ specialized compute units mapped onto shader pipelines (see
 [CUDA Device Architecture](/gpu-glossary/device-hardware/cuda-device-architecture)).
 
 So, for example, the
-[H100 whitepaper](https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c)
+[H100 white paper](https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c)
 indicates that an H100 GPU's
 [Streaming Multiprocessors (SMs)](/gpu-glossary/device-hardware/streaming-multiprocessor)
 each have 128 "FP32 CUDA Cores", which accurately counts the number of 32 bit

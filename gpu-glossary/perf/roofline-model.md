@@ -84,8 +84,8 @@ Finally, the early 2000s saw the end of
 [Dennard scaling](https://en.wikipedia.org/wiki/Dennard_scaling), aka increasing
 clock speed at equal power, due primarily to the fixed leakage current of
 transistors, which posed power draw and heat dissipation problems. Increasing
-clock speed had previously buoyed general purpose, latency-oriented systems like
-CPUs, over special purpose hardware. This slowdown was not accompanied by a
+clock speed had previously buoyed general-purpose, latency-oriented systems like
+CPUs, over special-purpose hardware. This slowdown was not accompanied by a
 slowdown in [Moore's Law](https://en.wikipedia.org/wiki/Moore%27s_law), aka
 increasing transistor count per chip. The architectural solution to an abundance
 of transistors but scarcity of power was hardware specialization: disaggregating

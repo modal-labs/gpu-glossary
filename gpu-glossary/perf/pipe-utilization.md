@@ -23,7 +23,7 @@ programmers should first consider
 [GPU kernel utilization](https://modal.com/blog/gpu-utilization-guide) and
 [SM utilization](/gpu-glossary/perf/streaming-multiprocessor-utilization).
 
-Pipe utilization is available in the the
+Pipe utilization is available in the
 `sm__inst_executed_pipe_*.avg.pct_of_peak_sustained_active` metrics from
 [NSight Compute](https://developer.nvidia.com/nsight-compute) (`ncu`), where the
 asterisk represents specific pipelines like

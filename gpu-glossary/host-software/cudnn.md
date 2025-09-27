@@ -21,14 +21,14 @@ layers, normalization routines, and attention mechanisms.
 
 In modern cuDNN code, computations are expressed as operation graphs, which can
 be constructed using open source
-[Python and C++ frontend APIs](https://docs.nvidia.com/deeplearning/cudnn/frontend/latest/developer/overview.html).
+[Python and C++ frontend APIs](https://docs.nvidia.com/deeplearning/cudnn/frontend/latest/developer/overview.html)
 via the declarative
 [Graph API](https://docs.nvidia.com/deeplearning/cudnn/frontend/v1.14.0/developer/graph-api.html).
 
 This API allows the developer to define a sequence of operations as a graph,
 which cuDNN can then analyze to perform optimizations, most importantly
 operation fusion. In operation fusion, a sequence of operations like
-Convolution + Bias + ReLU are merged ("fused") into a single operation run as a
+Convolution + Bias + ReLU is merged ("fused") into a single operation run as a
 single [kernel](/gpu-glossary/device-software/kernel). Operation fusion helps
 reduce demand on [memory bandwidth](/gpu-glossary/perf/memory-bandwidth) by
 keeping program intermediates in
