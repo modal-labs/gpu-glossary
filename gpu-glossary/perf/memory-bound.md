@@ -6,7 +6,7 @@ title: What does it mean to be memory-bound?
 limited by the [memory bandwidth](/gpu-glossary/perf/memory-bandwidth) of the
 GPU.
 
-![Roofline diagrams, like the one above, help identify whether a program's performance is bottlenecked by compute power, memory bandwidth, or something else Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](themed-image://roofline-model.svg)
+![Roofline diagrams, like the one above, help identify whether a program's performance is bottlenecked by compute power, memory bandwidth, or something else. Diagram adapted from [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf).](themed-image://roofline-model.svg)
 
 Specifically, they are limited by
 [the bandwidth](/gpu-glossary/perf/memory-bandwidth) between the
@@ -43,7 +43,7 @@ the weights once every 100 ms, and that puts a lower bound on our intertoken
 latency. By batching multiple inputs together, we can linearly increase the
 number of floating point operations done per parameter loaded (the
 [arithmetic intensity](/gpu-glossary/perf/arithmetic-intensity)), in principle
-up the point of [compute-boundedness](/gpu-glossary/perf/compute-bound), without
+up to the point of [compute-boundedness](/gpu-glossary/perf/compute-bound), without
 incurring any additional latency, which implies that the throughput improves
 linearly in the batch size.
 
