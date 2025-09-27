@@ -7,7 +7,7 @@ The Warp Scheduler of the
 decides which group of [threads](/gpu-glossary/device-software/thread) to
 execute on each clock cycle.
 
-![The internal architecture of an H100 SM. The Warp Scheduler and Dispatch Unit are shown in orange. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
+![The internal architecture of an H100 SM. The Warp Scheduler and Dispatch Unit are shown in orange. Modified from NVIDIA's [H100 white paper](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf).](themed-image://gh100-sm.svg)
 
 These groups of [threads](/gpu-glossary/device-software/thread), known as
 [warps](/gpu-glossary/device-software/warp), are switched out on a per clock

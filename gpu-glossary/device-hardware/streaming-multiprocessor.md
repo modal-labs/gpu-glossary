@@ -8,7 +8,7 @@ produce
 [sequences of instructions](/gpu-glossary/device-software/streaming-assembler)
 for its Streaming Multiprocessors to carry out.
 
-![A diagram of the internal architecture of an H100 GPU's Streaming Multiprocessors. GPU cores appear in green, other compute units in maroon, scheduling units in orange, and memory in blue. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
+![A diagram of the internal architecture of an H100 GPU's Streaming Multiprocessors. GPU cores appear in green, other compute units in maroon, scheduling units in orange, and memory in blue. Modified from NVIDIA's [H100 white paper](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf).](themed-image://gh100-sm.svg)
 
 Streaming Multiprocessors (SMs) of NVIDIA GPUs are roughly analogous to the
 cores of CPUs. That is, SMs both execute computations and store state available

@@ -5,7 +5,7 @@ title: What is a Tensor Core?
 Tensor Cores are GPU [cores](/gpu-glossary/device-hardware/core) that operate on
 entire matrices with each instruction.
 
-![The internal architecture of an H100 SM. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
+![The internal architecture of an H100 SM. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf).](themed-image://gh100-sm.svg)
 
 Operating on more data for a single instruction fetch dramatically reduces power
 requirements, which unlocks increased performance (see

@@ -6,7 +6,7 @@ abbreviation: LSU
 The Load/Store Units (LSUs) dispatch requests to load or store data to the
 memory subsystems of the GPU.
 
-![The internal architecture of an H100 SM. Load/Store Units are shown in pink, along with the [Special Function Units](/gpu-glossary/device-hardware/special-function-unit). Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
+![The internal architecture of an H100 SM. Load/Store Units are shown in pink, along with the [Special Function Units](/gpu-glossary/device-hardware/special-function-unit). Modified from NVIDIA's [H100 white paper](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf).](themed-image://gh100-sm.svg)
 
 Most importantly for
 [CUDA programmers](/gpu-glossary/host-software/cuda-software-platform), they
