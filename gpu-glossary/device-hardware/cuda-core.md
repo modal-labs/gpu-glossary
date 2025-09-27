@@ -5,7 +5,7 @@ title: What is a CUDA Core?
 The CUDA Cores are GPU [cores](/gpu-glossary/device-hardware/core) that execute
 scalar arithmetic instructions.
 
-![The internal architecture of an H100 SM. The CUDA Cores and Tensor Cores are depicted in green. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
+![The internal architecture of an H100 SM. The CUDA Cores and Tensor Cores are depicted in green. Note the larger size and lower number of Tensor Cores. Modified from NVIDIA's [H100 white paper](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf).](themed-image://gh100-sm.svg)
 
 They are to be contrasted with the
 [Tensor Cores](/gpu-glossary/device-hardware/tensor-core), which execute matrix

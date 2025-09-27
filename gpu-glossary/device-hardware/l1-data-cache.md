@@ -6,7 +6,7 @@ The L1 data cache is the private memory of the
 [Streaming Multiprocessor](/gpu-glossary/device-hardware/streaming-multiprocessor)
 (SM).
 
-![The internal architecture of an H100 SM. The L1 data cache is depicted in light blue. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
+![The internal architecture of an H100 SM. The L1 data cache is depicted in light blue. Modified from NVIDIA's [H100 white paper](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf).](themed-image://gh100-sm.svg)
 
 Each SM partitions that memory among
 [groups of threads](/gpu-glossary/device-software/thread-block) scheduled onto

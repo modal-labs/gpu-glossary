@@ -8,7 +8,7 @@ Tensor Memory Accelerators are specialized hardware in Hopper and Blackwell
 GPUs designed to accelerate access to multi-dimensional arrays in
 [GPU RAM](/gpu-glossary/device-hardware/gpu-ram).
 
-![The internal architecture of an H100 [Streaming Multiprocessor (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor). Note the Tensor Memory Accelerator at the bottom of the [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), shared between the four sub-units. Modified from NVIDIA's [H100 white paper](https://resources.nvidia.com/en-us-tensor-core).](themed-image://gh100-sm.svg)
+![The internal architecture of an H100 [Streaming Multiprocessor (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor). Note the Tensor Memory Accelerator at the bottom of the [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), shared between the four sub-units. Modified from NVIDIA's [H100 white paper](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf).](themed-image://gh100-sm.svg)
 
 The TMA loads data from
 [global memory](/gpu-glossary/device-software/global-memory)/[GPU RAM](/gpu-glossary/device-hardware/gpu-ram)
