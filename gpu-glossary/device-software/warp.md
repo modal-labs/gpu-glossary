@@ -35,7 +35,7 @@ for a table of results per clock cycle for specific instructions).
 A warp whose next instruction is delayed by missing operands is said to be
 [stalled](/gpu-glossary/perf/warp-execution-state).
 
-Instead of waiting for an instructions results to return, when multiple warps
+Instead of waiting for an instruction's results to return, when multiple warps
 are scheduled onto a single
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), the
 [Warp Scheduler](/gpu-glossary/device-hardware/warp-scheduler) will select

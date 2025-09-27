@@ -60,7 +60,7 @@ elements per row, and so we wrote:
 
 ```cpp
 float value = data[tid * 32];  // address LSBs: 0x000, 0x080, 0x100 ...
-// recall: floats are 4 bits wide
+// recall: floats are 4 bytes wide
 ```
 
 As depicted in the right side of the diagram above, all accesses hit the same

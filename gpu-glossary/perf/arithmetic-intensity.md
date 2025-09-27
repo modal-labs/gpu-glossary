@@ -28,7 +28,7 @@ increasing the arithmetic intensity.
 
 As another example, the
 [backpropagation algorithm](https://www.nature.com/articles/323533a0) creates
-long-lived intermediates (activation values) that generally must stored in
+long-lived intermediates (activation values) that generally must be stored in
 [global memory](/gpu-glossary/device-software/global-memory) during a forward
 pass and then retrieved during a backwards pass. In some cases, it is faster to
 store only a fraction of these intermediates and then recompute the remainder (a

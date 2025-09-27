@@ -35,7 +35,7 @@ leading to increased [ridge point](/gpu-glossary/perf/roofline-model)
 
 Representative bandwidth numbers for NVIDIA data center GPUs between the Ampere
 and Blackwell
-[Streaming Multiprocessor architecures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
+[Streaming Multiprocessor architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture)
 are listed in the table below.
 
 | **System (Compute / Memory)**                                                                                                                               | **[Arithmetic Bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) (TFLOPs/s)** | **Memory Bandwidth (TB/s)** | **[Ridge Point](/gpu-glossary/perf/roofline-model) (FLOPs/byte)** |
