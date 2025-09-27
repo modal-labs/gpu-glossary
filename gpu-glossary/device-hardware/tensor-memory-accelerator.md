@@ -39,7 +39,7 @@ asynchronously detect the completion of the TMA copy after it finishes and
 operate on the results (as in a producer-consumer model).
 
 For details, see the TMA sections of
-[Luo et al.'s Hopper micro-benchmarking paper](https://arxiv.org/abs/2501.12084v1).
+[Luo et al.'s Hopper micro-benchmarking paper](https://arxiv.org/abs/2501.12084v1)
 and the
 [NVIDIA Hopper Tuning Guide](https://docs.nvidia.com/cuda/hopper-tuning-guide/index.html#tensor-memory-accelerator).
 
