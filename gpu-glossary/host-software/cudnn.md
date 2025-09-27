@@ -21,7 +21,7 @@ layers, normalization routines, and attention mechanisms.
 
 In modern cuDNN code, computations are expressed as operation graphs, which can
 be constructed using open source
-[Python and C++ frontend APIs](https://docs.nvidia.com/deeplearning/cudnn/frontend/latest/developer/overview.html).
+[Python and C++ frontend APIs](https://docs.nvidia.com/deeplearning/cudnn/frontend/latest/developer/overview.html)
 via the declarative
 [Graph API](https://docs.nvidia.com/deeplearning/cudnn/frontend/v1.14.0/developer/graph-api.html).
 
