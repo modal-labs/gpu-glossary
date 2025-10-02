@@ -12,11 +12,13 @@ This list is incomplete; you can help by
 - [Matthew Nappo](https://www.linkedin.com/in/mattnappo/) wrote the initial
   internal "GPU Glossary" document from which this sprung.
 - [Harmya Bhatt](https://twitter.com/racerfunction) of
-  [Tensara](https://tensara.org/) co-wrote the material on
+  [Tensara](https://tensara.org/) co-authored the material on
   [performance](/gpu-glossary/perf).
 - [Philip Fabianek](https://www.linkedin.com/in/philip-fabianek/) contributed
   the articles on [cuBLAS](/gpu-glossary/host-software/cublas) and
   [cuDNN](/gpu-glossary/host-software/cudnn).
+- [Md Rashad Al Hasan Rony](https://www.rashad.ai/#about-me) co-authored
+  the article on [memory coalescing](/gpu-glossary/perf/memory-coalescing).
 - [You](https://github.com/modal-labs/gpu-glossary) can contribute to keep the
   glossary up-to-date and erratum-free!
 
