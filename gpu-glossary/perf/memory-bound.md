@@ -43,9 +43,9 @@ the weights once every 100 ms, and that puts a lower bound on our intertoken
 latency. By batching multiple inputs together, we can linearly increase the
 number of floating point operations done per parameter loaded (the
 [arithmetic intensity](/gpu-glossary/perf/arithmetic-intensity)), in principle
-up to the point of [compute-boundedness](/gpu-glossary/perf/compute-bound), without
-incurring any additional latency, which implies that the throughput improves
-linearly in the batch size.
+up to the point of [compute-boundedness](/gpu-glossary/perf/compute-bound),
+without incurring any additional latency, which implies that the throughput
+improves linearly in the batch size.
 
 For more on LLM inference, see our
 [LLM Engineer's Almanac](https://modal.com/llm-almanac/summary).
