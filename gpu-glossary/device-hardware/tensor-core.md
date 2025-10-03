@@ -24,14 +24,14 @@ matrix as D). The `MMA` stands for "Matrix Multiply and Accumulate". `HMMA16`
 indicates that the inputs are half-precision (`16` bits) and the `F32` indicates
 that the outputs are accumulated into `32` bit (aka single-precision) floats.
 
-`16816` is not a single number larger than 16,000. Instead, the string of
-numbers `16`, `8`, `16` denote the dimensions of the matrices. These dimensions
-are generally named `m`, `k`, and `n` by NVIDIA, for example in
+The `16816` between is not a single number larger than 16,000. Instead, the
+string of numbers `16`, `8`, and `16` denote the dimensions of the matrices.
+These dimensions are generally named `m`, `n`, and `k` by NVIDIA, for example in
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) instructions. The
-outer dimensions of A and B, aka `m` and `n`, come first and last, respectively,
-and the shared inner dimension for the accumulation, `k`, is in the middle.
-Multiplying these out, we see that the `HMMA16.16816.32` instruction performs 16
-× 8 × 16 = 2,048 multiply-accumulate (MAC) operations.
+outer dimensions of A and B, aka `m` and `n`, come first, followed by the shared
+inner dimension for the accumulation, `k`. Multiplying these out, we see that
+the `HMMA16.16816.32` instruction performs 16 × 8 × 16 = 2,048
+multiply-accumulate (MAC) operations.
 
 Note that a single instruction in a single
 [thread](/gpu-glossary/device-software/thread) does not produce the entire
