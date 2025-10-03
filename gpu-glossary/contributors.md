@@ -65,6 +65,7 @@ correct errors:
 <!-- This list is ordered alphabetically by the anchor text, ignoring case -->
 
 - [Alex Zhang](https://alexzhang13.github.io/)
+- [Ayoub Ghriss](https://github.com/ayghri)
 - [Erik Schultheis](https://www.linkedin.com/in/erik-schultheis-606a52119/)
 - Ismail Zaidi
 - [Michal Nawrot](https://github.com/michalnawrot)
