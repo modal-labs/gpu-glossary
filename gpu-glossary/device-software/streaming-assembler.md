@@ -29,11 +29,11 @@ Some exemplary instructions in SASS for the SM90a architecture of Hopper GPUs:
 
 Even more so than for CPUs, writing this "GPU assembler" by hand is very
 uncommon. Viewing compiler-generated SASS while profiling and editing high-level
-[CUDA C/C++](/gpu-glossary/host-software/cuda-c) code or in-line
+[CUDA C++](/gpu-glossary/host-software/cuda-c) code or in-line
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) is
 [more common](https://docs.nvidia.com/gameworks/content/developertools/desktop/ptx_sass_assembly_debugging.htm),
 especially in the production of the highest-performance kernels. Viewing
-[CUDA C/C++](/gpu-glossary/host-software/cuda-c), SASS, and
+[CUDA C++](/gpu-glossary/host-software/cuda-c), SASS, and
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) together is
 supported on [Godbolt](https://godbolt.org/z/5r9ej3zjW). For more detail on SASS
 with a focus on performance debugging workflows, see

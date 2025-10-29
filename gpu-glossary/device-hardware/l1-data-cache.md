@@ -25,7 +25,7 @@ The L1 data cache is accessed by the
 
 CPUs also maintain an L1 cache. In CPUs, that cache is fully hardware-managed.
 In GPUs that cache is mostly programmer-managed, even in high-level languages
-like [CUDA C](/gpu-glossary/host-software/cuda-c).
+like [CUDA C++](/gpu-glossary/host-software/cuda-c).
 
 Each L1 data cache in each of an H100's SMs can store 256 KiB (2,097,152 bits).
 Across the 132 SMs in an H100 SXM 5, that's 33 MiB (242,221,056 bits) of cache

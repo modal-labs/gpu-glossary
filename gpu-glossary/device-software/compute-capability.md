@@ -40,4 +40,4 @@ version.
 
 The technical specifications for each compute capability version can be found in
 the
-[Compute Capability section of the NVIDIA CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html).
+[Compute Capability section of the NVIDIA CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html).

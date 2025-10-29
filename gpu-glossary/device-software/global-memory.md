@@ -32,7 +32,7 @@ allocated from the host using a memory allocator provided by the
 [CUDA Runtime API](/gpu-glossary/host-software/cuda-runtime-api).
 
 The terminology "global" unfortunately collides with the `__global__` keyword in
-[CUDA C/C++](/gpu-glossary/host-software/cuda-c), which annotates functions that
+[CUDA C++](/gpu-glossary/host-software/cuda-c), which annotates functions that
 are launched on the host but run on the device
 ([kernels](/gpu-glossary/device-software/kernel)), whereas global memory is only
 on the device. Early CUDA architect Nicholas Wilt wrily notes that this choice

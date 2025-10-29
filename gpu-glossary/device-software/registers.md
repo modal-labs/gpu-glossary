@@ -18,7 +18,7 @@ but they can also spill to the
 penalty.
 
 As when programming CPUs, these registers are not directly manipulated by
-high-level languages like [CUDA C](/gpu-glossary/host-software/cuda-c). They are
+high-level languages like [CUDA C++](/gpu-glossary/host-software/cuda-c). They are
 only visible to a lower-level language, here
 [Parallel Thread Execution (PTX)](/gpu-glossary/device-software/parallel-thread-execution).
 They are typically managed by a compiler like `ptxas`. Among the compiler's

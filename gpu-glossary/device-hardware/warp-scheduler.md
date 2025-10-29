@@ -40,7 +40,7 @@ can be entirely programmer-managed and are
 context switches on the GPU have much less impact on cache hit rates. For
 details on the interaction between programmer-managed caches and
 hardware-managed caches in GPUs, see
-[the "Maximize Memory Throughput" section of the CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#maximize-memory-throughput).
+[the "Maximize Memory Throughput" section of the CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#maximize-memory-throughput).
 
 The Warp Schedulers also manage the
 [execution state of warps](/gpu-glossary/perf/warp-execution-state).

@@ -25,9 +25,9 @@ versions of the CUDA Driver API can run on systems with newer versions of the
 CUDA Driver API. That is, the operating system's binary loader may load a newer
 version of the CUDA Driver API and the program will function the same.
 
-For details on distributing [CUDA C/C++](/gpu-glossary/host-software/cuda-c)
+For details on distributing [CUDA C++](/gpu-glossary/host-software/cuda-c)
 applications, see the
-[CUDA C/C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide)
+[CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide)
 from NVIDIA.
 
 The CUDA Driver API is closed source. You can find its documentation

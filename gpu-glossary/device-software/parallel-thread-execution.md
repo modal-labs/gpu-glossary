@@ -105,7 +105,7 @@ in September of 2025, in-line PTX is the only way to take advantage of some
 Hopper-specific hardware features like the `wgmma` and `tma` instructions, as in
 [Flash Attention 3](https://arxiv.org/abs/2407.08608) or in the
 [Machete w4a16 kernels](https://youtu.be/-4ZkpQ7agXM). Viewing
-[CUDA C/C++](/gpu-glossary/host-software/cuda-c),
+[CUDA C++](/gpu-glossary/host-software/cuda-c),
 [SASS](/gpu-glossary/device-software/streaming-assembler), and
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) together is
 supported on [Godbolt](https://godbolt.org/z/5r9ej3zjW). See the

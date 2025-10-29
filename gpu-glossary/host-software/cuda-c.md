@@ -26,7 +26,7 @@ including:
   **[thread](/gpu-glossary/device-software/thread) indexing** with the
   `blockDim` and `threadIdx` built-in variables.
 
-CUDA C++ programs are compiled by a combination of host C/C++ compiler drivers
+CUDA C++ programs are compiled by a combination of host C++ compiler drivers
 like `gcc` and the
 [NVIDIA CUDA Compiler Driver](/gpu-glossary/host-software/nvcc), `nvcc`.
 

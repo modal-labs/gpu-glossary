@@ -9,7 +9,7 @@ A GPC is a collection of
 [Streaming Multiprocessors](/gpu-glossary/device-hardware/streaming-multiprocessor)
 or SMs) plus a raster engine. Apparently, some people use NVIDIA GPUs for
 graphics, for which the raster engine is important. Relatedly, the name used to
-stand for Graphics Processing Cluster, but is now, e.g. in the
+stand for Graphics Processing Cluster, but is now, e.g., in the
 [NVIDIA CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html),
 expanded as "GPU Processing Cluster".
 

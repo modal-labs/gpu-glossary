@@ -4,12 +4,12 @@ abbreviation: nvrtc
 ---
 
 The NVIDIA Runtime Compiler (`nvrtc`) is a runtime compilation library for CUDA
-C. It compiles [CUDA C++](/gpu-glossary/host-software/cuda-c) to
+C++. It compiles [CUDA C++](/gpu-glossary/host-software/cuda-c) to
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) without requiring
 a separate launch of the
 [NVIDIA CUDA Compiler Driver](/gpu-glossary/host-software/nvcc) (`nvcc`) in
 another process. It is used by some libraries or frameworks to, for example, map
-generated C/C++ code to
+generated C++ code to
 [PTX](/gpu-glossary/device-software/parallel-thread-execution) code that can run
 on a GPU.
 
