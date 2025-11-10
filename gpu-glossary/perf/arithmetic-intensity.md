@@ -45,7 +45,7 @@ O(1) memory complexity has O(N) arithmetic intensity scaling.
 | :------------------------ | -----------: | --------------: | -----------------------: | -------------------------------: |
 | SAXPY y = ax + y          |           2N |              8N |                      1/4 |                             O(1) |
 | Single-Precision Real FFT | 5/2 N log(N) |             16N |              5/32 log(N) |                        O(log(N)) |
-| SGEMM                     |         2N^3 |           24N^2 |                     N/12 |                             O(N) |
+| SGEMM C = A @ B + C       |         2N^3 |           16N^2 |                     N/8  |                             O(N) |
 
 Notably, matrix multiplication scales linearly, i.e. is O(N), in arithmetic
 intensity — it is O(N^3) in operational complexity and O(N^2) in memory
