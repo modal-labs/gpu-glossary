@@ -43,7 +43,7 @@ O(1) memory complexity has O(N) arithmetic intensity scaling.
 
 | **Kernel**                |    **FLOPs** | **Bytes Moved** | **Arithmetic Intensity** | **Arithmetic Intensity Scaling** |
 | :------------------------ | -----------: | --------------: | -----------------------: | -------------------------------: |
-| SAXPY y = ax + y          |           2N |              8N |                      1/4 |                             O(1) |
+| SAXPY y = ax + y          |           2N |             12N |                      1/6 |                             O(1) |
 | Single-Precision Real FFT | 5/2 N log(N) |             16N |              5/32 log(N) |                        O(log(N)) |
 | SGEMM C = A @ B + C       |         2N^3 |           16N^2 |                     N/8  |                             O(N) |
 
