@@ -6,6 +6,9 @@ a dictionary of terms related to programming GPUs,
 with a focus on the GPUs that run on the [Modal platform](https://modal.com),
 NVIDIA GPUs.
 
+# Translation version
+* [Simplified Chinese, 简体中文](https://github.com/miter6/gpu-glossary-zh)
+
 ## Licenses
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
