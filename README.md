@@ -20,3 +20,6 @@ The remainder of the files in this repository are licensed under the
 [MIT License](https://opensource.org/license/mit).
 See [`LICENSE`](LICENSE) for details.
 
+## Translations
+
+- [简体中文](https://github.com/miter6/gpu-glossary-zh)
