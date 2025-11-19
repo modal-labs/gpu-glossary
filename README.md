@@ -22,4 +22,4 @@ See [`LICENSE`](LICENSE) for details.
 
 ## Translations
 
-- [Simplified Chinese, 简体中文](https://github.com/miter6/gpu-glossary-zh)
+- [简体中文](https://github.com/miter6/gpu-glossary-zh)
