@@ -25,5 +25,6 @@ A single CUDA [kernel](/gpu-glossary/device-software/kernel) launch produces one
 or more thread blocks (in the form of a
 [thread block grid](/gpu-glossary/device-software/thread-block-grid)), each of
 which contains one or more [warps](/gpu-glossary/device-software/warp). Blocks
-can be arbitrarily sized, but they are typically multiples of the
-[warp](/gpu-glossary/device-software/warp) size (32 on all current CUDA GPUs).
+can be arbitrarily sized, up to a limit of 1024 on current devices,
+but they are typically multiples of the
+[warp](/gpu-glossary/device-software/warp) size (32 on current devices).
