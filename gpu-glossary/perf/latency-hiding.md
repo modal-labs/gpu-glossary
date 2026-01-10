@@ -50,4 +50,4 @@ slow operations to complete.
 
 For a deep dive into latency hiding on
 pre-[Tensor Core](/gpu-glossary/device-hardware/tensor-core) GPUs, see
-[Vasily Volkov's PhD thesis](https://arxiv.org/abs/2206.02874).
+[Vasily Volkov's PhD thesis](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-143.pdf).
