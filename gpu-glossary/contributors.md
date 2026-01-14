@@ -19,6 +19,8 @@ This list is incomplete; you can help by
   [cuDNN](/gpu-glossary/host-software/cudnn).
 - [Md Rashad Al Hasan Rony](https://www.rashad.ai/#about-me) co-authored the
   article on [memory coalescing](/gpu-glossary/perf/memory-coalescing).
+- [Christopher Fleetwood](https://fleetwood.dev/) contributed the
+  article on [warpgroups](/gpu-glossary/device-software/warpgroup).
 - [You](https://github.com/modal-labs/gpu-glossary) can contribute to keep the
   glossary up-to-date and erratum-free!
 
