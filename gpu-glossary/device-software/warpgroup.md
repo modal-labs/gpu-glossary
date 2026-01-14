@@ -18,7 +18,7 @@ So the valid warpgroups for an 8 warp dispatch are:
 
 Introduced in NVIDIA's Hopper architecture, warpgroups are used to enable inter-warp collaboration for instructions such
 as `wgmma.mma_async`. Upon dispatching a warpgroup level instruction, we coordinate 128 threads (4 warps * 32
-threads/warp). Operating at larger granularity removes the need for explicit synchronization and allows work to be
+threads/warp). Operating at a larger granularity removes the need for explicit inter-warp synchronization and allows work to be
 performed on larger problem sizes (e.g `.m64n128k16` as opposed to `m16n8k16` for warp level instructions). 
 
 
