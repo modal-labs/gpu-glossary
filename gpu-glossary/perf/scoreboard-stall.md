@@ -17,7 +17,7 @@ A long scoreboard stall occurs when an instruction is waiting on the result of a
 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), such as global memory loads (`LDG`) or stores (`STG`).
 Long scoreboard stalls typically indicate [memory-bound](/gpu-glossary/perf/memory-bound) code.
 
-A warp has 6 scoreboards which the compiler uses to track data dependencies between instructions. For example:
+A [warp](/gpu-glossary/device-software/warp) has 6 scoreboards which the compiler uses to track data dependencies between instructions. For example:
 
 ```nasm
 [B------:R-:W2:-:S04]  /*00f0*/  LDG.E.SYS R0, [R2] ;   # Sets scoreboard 2
