@@ -20,4 +20,4 @@ You can find its documentation
 [here](https://docs.nvidia.com/nsight-systems/index.html), but
 [watching someone use the tool](https://www.youtube.com/watch?v=dUDGO66IadU) is
 usually more helpful. For details on how to profile GPU applications on Modal,
-see [our documentation](https://modal.com/docs/examples/nsys).
+see [our documentation](https://modal.com/docs/examples/torch_profiling).
