@@ -9,8 +9,9 @@ for storing the inputs and outputs of
 [Tensor Cores](/gpu-glossary/device-hardware/tensor-core).
 
 Tensor Memory access is highly restricted. Data must be moved collectively by
-four [warps](/gpu-glossary/device-software/warp) in a warpgroup, and they can
-move memory only in specific patterns between Tensor Memory and
+four [warps](/gpu-glossary/device-software/warp) in a
+[warpgroup](/gpu-glossary/device-software/warpgroup), and they can move memory
+only in specific patterns between Tensor Memory and
 [registers](/gpu-glossary/device-software/registers), write
 [shared memory](/gpu-glossary/device-software/shared-memory) to Tensor Memory,
 or issue matrix-multiply-accumulate (MMA) instructions to
