@@ -68,18 +68,8 @@ including:
 When warps are stalled on accesses to shared memory or on long-running
 arithmetic instructions, they are said to be stalled on the "short scoreboard".
 When warps are stalled on accesses to GPU RAM, they are said to be stalled on
-the "long scoreboard". These are hardware units inside the
-[warp scheduler](/gpu-glossary/device-hardware/warp-scheduler).
-[Scoreboarding](https://www.cs.umd.edu/~meesh/411/website/projects/dynamic/scoreboard.html)
-is a technique for dependency tracking in dynamic instruction scheduling that
-dates back to the "first supercomputer", the
-[Control Data Corporation 6600](https://en.wikipedia.org/wiki/CDC_6600), one of
-which
-[disproved Euler's sum of powers conjecture](https://www.ams.org/journals/bull/1966-72-06/S0002-9904-1966-11654-3/S0002-9904-1966-11654-3.pdf)
-in 1966. Unlike in CPUs, scoreboarding isn't used for out-of-order execution
-within [threads](/gpu-glossary/device-software/thread) (instruction-level
-parallelism), only across them (thread-level parallelism); see
-[this NVIDIA patent](https://patents.google.com/patent/US7676657).
+the "long scoreboard". Both types of stalls are known as
+[scoreboard stalls](/gpu-glossary/perf/scoreboard-stall).
 
 Stalled [warps](/gpu-glossary/device-software/warp) appear in multiple slots in
 each cycle in the diagram above. Stalled
