@@ -39,7 +39,7 @@ For example, below is what you might see from a `cuobjdump` with the
 `--dump-sass` flag:
 
 ```nasm
-[barrier:  :  :  :  ]  /*line*/  INSTRUCTION Ri, [Rj] ; # format: scoreboard info, line number, instruction, operands
+[barrier:  :  :  :  ]  /*line*/  INSTRUCTION Ri, [Rj] ; # Format: scoreboard info, line number, instruction, operands
 [B------:R-:W2:-:S04]  /*00f0*/  LDG.E.SYS R0, [R2] ;   # Sets scoreboard 2
 [B------:R-:W2:-:S01]  /*0100*/  LDG.E.SYS R5, [R4] ;   # `ptxas` intelligently reuses scoreboard 2
 ...
