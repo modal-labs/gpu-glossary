@@ -60,9 +60,6 @@ Scoreboard reuse can mean that the stall classification from Nsight Compute is
 incorrect, as a long and short scoreboard stall may be conflated if they use the
 same scoreboard.
 
-For more details about scoreboard implementation on GPUs, see
-[Professor Matthew D. Sinclair's slides](https://pages.cs.wisc.edu/~sinclair/courses/cs758/fall2019/handouts/lecture/cs758-fall19-gpu_uarch2.pdf).
-
 [Scoreboarding](https://www.cs.umd.edu/~meesh/411/website/projects/dynamic/scoreboard.html)
 for dependency tracking in dynamic instruction scheduling dates back to the
 "first supercomputer", the
@@ -73,3 +70,6 @@ in 1966. Unlike in CPUs, scoreboarding in GPUs isn't used for out-of-order
 execution within [threads](/gpu-glossary/device-software/thread)
 (instruction-level parallelism), only across them (thread-level parallelism);
 see [this NVIDIA patent](https://patents.google.com/patent/US7676657).
+
+For more details about scoreboard implementation on GPUs, see
+[Professor Matthew D. Sinclair's slides](https://pages.cs.wisc.edu/~sinclair/courses/cs758/fall2019/handouts/lecture/cs758-fall19-gpu_uarch2.pdf).
