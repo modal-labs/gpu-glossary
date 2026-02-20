@@ -96,7 +96,7 @@ The operands to each `HMMA` instruction can be read, in order, as
 `D = A @ B + C`. For example, instruction 3 uses
 [register](/gpu-glossary/device-hardware/register-file) 20 for its output `D`,
 registers 14 and 16 for its inputs `A` and `B`, respectively, and re-uses
-register 20 for its input `C`, effecting the computation `C += A @ B`.
+register 20 for its input `C`, affecting the computation `C += A @ B`.
 
 This program partitions the full 16 by 16 square matrix multiplication into four
 separate instructions, each itself a matrix multiplication of a 16 by 8 matrix

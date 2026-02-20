@@ -13,7 +13,7 @@ Each SM partitions that memory among
 it.
 
 The L1 data cache is co-located with and only about an order of magnitude slower
-than the components that effect computations (e.g. the
+than the components that affect computations (e.g. the
 [CUDA Cores](/gpu-glossary/device-hardware/cuda-core)).
 
 It is implemented with SRAM, the same basic semiconductor cell used in CPU

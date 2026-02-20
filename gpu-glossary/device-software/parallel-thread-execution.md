@@ -85,7 +85,7 @@ processors. While each processor runs one
 [thread](/gpu-glossary/device-software/thread), those threads must execute the
 same instructions — hence _parallel_ thread execution, or PTX. They coordinate
 with each other through
-[shared memory](/gpu-glossary/device-software/shared-memory) and effect
+[shared memory](/gpu-glossary/device-software/shared-memory) and affect
 different results by means of private
 [registers](/gpu-glossary/device-software/registers).
 

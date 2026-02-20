@@ -35,6 +35,6 @@ The terminology "global" unfortunately collides with the `__global__` keyword in
 [CUDA C/C++](/gpu-glossary/host-software/cuda-c), which annotates functions that
 are launched on the host but run on the device
 ([kernels](/gpu-glossary/device-software/kernel)), whereas global memory is only
-on the device. Early CUDA architect Nicholas Wilt wrily notes that this choice
+on the device. Early CUDA architect Nicholas Wilt wryly notes that this choice
 was made "for maximum developer confusion" in his
 [_CUDA Handbook_](https://www.cudahandbook.com/).
