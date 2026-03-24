@@ -53,7 +53,7 @@ compute/[arithmetic bandwidth](/gpu-glossary/perf/arithmetic-bandwidth) or
 [memory bandwidth](/gpu-glossary/perf/memory-bandwidth).
 
 <small>Of course, _any_ resource can become a bottleneck. For instance, power
-ingress and heat egress can and does bottleneck some GPUs below their
+ingress and heat egress can and do bottleneck some GPUs below their
 theoretical maximum performance. See
 [this article from NVIDIA](https://developer.nvidia.com/blog/nvidia-sets-new-generative-ai-performance-and-scale-records-in-mlperf-training-v4-0/)
 explaining a 4% end-to-end performance improvement by redirecting power from the

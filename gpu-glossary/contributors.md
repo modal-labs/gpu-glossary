@@ -73,3 +73,4 @@ correct errors:
 - Ismail Zaidi
 - [Michal Nawrot](https://github.com/michalnawrot)
 - [Nicolas Blin](https://www.nicolas-blin.fr/)
+- [Tony Wang](https://github.com/tonywangs)
