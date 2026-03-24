@@ -15,9 +15,10 @@ receiving work fast enough. For example, CUDA API call overhead adds on the
 order of 10 μs per kernel launch. Moreover, frameworks like PyTorch or
 TensorFlow spend time deciding which
 [kernel](/gpu-glossary/device-software/kernel) to launch, which can take many
-microseconds. We generally use the term "host overhead" here, though it's not
-entirely standardized.
-[CUDA Graphs](https://developer.nvidia.com/blog/cuda-graphs/), which collect a
+microseconds. We generally use the term
+["host overhead"](https://modal.com/blog/host-overhead-inference-efficiency)
+here, though it's not entirely standardized.
+[CUDA Graphs](/gpu-glossary/host-software/cuda-graph), which can collect a
 number of device-side [kernels](/gpu-glossary/device-software/kernel) together
 into a single host-side launch, are a common solution to these overheads. For
 more, see the

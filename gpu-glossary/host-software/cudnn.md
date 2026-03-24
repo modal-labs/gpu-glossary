@@ -23,7 +23,8 @@ In modern cuDNN code, computations are expressed as operation graphs, which can
 be constructed using open source
 [Python and C++ frontend APIs](https://docs.nvidia.com/deeplearning/cudnn/frontend/latest/developer/overview.html)
 via the declarative
-[Graph API](https://docs.nvidia.com/deeplearning/cudnn/frontend/v1.14.0/developer/graph-api.html).
+[Graph API](https://docs.nvidia.com/deeplearning/cudnn/frontend/v1.14.0/developer/graph-api.html)
+(not to be confused with [CUDA Graphs](/gpu-glossary/host-software/cuda-graph)).
 
 This API allows the developer to define a sequence of operations as a graph,
 which cuDNN can then analyze to perform optimizations, most importantly
