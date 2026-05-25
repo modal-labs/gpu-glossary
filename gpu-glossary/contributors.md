@@ -17,6 +17,8 @@ This list is incomplete; you can help by
 - [Philip Fabianek](https://www.linkedin.com/in/philip-fabianek/) contributed
   the articles on [cuBLAS](/gpu-glossary/host-software/cublas) and
   [cuDNN](/gpu-glossary/host-software/cudnn).
+- [Debashish Chakraborty](https://github.com/debashishc) co-authored the article
+  on [CuTe DSL](gpu-glossary/host-software/cute-dsl)
 - [Md Rashad Al Hasan Rony](https://www.rashad.ai/#about-me) co-authored the
   article on [memory coalescing](/gpu-glossary/perf/memory-coalescing).
 - [Christopher Fleetwood](https://fleetwood.dev/) contributed the articles on

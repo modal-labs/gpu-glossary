@@ -52,7 +52,7 @@ Ampere
 GPUs. For Transformer neural networks on Hopper and especially Blackwell
 [SM architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture),
 NVIDIA has tended to place more emphasis on the
-[CUTLASS](https://github.com/NVIDIA/cutlass) library.
+[CUTLASS](/gpu-glossary/host-software/cutlass) library.
 
 For more information on cuDNN, see the
 [official cuDNN documentation](https://docs.nvidia.com/deeplearning/cudnn/), and

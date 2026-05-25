@@ -2,6 +2,9 @@
 title: What is the CUDA Software Platform?
 ---
 
+The CUDA software platform is a collection of software for developing CUDA
+programs.
+
 CUDA stands for _Compute Unified Device Architecture_. Depending on the context,
 "CUDA" can refer to multiple distinct things: a
 [high-level device architecture](/gpu-glossary/device-hardware/cuda-device-architecture),
@@ -16,11 +19,9 @@ white paper. We highly recommend this paper, which is the original source for
 many claims, diagrams, and even specific turns of phrase in NVIDIA's
 documentation.
 
-Here, we focus on the CUDA _software platform_.
-
-The CUDA software platform is a collection of software for developing CUDA
-programs. Though CUDA software platforms exist for other languages, like
-FORTRAN, we will focus on the dominant
+Here, we focus on the CUDA _software platform_. Though CUDA software platforms
+exist for other languages, like FORTRAN, Python, and
+[BASIC](/gpu-glossary/host-software/cutile-basic), we will focus on the dominant
 [CUDA C++](/gpu-glossary/host-software/cuda-c) version.
 
 This platform can be roughly divided into the components used to _build_
@@ -33,7 +34,10 @@ below.
 
 ![The CUDA Toolkit. Adapted from the *Professional CUDA C Programming Guide*.](themed-image://cuda-toolkit.svg)
 
-Built on top of these APIs are libraries of and for building optimized
+Built on top of these APIs are libraries of high-performance
 [kernels](/gpu-glossary/device-software/kernel) for general and specific
 domains, like [cuBLAS](/gpu-glossary/host-software/cublas) for linear algebra
-and [cuDNN](/gpu-glossary/host-software/cudnn) for deep neural networks.
+and [cuDNN](/gpu-glossary/host-software/cudnn) for deep neural networks and
+tools for composing such kernels yourself, like
+[CUTLASS](/gpu-glossary/host-software/cutlass) and
+[CuTe DSL](/gpu-glossary/host-software/cute-dsl).
