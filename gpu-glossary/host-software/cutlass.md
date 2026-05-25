@@ -5,7 +5,7 @@ title: What is CUTLASS?
 CUDA Templates for Linear Algebra Subroutines and Solvers (CUTLASS) is a library
 of abstractions for implementing high-performance linear algebra in
 [CUDA](/gpu-glossary/device-software/cuda-programming-model)
-[kernels](/gpu-glossary/device-software/kernels).
+[kernels](/gpu-glossary/device-software/kernel).
 
 Like [cuBLAS](/gpu-glossary/host-software/cublas), CUTLASS is named in reference
 to the

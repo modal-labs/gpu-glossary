@@ -95,7 +95,7 @@ Layout concerns are one reason why CuTe DSL is useful for high-performance
 kernels. Engineering for [performance](/gpu-glossary/perf) is difficult because
 kernels must be closely mapped to hardware: which threads handle which data, how
 memory is accessed, how work is tiled, and which hardware operations the
-generated code should use. CuTE DSL allows programmers to express these mappings
+generated code should use. CuTe DSL allows programmers to express these mappings
 explicitly while reusing much of the same kernel code across a variety of shapes
 and
 [Streaming Multiprocessor architectures](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture).

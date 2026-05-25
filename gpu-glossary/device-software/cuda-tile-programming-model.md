@@ -11,7 +11,7 @@ exposes a [hierarchy of threads](/gpu-glossary/device-software/thread-hierarchy)
 and a [hierarchy of memories](/gpu-glossary/device-software/memory-hierarchy) to
 user programs that receive pointers and execute concurrently to mutate memory
 relative to those pointers. The same instructions are issued to multiple
-[threads](/gpu-glossary/device-software/threads) in parallel, and so this
+[threads](/gpu-glossary/device-software/thread) in parallel, and so this
 programming model is a "single-instruction, multiple thread" (SIMT) programming
 model. This is the programming model used in, for instance,
 [CUDA C/C++](/gpu-glossary/host-software/cuda-c) and the
