@@ -138,9 +138,8 @@ both computation and memory. It is generally recommended to instead use existing
 kernels from kernel libraries like
 [cuBLAS (CUDA Basic Linear Algebra Subroutines)](/gpu-glossary/host-software/cublas)
 or higher-level kernel programming interfaces like
-[CUTLASS (CUDA Templates for Linear Algebra Subroutines)](https://github.com/NVIDIA/cutlass).
-For an introduction to CUTLASS, see
-[this blog post series by Colfax Research](https://research.colfax-intl.com/cutlass-tutorial-wgmma-hopper/).
+[CUTLASS (CUDA Templates for Linear Algebra Subroutines)](/gpu-glossary/host-software/cutlass)
+in C++ or [CuTe DSL](/gpu-glossary/host-software/cute-dsl) in Python.
 
 Tensor Cores are much larger and less numerous than
 [CUDA Cores](/gpu-glossary/device-hardware/cuda-core). An H100 SXM5 has only

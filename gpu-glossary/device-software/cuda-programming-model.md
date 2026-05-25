@@ -2,6 +2,9 @@
 title: What is the CUDA Programming Model?
 ---
 
+The CUDA programming model is a programming model for programming massively
+parallel processors.
+
 CUDA stands for _Compute Unified Device Architecture_. Depending on the context,
 "CUDA" can refer to multiple distinct things: a
 [high-level device architecture](/gpu-glossary/device-hardware/cuda-device-architecture),
@@ -16,9 +19,6 @@ many claims, diagrams, and even specific turns of phrase in NVIDIA's
 documentation.
 
 Here, we focus on the CUDA _programming model_.
-
-The Compute Unified Device Architecture (CUDA) programming model is a
-programming model for programming massively parallel processors.
 
 Per the
 [NVIDIA CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/#a-scalable-programming-model),
