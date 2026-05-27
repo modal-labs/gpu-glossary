@@ -54,6 +54,8 @@ bytes – not coincidentally, enough for each of the 32
 [threads](/gpu-glossary/device-software/thread) in a
 [warp](/gpu-glossary/device-software/warp) to load one 32 bit float.
 
+![With stride 1 (left), all 32 [threads](/gpu-glossary/device-software/thread) in a [warp](/gpu-glossary/device-software/warp) access contiguous memory addresses, serviced by a single 128-byte DRAM burst. With stride 16 (right), each thread's access is spread across memory, requiring many separate DRAM fetches.](./light-mem-coal.svg)
+
 To demonstrate the performance impact of memory coalescing, let's consider the
 following [kernel](/gpu-glossary/device-software/kernel), which reads values
 from an array with a variable `stride`, or spacing between accessed elements.
