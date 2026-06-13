@@ -17,25 +17,32 @@ long scoreboard stalls.
 A short scoreboard stall occurs when an instruction is waiting on the result of
 a variable latency instruction which does not leave the
 [Streaming Multiprocessor (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor).
-This includes slow math instructions on the
-[Special Function Unit](/gpu-glossary/device-hardware/special-function-unit)
-like `MUFU.EX2` and `MUFU.SQRT` and matrix multiplications on the
-[Tensor Core](/gpu-glossary/device-hardware/tensor-core) like `MMA`. It also
-includes [shared memory](/gpu-glossary/device-software/shared-memory) operations
-like `LDS` and `STS`.
+Most prominently, this includes
+[shared memory](/gpu-glossary/device-software/shared-memory) operations like
+`LDS` and `STS`, which can have variable latency due to, for instance,
+[bank conflicts](/gpu-glossary/perf/bank-conflict). It also includes certain
+[Special Function Unit (SFU)](/gpu-glossary/device-hardware/special-function-unit)
+operations,
+[reportedly](https://stackoverflow.com/questions/66123750/what-are-the-long-and-short-scoreboards-w-r-t-mio-l1tex)
+because they are shared by
+[SM](/gpu-glossary/device-hardware/streaming-multiprocessor) sub-partitions and
+managed by the same Memory Input/Output hardware as
+[shared memory](/gpu-glossary/device-software/shared-memory) accesses.
 
 A long scoreboard stall occurs when an instruction is waiting on the result of a
-memory operation that leaves the
-[SM](/gpu-glossary/device-hardware/streaming-multiprocessor), such as global
-memory loads (`LDG`) or stores (`STG`). Long scoreboard stalls dominate
+memory operation which may leave the
+[SM](/gpu-glossary/device-hardware/streaming-multiprocessor), such as
+[global memory](/gpu-glossary/device-software/global-memory) loads (`LDG`) or
+stores (`STG`). Long scoreboard stalls dominate
 [memory-bound](/gpu-glossary/perf/memory-bound) code.
-
-A [warp](/gpu-glossary/device-software/warp) has 6 scoreboards which the
-compiler uses to track data dependencies between instructions.
 
 Some scoreboard information is legible in
 [Streaming Assembler (SASS)](/gpu-glossary/device-software/streaming-assembler).
-For example, below is what you might see from a `cuobjdump` with the
+For instance, you can see that each [warp](/gpu-glossary/device-software/warp)
+has six distinct barrier identifiers which the compiler uses to track data
+dependencies between instructions.
+
+Concretely, below is what you might see from a `cuobjdump` with the
 `--dump-sass` flag:
 
 ```nasm

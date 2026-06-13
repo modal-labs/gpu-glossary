@@ -65,10 +65,11 @@ including:
   operations,
 - pipeline conflicts, i.e. the execution resources are currently occupied.
 
-When warps are stalled on accesses to shared memory or on long-running
-arithmetic instructions, they are said to be stalled on the "short scoreboard".
-When warps are stalled on accesses to GPU RAM, they are said to be stalled on
-the "long scoreboard". Both types of stalls are known as
+When warps are stalled on variable-latency instructions that don't leave the
+[SM](/gpu-glossary/device-hardware/streaming-multiprocessor), they are said to
+be stalled on the "short scoreboard". When warps are stalled on variable-latency
+instructions which do, they are said to be stalled on the "long scoreboard".
+Both types of stalls are known as
 [scoreboard stalls](/gpu-glossary/perf/scoreboard-stall).
 
 Stalled [warps](/gpu-glossary/device-software/warp) appear in multiple slots in
