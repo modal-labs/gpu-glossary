@@ -19,14 +19,11 @@ a variable latency instruction which does not leave the
 [Streaming Multiprocessor (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor).
 Most prominently, this includes
 [shared memory](/gpu-glossary/device-software/shared-memory) operations like
-`LDS` and `STS`, which can have variable latency due to, for instance,
-[bank conflicts](/gpu-glossary/perf/bank-conflict). It also includes certain
+`LDS` and `STS`. It also includes certain
 [Special Function Unit (SFU)](/gpu-glossary/device-hardware/special-function-unit)
-operations,
-[reportedly](https://stackoverflow.com/questions/66123750/what-are-the-long-and-short-scoreboards-w-r-t-mio-l1tex)
-because they are shared by
-[SM](/gpu-glossary/device-hardware/streaming-multiprocessor) sub-partitions and
-managed by the same Memory Input/Output hardware as
+operations, for reasons that are somewhat obscure, but
+[related](https://stackoverflow.com/questions/66123750/what-are-the-long-and-short-scoreboards-w-r-t-mio-l1tex)
+to their integration with the same Memory Input/Output hardware as
 [shared memory](/gpu-glossary/device-software/shared-memory) accesses.
 
 A long scoreboard stall occurs when an instruction is waiting on the result of a
