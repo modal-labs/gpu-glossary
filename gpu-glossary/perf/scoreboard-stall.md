@@ -21,7 +21,7 @@ Most prominently, this includes
 [shared memory](/gpu-glossary/device-software/shared-memory) operations like
 `LDS` and `STS`. It also includes certain
 [Special Function Unit (SFU)](/gpu-glossary/device-hardware/special-function-unit)
-operations, for reasons that are somewhat obscure, but
+operations for reasons that are somewhat obscure, but
 [related](https://stackoverflow.com/questions/66123750/what-are-the-long-and-short-scoreboards-w-r-t-mio-l1tex)
 to their integration with the same Memory Input/Output hardware as
 [shared memory](/gpu-glossary/device-software/shared-memory) accesses.
