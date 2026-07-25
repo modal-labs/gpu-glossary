@@ -11,7 +11,8 @@ Occupancy is the ratio of the
 There are two types of occupancy measurements:
 
 - _Theoretical Occupancy_ represents the upper limit for occupancy due to the
-  kernel launch configuration and device capabilities.
+  [kernel launch configuration](/gpu-glossary/device-software/kernel-launch-configuration)
+  and device capabilities.
 - _Achieved Occupancy_ measures the actual occupancy during
   [kernel](/gpu-glossary/device-software/kernel) execution, aka on
   [active cycles](/gpu-glossary/perf/active-cycle).

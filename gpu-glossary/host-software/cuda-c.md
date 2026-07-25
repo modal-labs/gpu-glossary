@@ -17,6 +17,8 @@ including:
 - **[Kernel](/gpu-glossary/device-software/kernel) launches** with **`<<<>>>`**.
   [Kernels](/gpu-glossary/device-software/kernel) are executed from the CPU host
   using a triple bracket syntax that sets the
+  [launch configuration](/gpu-glossary/device-software/kernel-launch-configuration),
+  including the
   [thread block grid](/gpu-glossary/device-software/thread-block-grid)
   dimensions.
 - **[Shared memory](/gpu-glossary/device-software/shared-memory) allocation**
