@@ -7,11 +7,11 @@ launches and other work that can be submitted by the host to the device all at
 once.
 
 The primary use case for CUDA Graphs is reducing
-[overhead](/gpu-glossary/perf/overhead) from host identification, configuration,
-and submission of large numbers of
-[kernels](/gpu-glossary/device-software/kernel) in short periods. Each launch
-takes on the order of microseconds, so if hundreds of
-[kernels](/gpu-glossary/device-software/kernel) need to be launched in
+[overhead](/gpu-glossary/perf/overhead) from host identification,
+[configuration](/gpu-glossary/device-software/kernel-launch-configuration), and
+submission of large numbers of [kernels](/gpu-glossary/device-software/kernel)
+in short periods. Each launch takes on the order of microseconds, so if hundreds
+of [kernels](/gpu-glossary/device-software/kernel) need to be launched in
 milliseconds, this overhead can be very noticeable. This is commonly the case
 for
 [low-latency LLM inference](https://modal.com/docs/guide/high-performance-llm-inference).

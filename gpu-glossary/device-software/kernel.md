@@ -11,9 +11,11 @@ languages targeting CPUs.
 
 Unlike procedures, a kernel is called ("launched") once and returns once, but is
 executed many times, once each by a number of
-[threads](/gpu-glossary/device-software/thread). These executions are generally
-concurrent (their execution order is non-deterministic) and parallel (they occur
-simultaneously on different execution units).
+[threads](/gpu-glossary/device-software/thread) set by the launch's
+[configuration](/gpu-glossary/device-software/kernel-launch-configuration).
+These executions are generally concurrent (their execution order is
+non-deterministic) and parallel (they occur simultaneously on different
+execution units).
 
 The collection of all threads executing a kernel is organized as a kernel grid —
 aka a [thread block grid](/gpu-glossary/device-software/thread-block-grid), the

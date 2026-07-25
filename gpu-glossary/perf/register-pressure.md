@@ -22,8 +22,9 @@ code for the [kernel](/gpu-glossary/device-software/kernel), and since all
 [thread block](/gpu-glossary/device-software/thread-block) are scheduled onto
 the same [SM](/gpu-glossary/device-hardware/streaming-multiprocessor), the total
 space required by a [thread block](/gpu-glossary/device-software/thread-block)
-is determined also by the [kernel](/gpu-glossary/device-software/kernel) launch
-configuration. As the space allocated per
+is determined also by the
+[kernel launch configuration](/gpu-glossary/device-software/kernel-launch-configuration).
+As the space allocated per
 [thread block](/gpu-glossary/device-software/thread-block) increases, fewer
 [thread blocks](/gpu-glossary/device-software/thread-block) can be scheduled
 onto the same [SM](/gpu-glossary/device-hardware/streaming-multiprocessor),
