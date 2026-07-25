@@ -7,7 +7,9 @@ title: What is a Thread Block Grid?
 When a CUDA [kernel](/gpu-glossary/device-software/kernel) is launched, it
 creates a collection of [threads](/gpu-glossary/device-software/thread) known as
 a thread block grid. Grids can be one, two, or three dimensional. They are made
-up of [thread blocks](/gpu-glossary/device-software/thread-block).
+up of [thread blocks](/gpu-glossary/device-software/thread-block). Their
+dimensions are set by the
+[launch configuration](/gpu-glossary/device-software/kernel-launch-configuration).
 
 The matching level of the
 [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy) is the

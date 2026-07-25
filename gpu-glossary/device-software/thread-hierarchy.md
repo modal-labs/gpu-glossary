@@ -9,7 +9,10 @@ The thread hierarchy is a key abstraction of the
 alongside the
 [memory hierarchy](/gpu-glossary/device-software/memory-hierarchy). It organizes
 the execution of parallel programs across multiple levels, from individual
-threads up to entire GPU devices.
+threads up to entire GPU devices. The size of each level is not fixed by the
+program but chosen at each [kernel](/gpu-glossary/device-software/kernel)
+launch, as part of its
+[launch configuration](/gpu-glossary/device-software/kernel-launch-configuration).
 
 At the lowest level are individual
 [threads](/gpu-glossary/device-software/thread). Like a thread of execution on a
