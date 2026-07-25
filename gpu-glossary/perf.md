@@ -27,5 +27,5 @@ that you need to understand to optimize the performance of programs running on
 GPUs.
 
 Roughly speaking, it should cover every term that you run across when using
-[NSight Compute](https://developer.nvidia.com/nsight-compute) to debug GPU
+[Nsight Compute](/gpu-glossary/host-software/nsight-compute) to debug GPU
 [kernel](/gpu-glossary/device-software/kernel) performance issues.

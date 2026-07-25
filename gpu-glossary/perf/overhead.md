@@ -17,7 +17,11 @@ TensorFlow spend time deciding which
 [kernel](/gpu-glossary/device-software/kernel) to launch, which can take many
 microseconds. We generally use the term
 ["host overhead"](https://modal.com/blog/host-overhead-inference-efficiency)
-here, though it's not entirely standardized.
+here, though it's not entirely standardized. Because overhead appears as gaps
+_between_ [kernels](/gpu-glossary/device-software/kernel), it is diagnosed with
+a system-wide profiler like
+[Nsight Systems](/gpu-glossary/host-software/nsight-systems) rather than with a
+[kernel](/gpu-glossary/device-software/kernel) profiler.
 [CUDA Graphs](/gpu-glossary/host-software/cuda-graph), which can collect a
 number of device-side [kernels](/gpu-glossary/device-software/kernel) together
 into a single host-side launch, are a common solution to these overheads. For

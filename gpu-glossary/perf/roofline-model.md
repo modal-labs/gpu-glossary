@@ -50,8 +50,9 @@ importantly they vary depending on the subsystem, not just the system;
 [Tensor Cores](/gpu-glossary/device-hardware/tensor-core) have more FLOPS than
 [CUDA Cores](/gpu-glossary/device-hardware/cuda-core)).
 
-NVIDIA's NSight Compute tool for [kernel](/gpu-glossary/device-software/kernel)
-performance engineering automatically performs roofline analysis for profiled
+NVIDIA's [Nsight Compute](/gpu-glossary/host-software/nsight-compute) tool for
+[kernel](/gpu-glossary/device-software/kernel) performance engineering
+automatically performs roofline analysis for profiled
 [kernels](/gpu-glossary/device-software/kernel).
 
 The roofline model is deceptively simple. Note that, for instance, system
