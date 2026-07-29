@@ -62,9 +62,9 @@ After loading the data into `R4` (`L1`), all 32
 (`L2`), and each [thread](/gpu-glossary/device-software/thread) gets its own
 `P0` value based on the `data` value in `R4`. Then, we have a bit of
 [compiler](/gpu-glossary/host-software/nvcc) cleverness: in `L3` _all_
-[threads](/gpu-glossary/device-software/thread) execute the code in A, writing
+[threads](/gpu-glossary/device-software/thread) execute the code in B, writing `data[idx] + 2`
 to `R0`. Only those for whom `P0` is true then execute the code in B (`L4`),
-over-writing the value written to `R0` in `L3`. On this instruction, the
+over-writing the value written in `L3` with `data[idx] * 4`. On this instruction, the
 [warp](/gpu-glossary/device-software/warp) is said to be "divergent". On `L5`,
 all [threads](/gpu-glossary/device-software/thread) are back to executing the
 same code. Once the
