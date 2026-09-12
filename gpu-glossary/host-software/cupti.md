@@ -10,8 +10,11 @@ profiling execution of [CUDA C++](/gpu-glossary/host-software/cuda-c),
 Critically, it synchronizes timestamps across the CPU host and the GPU device.
 
 CUPTI's interfaces are consumed by, for example, the
-[NSight Systems Profiler](/gpu-glossary/host-software/nsight-systems) and the
+[Nsight Systems Profiler](/gpu-glossary/host-software/nsight-systems) and the
 [PyTorch Profiler](https://modal.com/docs/examples/torch_profiling).
+[Nsight Compute](/gpu-glossary/host-software/nsight-compute) instead reserves
+the driver's performance monitor directly, and so contends with CUPTI clients
+for it.
 
 You can find its documentation [here](https://docs.nvidia.com/cupti/).
 

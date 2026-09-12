@@ -60,9 +60,10 @@ There may be multiple scoreboards to barrier, such as `B01--4-` which means wait
 until scoreboards 0,1,4 are all cleared. When the data dependency has been
 satisfied, the respective scoreboard is decremented.
 
-Scoreboard reuse can mean that the stall classification from Nsight Compute is
-incorrect, as a long and short scoreboard stall may be conflated if they use the
-same scoreboard.
+Scoreboard reuse can mean that the stall classification from
+[Nsight Compute](/gpu-glossary/host-software/nsight-compute) is incorrect, as a
+long and short scoreboard stall may be conflated if they use the same
+scoreboard.
 
 [Scoreboarding](https://www.cs.umd.edu/~meesh/411/website/projects/dynamic/scoreboard.html)
 for dependency tracking in dynamic instruction scheduling dates back to the

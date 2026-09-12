@@ -25,7 +25,7 @@ programmers should first consider
 
 Pipe utilization is available in the
 `sm__inst_executed_pipe_*.avg.pct_of_peak_sustained_active` metrics from
-[NSight Compute](https://developer.nvidia.com/nsight-compute) (`ncu`), where the
+[Nsight Compute](/gpu-glossary/host-software/nsight-compute) (`ncu`), where the
 asterisk represents specific pipelines like
 [`fma`](/gpu-glossary/device-hardware/cuda-core),
 [`tensor`](/gpu-glossary/device-hardware/tensor-core),

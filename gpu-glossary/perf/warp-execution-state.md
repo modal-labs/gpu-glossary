@@ -4,7 +4,9 @@ title: What is warp execution state?
 
 The state of the [warps](/gpu-glossary/device-software/warp) running a
 [kernel](/gpu-glossary/device-software/kernel) is described with a number of
-non-exclusive adjectives: active, stalled, eligible, and selected.
+non-exclusive adjectives: active, stalled, eligible, and selected. These states,
+and the reasons for stalls in particular, are sampled and reported by
+[Nsight Compute](/gpu-glossary/host-software/nsight-compute).
 
 ![Warp execution states are indicated by color. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](themed-image://cycles.svg)
 

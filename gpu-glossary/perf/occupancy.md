@@ -8,7 +8,8 @@ Occupancy is the ratio of the
 
 ![There are four warp slots per cycle on each of four clock cycles and so there are 16=4*4 total warp slots, and there are active warps in 15 of them, for an occupancy of ~94%. Diagram inspired by the [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) talk at GTC 2025.](themed-image://cycles.svg)
 
-There are two types of occupancy measurements:
+There are two types of occupancy measurements, both reported by
+[Nsight Compute](/gpu-glossary/host-software/nsight-compute):
 
 - _Theoretical Occupancy_ represents the upper limit for occupancy due to the
   kernel launch configuration and device capabilities.
